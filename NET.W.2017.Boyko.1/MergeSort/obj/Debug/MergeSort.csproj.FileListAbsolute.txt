@@ -1,0 +1,5 @@
+E:\EPAM-training\NET.W.2017.Boyko.1\MergeSort\bin\Debug\MergeSort.dll
+E:\EPAM-training\NET.W.2017.Boyko.1\MergeSort\bin\Debug\MergeSort.pdb
+E:\EPAM-training\NET.W.2017.Boyko.1\MergeSort\obj\Debug\MergeSort.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.1\MergeSort\obj\Debug\MergeSort.dll
+E:\EPAM-training\NET.W.2017.Boyko.1\MergeSort\obj\Debug\MergeSort.pdb

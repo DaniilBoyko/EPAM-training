@@ -1,0 +1,9 @@
+E:\EPAM-training\NET.W.2017.Boyko.1\CheckMergeSort\bin\Debug\CheckMergeSort.exe.config
+E:\EPAM-training\NET.W.2017.Boyko.1\CheckMergeSort\bin\Debug\CheckMergeSort.exe
+E:\EPAM-training\NET.W.2017.Boyko.1\CheckMergeSort\bin\Debug\CheckMergeSort.pdb
+E:\EPAM-training\NET.W.2017.Boyko.1\CheckMergeSort\bin\Debug\MergeSort.dll
+E:\EPAM-training\NET.W.2017.Boyko.1\CheckMergeSort\bin\Debug\MergeSort.pdb
+E:\EPAM-training\NET.W.2017.Boyko.1\CheckMergeSort\obj\Debug\CheckMergeSort.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.1\CheckMergeSort\obj\Debug\CheckMergeSort.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.1\CheckMergeSort\obj\Debug\CheckMergeSort.exe
+E:\EPAM-training\NET.W.2017.Boyko.1\CheckMergeSort\obj\Debug\CheckMergeSort.pdb
