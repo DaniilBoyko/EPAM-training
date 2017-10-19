@@ -23,9 +23,7 @@ namespace Sorting
             T[] partArray = GetSubArray(array, left, rihgt);
             Sort(partArray);
             for (int i = left; i < rihgt; i++)
-            {
                 array[i] = partArray[i];
-            }
         }
         #endregion
 
@@ -40,7 +38,7 @@ namespace Sorting
 
             T[] left = SortWithMerge(GetSubArray(array, 0, middle));
             T[] right = SortWithMerge(GetSubArray(array, middle, array.Length));
-            T[]result = Merge(left, right);
+            T[] result = Merge(left, right);
 
             return result;
         }
@@ -52,13 +50,9 @@ namespace Sorting
             while (left.Length > i && right.Length > j)
             {
                 if (!(left[i].CompareTo(right[j]) == 1))
-                {
                     result[k++] = left[i++];
-                }
                 else
-                {
                     result[k++] = right[j++];
-                }
             }
 
             if (left.Length > i)
@@ -73,9 +67,8 @@ namespace Sorting
         {
             T[] resutlArray = new T[Math.Min(right - left, array.Length - left)];
             for (int i = left, j = 0; i < right && i < array.Length; i++, j++)
-            {
                 resutlArray[j] = array[i];
-            }
+
             return resutlArray;
         }
         #endregion 

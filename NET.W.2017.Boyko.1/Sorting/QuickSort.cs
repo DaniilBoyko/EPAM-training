@@ -44,6 +44,7 @@ namespace Sorting
                     left++;
                 while (array[right].CompareTo(baseElement) > 0)
                     right--;
+
                 if (left <= right)
                 {
                     Swap(ref array[left], ref array[right]);

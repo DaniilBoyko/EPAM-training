@@ -11,9 +11,8 @@ namespace Testing
         public static void ShowArray<T>(IEnumerable<T> array)
         {
             foreach (var a in array)
-            {
                 Console.Write($"{a} ");
-            }
+
             Console.WriteLine();
 
         }
