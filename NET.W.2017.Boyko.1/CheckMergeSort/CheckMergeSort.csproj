@@ -49,9 +49,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MergeSort\MergeSort.csproj">
-      <Project>{cf10e702-d857-4a39-afb2-a7c1cea89be6}</Project>
-      <Name>MergeSort</Name>
+    <ProjectReference Include="..\Sorting\Sorting.csproj">
+      <Project>{7c0bb353-80ef-452e-8a99-e99bbe214d83}</Project>
+      <Name>Sorting</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,9 @@
+E:\EPAM-training\NET.W.2017.Boyko.1\Testing\bin\Debug\Testing.exe.config
+E:\EPAM-training\NET.W.2017.Boyko.1\Testing\bin\Debug\Testing.exe
+E:\EPAM-training\NET.W.2017.Boyko.1\Testing\bin\Debug\Testing.pdb
+E:\EPAM-training\NET.W.2017.Boyko.1\Testing\bin\Debug\Sorting.dll
+E:\EPAM-training\NET.W.2017.Boyko.1\Testing\bin\Debug\Sorting.pdb
+E:\EPAM-training\NET.W.2017.Boyko.1\Testing\obj\Debug\Testing.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.1\Testing\obj\Debug\Testing.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.1\Testing\obj\Debug\Testing.exe
+E:\EPAM-training\NET.W.2017.Boyko.1\Testing\obj\Debug\Testing.pdb

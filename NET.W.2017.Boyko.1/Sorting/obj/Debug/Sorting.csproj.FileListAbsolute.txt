@@ -1,0 +1,6 @@
+E:\EPAM-training\NET.W.2017.Boyko.1\Sorting\bin\Debug\Sorting.dll
+E:\EPAM-training\NET.W.2017.Boyko.1\Sorting\bin\Debug\Sorting.pdb
+E:\EPAM-training\NET.W.2017.Boyko.1\Sorting\obj\Debug\Sorting.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.1\Sorting\obj\Debug\Sorting.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.1\Sorting\obj\Debug\Sorting.dll
+E:\EPAM-training\NET.W.2017.Boyko.1\Sorting\obj\Debug\Sorting.pdb

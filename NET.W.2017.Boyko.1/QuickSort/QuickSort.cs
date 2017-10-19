@@ -6,14 +6,25 @@ using System.Threading.Tasks;
 
 namespace QuickSort
 {
-    public class QuickSort
+    public class QuickSort<T> 
+        where T : IComparable
     {
-        public static void Sort(int[] array)
+        #region API
+        public static void Sort(T[] array)
         {
+            CheckParamArray(array);
             SortPart(array, 0, array.Length - 1);
         }
 
-        private static void SortPart(int[] array, int left, int right)
+        public static void Sort(T[] array, int left, int right)
+        {
+            CheckFullParam(array, left, right);
+            SortPart(array, left, right);
+        }
+        #endregion
+
+        #region Private methods
+        private static void SortPart(T[] array, int left, int right)
         {
             if (left < right)
             {
@@ -23,39 +34,55 @@ namespace QuickSort
             }
         }
 
-        private static int PartitionSort(int[] array, int left, int right)
+        private static int PartitionSort(T[] array, int left, int right)
         {
-            int baseElement = GetBaseElement(array, left, right);
-            int l = left;
-            int r = right;
-            while (l <= r)
+            T baseElement = GetBaseElement(array, left, right);
+
+            while (left <= right)
             {
-                while (array[l] < baseElement)
-                    l++;
-                while (array[r] > baseElement)
-                    r--;
-                if (l <= r)
+                while (array[left].CompareTo(baseElement) < 0)
+                    left++;
+                while (array[right].CompareTo(baseElement) > 0)
+                    right--;
+                if (left <= right)
                 {
-                    Swap(ref array[l], ref array[r]);
-                    l++;
-                    r--;
+                    Swap(ref array[left], ref array[right]);
+                    left++;
+                    right--;
                 }
             }
 
-            return l;
+            return left;
         }
 
-        private static int GetBaseElement(int[] array, int left, int right) 
+        private static T GetBaseElement(T[] array, int left, int right) 
         {
-            return array[right];
+            return array[right - 1];
         }
 
-        private static void Swap(ref int a, ref int b)
+        private static void CheckParamArray(T[] array)
         {
-            int c = a;
+            if (array == null)
+                throw new ArgumentNullException();
+        }
+
+        private static void CheckFullParam(T[] array, int left, int right)
+        {
+            CheckParamArray(array);
+
+            if (left < 0 || right >= array.Length)
+                throw new ArgumentOutOfRangeException();
+
+            if (right < left)
+                throw new ArgumentException();
+        }
+
+        private static void Swap(ref T a, ref T b)
+        {
+            T c = a;
             a = b;
             b = c;
         }
-
+        #endregion
     }
 }

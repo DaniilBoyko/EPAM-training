@@ -3,3 +3,4 @@ E:\EPAM-training\NET.W.2017.Boyko.1\QuickSort\bin\Debug\QuickSort.pdb
 E:\EPAM-training\NET.W.2017.Boyko.1\QuickSort\obj\Debug\QuickSort.csproj.CoreCompileInputs.cache
 E:\EPAM-training\NET.W.2017.Boyko.1\QuickSort\obj\Debug\QuickSort.dll
 E:\EPAM-training\NET.W.2017.Boyko.1\QuickSort\obj\Debug\QuickSort.pdb
+E:\EPAM-training\NET.W.2017.Boyko.1\QuickSort\obj\Debug\QuickSort.csprojResolveAssemblyReference.cache

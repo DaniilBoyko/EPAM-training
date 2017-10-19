@@ -1,9 +1,9 @@
 E:\EPAM-training\NET.W.2017.Boyko.1\CheckQuickSort\bin\Debug\CheckQuickSort.exe.config
 E:\EPAM-training\NET.W.2017.Boyko.1\CheckQuickSort\bin\Debug\CheckQuickSort.exe
 E:\EPAM-training\NET.W.2017.Boyko.1\CheckQuickSort\bin\Debug\CheckQuickSort.pdb
-E:\EPAM-training\NET.W.2017.Boyko.1\CheckQuickSort\bin\Debug\QuickSort.dll
-E:\EPAM-training\NET.W.2017.Boyko.1\CheckQuickSort\bin\Debug\QuickSort.pdb
 E:\EPAM-training\NET.W.2017.Boyko.1\CheckQuickSort\obj\Debug\CheckQuickSort.csprojResolveAssemblyReference.cache
 E:\EPAM-training\NET.W.2017.Boyko.1\CheckQuickSort\obj\Debug\CheckQuickSort.csproj.CoreCompileInputs.cache
 E:\EPAM-training\NET.W.2017.Boyko.1\CheckQuickSort\obj\Debug\CheckQuickSort.exe
 E:\EPAM-training\NET.W.2017.Boyko.1\CheckQuickSort\obj\Debug\CheckQuickSort.pdb
+E:\EPAM-training\NET.W.2017.Boyko.1\CheckQuickSort\bin\Debug\Sorting.dll
+E:\EPAM-training\NET.W.2017.Boyko.1\CheckQuickSort\bin\Debug\Sorting.pdb

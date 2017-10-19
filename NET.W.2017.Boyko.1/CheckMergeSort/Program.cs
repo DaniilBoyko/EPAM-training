@@ -25,14 +25,14 @@ namespace CheckMergeSort
             int[] array = { 3, 7, 8, 5, 2, 1, 9, 5, 4 };
 
             ShowArray(array);
-            MergeSort.MergeSort.Sort(array);
+            Sorting.MergeSort<int>.Sort(array);
             ShowArray(array);
             Console.WriteLine();
 
             int[] array2 = { 3, 7, 8, 5, 2, 1, 9, 5, 4, -10, -11, -12 };
 
             ShowArray(array2);
-            MergeSort.MergeSort.Sort(array2);
+            Sorting.MergeSort<int>.Sort(array2);
             ShowArray(array2);
         }
     }

@@ -49,9 +49,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\QuickSort\QuickSort.csproj">
-      <Project>{97f3f6d6-2115-470d-a87b-d84b457d3705}</Project>
-      <Name>QuickSort</Name>
+    <ProjectReference Include="..\Sorting\Sorting.csproj">
+      <Project>{7c0bb353-80ef-452e-8a99-e99bbe214d83}</Project>
+      <Name>Sorting</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
