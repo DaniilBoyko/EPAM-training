@@ -50,6 +50,7 @@ namespace SpecialFunctions.NUnitTests
             get
             {
                 yield return new TestCaseData(new[]{ 1, 2, 3, 4, 5, 6, 7, 68, 69, 70, 15, 17}.ToList(), 7).Returns(new[]{7, 70, 17}.ToList());
+                yield return new TestCaseData(new[] { 1, 2, 3, 4, 5, 6, 7, 68, 69, 70, 15, 17 }.ToList(), 1).Returns(new[] { 1, 15, 17 }.ToList());
                 yield return new TestCaseData(null, 7).Throws(typeof(ArgumentNullException));
                 yield return new TestCaseData(new[] { 1, 2, 3, 68, 69, 70}.ToList(), 10).Throws(typeof(ArgumentOutOfRangeException));
                 yield return new TestCaseData(new[] { 1, 2, 3, 68, 69, 70 }.ToList(), -1).Throws(typeof(ArgumentOutOfRangeException));
