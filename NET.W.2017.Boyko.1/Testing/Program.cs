@@ -14,7 +14,6 @@ namespace Testing
                 Console.Write($"{a} ");
 
             Console.WriteLine();
-
         }
 
         public delegate void SortingMethod<T>(T[] array);
@@ -48,8 +47,6 @@ namespace Testing
             ShowTest(Sorting.MergeSort<int>.Sort, array);
             ShowTest(Sorting.MergeSort<double>.Sort, array2);
             ShowTest(Sorting.MergeSort<string>.Sort, array3);
-
-
         }
     }
 }

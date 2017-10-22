@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace SpecialFunctions
@@ -131,21 +132,16 @@ namespace SpecialFunctions
             if (number < 0 && degree % 2 == 0)
                 throw new ArgumentOutOfRangeException();
 
-            double result = 2.0;
+            double prevResult = number / degree;
+            double curResult = prevResult;
 
-            while (Math.Pow(result, degree) - number > precision)
+            do
             {
-                result = 1.0 / degree * ((degree - 1) * result + number * 1.0 / Math.Pow(result, degree - 1));
-            }
+                prevResult = curResult;
+                curResult = 1.0 / degree * ((degree - 1) * curResult + number * 1.0 / Math.Pow(curResult, degree - 1));
+            } while (Math.Abs(prevResult - curResult) > precision);
 
-            int countPrecision = 0;
-            while (precision < 1.0)
-            {
-                countPrecision += 1;
-                precision *= 10;
-            }
-            
-            return Math.Round(result, countPrecision);
+            return curResult;
         }
     }
 }

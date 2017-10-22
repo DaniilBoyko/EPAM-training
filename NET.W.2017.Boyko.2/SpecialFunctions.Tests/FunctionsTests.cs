@@ -113,7 +113,7 @@ namespace SpecialFunctions.Tests
             int toPosition = 8;
 
             //Act
-            int result = Functions.InsertNumber(numberSource, numberInsert, fromPosition, toPosition);
+            Functions.InsertNumber(numberSource, numberInsert, fromPosition, toPosition);
         }
 
         [TestMethod]
@@ -127,7 +127,7 @@ namespace SpecialFunctions.Tests
             int toPosition = -8;
 
             //Act
-            int result = Functions.InsertNumber(numberSource, numberInsert, fromPosition, toPosition);
+            Functions.InsertNumber(numberSource, numberInsert, fromPosition, toPosition);
         }
 
         [TestMethod]
@@ -141,7 +141,7 @@ namespace SpecialFunctions.Tests
             int toPosition = 32;
 
             //Act
-            int result = Functions.InsertNumber(numberSource, numberInsert, fromPosition, toPosition);
+            Functions.InsertNumber(numberSource, numberInsert, fromPosition, toPosition);
         }
 
         [TestMethod]
@@ -155,7 +155,7 @@ namespace SpecialFunctions.Tests
             int toPosition = 3;
 
             //Act
-            int result = Functions.InsertNumber(numberSource, numberInsert, fromPosition, toPosition);
+            Functions.InsertNumber(numberSource, numberInsert, fromPosition, toPosition);
         }
     }
 }

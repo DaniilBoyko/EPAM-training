@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using NUnit.Framework;
 
@@ -61,16 +60,17 @@ namespace SpecialFunctions.NUnitTests
         {
             get
             {
-                yield return new TestCaseData(1, 5, 0.0001).Returns(1);
-                yield return new TestCaseData(8, 3, 0.0001).Returns(2);
-                yield return new TestCaseData(0.001, 3, 0.0001).Returns(0.1);
-                yield return new TestCaseData(0.04100625, 4, 0.0001).Returns(0.45);
-                yield return new TestCaseData(0.0289936, 7, 0.0001).Returns(0.6);
-                yield return new TestCaseData(0.0081, 4, 0.01).Returns(0.3);
-                yield return new TestCaseData(-0.008, 3, 0.1).Returns(-0.2);
-                yield return new TestCaseData(0.004241979, 9, 0.00000001).Returns(0.545);
-                yield return new TestCaseData(-8, 2, 0.0001).Throws(typeof(ArgumentOutOfRangeException));
-                yield return new TestCaseData(8, 3, -0.0001).Throws(typeof(ArgumentOutOfRangeException));
+                yield return new TestCaseData(1, 5, 0.0001, 1.0);
+                yield return new TestCaseData(8, 3, 0.0001, 2.0);
+                yield return new TestCaseData(0.001, 3, 0.0001, 0.1);
+                yield return new TestCaseData(0.04100625, 4, 0.0001, 0.45);
+                yield return new TestCaseData(0.0289936, 7, 0.0001, 0.603);
+                yield return new TestCaseData(0.0081, 4, 0.01, 0.3);
+                yield return new TestCaseData(-0.008, 3, 0.1, -0.2);
+                yield return new TestCaseData(0.004241979, 9, 0.00000001, 0.545);
+                yield return new TestCaseData(-8, 2, 0.0001, 1).Throws(typeof(ArgumentOutOfRangeException));
+                yield return new TestCaseData(8, 3, -0.0001, 1).Throws(typeof(ArgumentOutOfRangeException));
+
             }
         }
 
@@ -96,9 +96,10 @@ namespace SpecialFunctions.NUnitTests
         }
 
         [Test, TestCaseSource(nameof(FindNthRootTestCaseDatas))]
-        public double FindNthRootMethod_FindRootOfSetDegreeFromNumberWithSetPrecision(double number, int degree, double precision)
+        public void FindNthRootMethod_FindRootOfSetDegreeFromNumberWithSetPrecision(double number, int degree, double precision, double expectedResult)
         {
-            return Functions.FindNthRoot(number, degree, precision);
+            double result = Functions.FindNthRoot(number, degree, precision);
+            Assert.That(result, Is.EqualTo(expectedResult).Within(precision));
         }
 
     }
