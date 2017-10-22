@@ -1,0 +1,6 @@
+E:\EPAM-training\NET.W.2017.Boyko.2\SpecialFunctions\bin\Debug\SpecialFunctions.dll
+E:\EPAM-training\NET.W.2017.Boyko.2\SpecialFunctions\bin\Debug\SpecialFunctions.pdb
+E:\EPAM-training\NET.W.2017.Boyko.2\SpecialFunctions\obj\Debug\SpecialFunctions.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.2\SpecialFunctions\obj\Debug\SpecialFunctions.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.2\SpecialFunctions\obj\Debug\SpecialFunctions.dll
+E:\EPAM-training\NET.W.2017.Boyko.2\SpecialFunctions\obj\Debug\SpecialFunctions.pdb

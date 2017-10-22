@@ -1,0 +1,10 @@
+E:\EPAM-training\NET.W.2017.Boyko.2\SpecialFunctions.NUnitTests\bin\Debug\SpecialFunctions.NUnitTests.dll
+E:\EPAM-training\NET.W.2017.Boyko.2\SpecialFunctions.NUnitTests\bin\Debug\SpecialFunctions.NUnitTests.pdb
+E:\EPAM-training\NET.W.2017.Boyko.2\SpecialFunctions.NUnitTests\bin\Debug\nunit.framework.dll
+E:\EPAM-training\NET.W.2017.Boyko.2\SpecialFunctions.NUnitTests\bin\Debug\SpecialFunctions.dll
+E:\EPAM-training\NET.W.2017.Boyko.2\SpecialFunctions.NUnitTests\bin\Debug\SpecialFunctions.pdb
+E:\EPAM-training\NET.W.2017.Boyko.2\SpecialFunctions.NUnitTests\bin\Debug\nunit.framework.xml
+E:\EPAM-training\NET.W.2017.Boyko.2\SpecialFunctions.NUnitTests\obj\Debug\SpecialFunctions.NUnitTests.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.2\SpecialFunctions.NUnitTests\obj\Debug\SpecialFunctions.NUnitTests.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.2\SpecialFunctions.NUnitTests\obj\Debug\SpecialFunctions.NUnitTests.dll
+E:\EPAM-training\NET.W.2017.Boyko.2\SpecialFunctions.NUnitTests\obj\Debug\SpecialFunctions.NUnitTests.pdb
