@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
+using System.Diagnostics;
 using System.Text;
+
 
 namespace SpecialFunctions
 {
@@ -48,8 +49,11 @@ namespace SpecialFunctions
         /// </summary>
         /// <param name="number"></param>
         /// <returns>Finding bigger number or -1</returns>
-        public static int FindNextBiggerNumber(int number)
+        public static Tuple<int, long> FindNextBiggerNumber(int number)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
             StringBuilder strNumber = new StringBuilder(number.ToString());
             bool flagExistsBigger = false;
             int index = -1;
@@ -63,8 +67,10 @@ namespace SpecialFunctions
                 }
             }
             if (!flagExistsBigger)
-                return -1;
-
+            {
+                stopwatch.Stop();
+                return new Tuple<int, long>(-1, stopwatch.ElapsedMilliseconds);
+            }
 
             int replaceIndex = -1;
             int minDifference = 10;
@@ -86,8 +92,10 @@ namespace SpecialFunctions
             Array.Sort(endOfNumberString);
             strNumber.Remove(index + 1, endOfNumberString.Length);
             strNumber.Append(endOfNumberString);
-            
-            return int.Parse(strNumber.ToString());
+
+            stopwatch.Stop();
+
+            return new Tuple<int, long>(int.Parse(strNumber.ToString()), stopwatch.ElapsedMilliseconds);
         }
 
 

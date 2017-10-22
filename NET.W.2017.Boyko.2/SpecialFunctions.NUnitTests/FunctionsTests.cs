@@ -28,20 +28,20 @@ namespace SpecialFunctions.NUnitTests
         {
             get
             {
-                yield return new TestCaseData(12).Returns(21);
-                yield return new TestCaseData(4).Returns(-1);
-                yield return new TestCaseData(513).Returns(531);
-                yield return new TestCaseData(2017).Returns(2071);
-                yield return new TestCaseData(414).Returns(441);
-                yield return new TestCaseData(144).Returns(414);
-                yield return new TestCaseData(1234321).Returns(1241233);
-                yield return new TestCaseData(1234126).Returns(1234162);
-                yield return new TestCaseData(3456432).Returns(3462345);
-                yield return new TestCaseData(10).Returns(-1);
-                yield return new TestCaseData(20).Returns(-1);
-                yield return new TestCaseData(44444).Returns(-1);
-                yield return new TestCaseData(123987).Returns(127389);
-                yield return new TestCaseData(4569876).Returns(4576689);
+                yield return new TestCaseData(12, 21);
+                yield return new TestCaseData(4, -1);
+                yield return new TestCaseData(513, 531);
+                yield return new TestCaseData(2017, 2071);
+                yield return new TestCaseData(414, 441);
+                yield return new TestCaseData(144, 414);
+                yield return new TestCaseData(1234321, 1241233);
+                yield return new TestCaseData(1234126, 1234162);
+                yield return new TestCaseData(3456432, 3462345);
+                yield return new TestCaseData(10, -1);
+                yield return new TestCaseData(20, -1);
+                yield return new TestCaseData(44444, -1);
+                yield return new TestCaseData(123987, 127389);
+                yield return new TestCaseData(4569876, 4576689);
             }
         }
 
@@ -85,9 +85,10 @@ namespace SpecialFunctions.NUnitTests
         }
 
         [Test, TestCaseSource(nameof(FindNextBiggerNumberTestCaseDatas))]
-        public int FindNextBiggerNumberMethod_FindNextBiggerNumberOrMines1(int number)
+        public void FindNextBiggerNumberMethod_FindNextBiggerNumberOrMines1(int number, int resultExpected)
         {
-            return Functions.FindNextBiggerNumber(number);
+            var resultTuple = Functions.FindNextBiggerNumber(number);
+            Assert.AreEqual(resultExpected, resultTuple.Item1);
         }
 
         [Test, TestCaseSource(nameof(FilterDigitTestCaseDatas))]
