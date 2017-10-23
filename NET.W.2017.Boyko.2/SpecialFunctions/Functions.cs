@@ -8,6 +8,11 @@ namespace SpecialFunctions
 {
     public class Functions
     {
+        #region Constants
+        private const int COUNT_BITS = 31;
+        #endregion
+
+        #region Public Methods (API)
         /// <summary>
         /// This function get first (toPosition - fromPositon) bytes from nuberInset
         /// and insert them into numberSource in position (fromPosition, toPosition).
@@ -19,7 +24,7 @@ namespace SpecialFunctions
         /// <returns>Number after inserting.</returns>
         public static int InsertNumber(int numberSource, int numberInsert, int fromPosition, int toPosition)
         {
-            if (fromPosition < 0 || toPosition < 0 || toPosition > 31)
+            if (fromPosition < 0 || toPosition < 0 || toPosition > COUNT_BITS)
                 throw new ArgumentOutOfRangeException();
 
             if (fromPosition > toPosition)
@@ -152,6 +157,6 @@ namespace SpecialFunctions
             return curResult;
         }
 
-
+        #endregion
     }
 }
