@@ -1,0 +1,10 @@
+E:\EPAM-training\NET.W.2017.Boyko.4\NumberFunctions.Tests\bin\Debug\NumberFunctions.Tests.dll
+E:\EPAM-training\NET.W.2017.Boyko.4\NumberFunctions.Tests\bin\Debug\NumberFunctions.Tests.pdb
+E:\EPAM-training\NET.W.2017.Boyko.4\NumberFunctions.Tests\bin\Debug\NumberFunctions.dll
+E:\EPAM-training\NET.W.2017.Boyko.4\NumberFunctions.Tests\bin\Debug\nunit.framework.dll
+E:\EPAM-training\NET.W.2017.Boyko.4\NumberFunctions.Tests\bin\Debug\NumberFunctions.pdb
+E:\EPAM-training\NET.W.2017.Boyko.4\NumberFunctions.Tests\bin\Debug\nunit.framework.xml
+E:\EPAM-training\NET.W.2017.Boyko.4\NumberFunctions.Tests\obj\Debug\NumberFunctions.Tests.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.4\NumberFunctions.Tests\obj\Debug\NumberFunctions.Tests.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.4\NumberFunctions.Tests\obj\Debug\NumberFunctions.Tests.dll
+E:\EPAM-training\NET.W.2017.Boyko.4\NumberFunctions.Tests\obj\Debug\NumberFunctions.Tests.pdb

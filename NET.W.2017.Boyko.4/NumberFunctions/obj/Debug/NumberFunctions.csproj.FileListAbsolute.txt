@@ -1,0 +1,6 @@
+E:\EPAM-training\NET.W.2017.Boyko.4\NumberFunctions\bin\Debug\NumberFunctions.dll
+E:\EPAM-training\NET.W.2017.Boyko.4\NumberFunctions\bin\Debug\NumberFunctions.pdb
+E:\EPAM-training\NET.W.2017.Boyko.4\NumberFunctions\obj\Debug\NumberFunctions.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.4\NumberFunctions\obj\Debug\NumberFunctions.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.4\NumberFunctions\obj\Debug\NumberFunctions.dll
+E:\EPAM-training\NET.W.2017.Boyko.4\NumberFunctions\obj\Debug\NumberFunctions.pdb
