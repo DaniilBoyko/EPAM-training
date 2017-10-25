@@ -49,11 +49,12 @@ namespace SpecialFunctions.NUnitTests
         {
             get
             {
-                yield return new TestCaseData(new[]{ 1, 2, 3, 4, 5, 6, 7, 68, 69, 70, 15, 17}.ToList(), 7).Returns(new[]{7, 70, 17}.ToList());
-                yield return new TestCaseData(new[] { 1, 2, 3, 4, 5, 6, 7, 68, 69, 70, 15, 17 }.ToList(), 1).Returns(new[] { 1, 15, 17 }.ToList());
+                yield return new TestCaseData(new[]{ 1, 2, 3, 4, 5, 6, 7, 68, 69, 70, 15, 17}, 7).Returns(new[]{7, 70, 17});
+                yield return new TestCaseData(new[] { 1, 2, 3, 4, 5, 6, 7, 68, 69, 70, 15, 17 }, 1).Returns(new[] { 1, 15, 17 });
+                yield return new TestCaseData(new int[3], 1).Returns(new int[0]);
                 yield return new TestCaseData(null, 7).Throws(typeof(ArgumentNullException));
-                yield return new TestCaseData(new[] { 1, 2, 3, 68, 69, 70}.ToList(), 10).Throws(typeof(ArgumentOutOfRangeException));
-                yield return new TestCaseData(new[] { 1, 2, 3, 68, 69, 70 }.ToList(), -1).Throws(typeof(ArgumentOutOfRangeException));
+                yield return new TestCaseData(new[] { 1, 2, 3, 68, 69, 70}, 10).Throws(typeof(ArgumentOutOfRangeException));
+                yield return new TestCaseData(new[] { 1, 2, 3, 68, 69, 70 }, -1).Throws(typeof(ArgumentOutOfRangeException));
             }
         }
 
@@ -71,6 +72,7 @@ namespace SpecialFunctions.NUnitTests
                 yield return new TestCaseData(0.004241979, 9, 0.00000001, 0.545);
                 yield return new TestCaseData(-8, 2, 0.0001, 1).Throws(typeof(ArgumentOutOfRangeException));
                 yield return new TestCaseData(8, 3, -0.0001, 1).Throws(typeof(ArgumentOutOfRangeException));
+                yield return new TestCaseData(8, -3, -0.0001, 1).Throws(typeof(ArgumentOutOfRangeException));
 
             }
         }
@@ -87,14 +89,13 @@ namespace SpecialFunctions.NUnitTests
         [Test, TestCaseSource(nameof(FindNextBiggerNumberTestCaseDatas))]
         public void FindNextBiggerNumberMethod_FindNextBiggerNumberOrMines1(int number, int resultExpected)
         {
-            var resultTuple = Functions.FindNextBiggerNumber(number);
-            Assert.AreEqual(resultExpected, resultTuple.Item1);
+            Assert.AreEqual(resultExpected, Functions.FindNextBiggerNumber(number));
         }
 
         [Test, TestCaseSource(nameof(FilterDigitTestCaseDatas))]
-        public List<int> FilterDigitMethod_FilterListOfIntegersWhichDontHaveDigit(List<int> list, int digit)
+        public int[] FilterDigitMethod_FilterListOfIntegersWhichDontHaveDigit(int[] array, int digit)
         {
-            return Functions.FilterDigit(list, digit);
+            return Functions.FilterDigit(digit, array);
         }
 
         [Test, TestCaseSource(nameof(FindNthRootTestCaseDatas))]

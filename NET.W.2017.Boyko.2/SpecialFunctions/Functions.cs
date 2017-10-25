@@ -49,16 +49,14 @@ namespace SpecialFunctions
             return numberSource;
         }
 
+
         /// <summary>
         /// Find next bigger number, if exists, or -1
         /// </summary>
         /// <param name="number"></param>
         /// <returns>Finding bigger number or -1</returns>
-        public static Tuple<int, long> FindNextBiggerNumber(int number)
+        public static int FindNextBiggerNumber(int number)
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-
             StringBuilder strNumber = new StringBuilder(number.ToString());
             bool flagExistsBigger = false;
             int index = -1;
@@ -73,8 +71,7 @@ namespace SpecialFunctions
             }
             if (!flagExistsBigger)
             {
-                stopwatch.Stop();
-                return new Tuple<int, long>(-1, stopwatch.ElapsedMilliseconds);
+                return -1;
             }
 
             int replaceIndex = -1;
@@ -98,35 +95,45 @@ namespace SpecialFunctions
             strNumber.Remove(index + 1, endOfNumberString.Length);
             strNumber.Append(endOfNumberString);
 
-            stopwatch.Stop();
+            return int.Parse(strNumber.ToString());
+        }
 
-            return new Tuple<int, long>(int.Parse(strNumber.ToString()), stopwatch.ElapsedMilliseconds);
+        public static int FindNextBiggerNumber(int number, out long executionTIme)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            int result = FindNextBiggerNumber(number);
+
+            stopwatch.Stop();
+            executionTIme = stopwatch.ElapsedMilliseconds;
+
+            return result;
         }
 
 
         /// <summary>
         /// This function filter numbers, which don't contain set digit.
         /// </summary>
-        /// <param name="list">list of numbers</param>
+        /// <param name="array">array of numbers</param>
         /// <param name="digit">digit to filter</param>
         /// <returns>List of numbers, which contains set digit.</returns>
-        public static List<int> FilterDigit (List<int> list, int digit)
+        public static int[] FilterDigit (int digit, params int[] array)
         {
-            if (list == null)
-                throw new ArgumentNullException();
+            if (array == null)
+                throw new ArgumentNullException(nameof(array));
 
             if (digit > 9 || digit < 0)
-                throw new ArgumentOutOfRangeException();
-
+                throw new ArgumentOutOfRangeException($"{nameof(digit)} must be from 0 to 9", nameof(digit));
+            
             List<int> resultList = new List<int>();
-
-            foreach(int number in list)
+            foreach(var number in array)
             {
-                if (number.ToString().Contains(digit.ToString()))
+                if (IsContainsDigit(number, digit))
                     resultList.Add(number);
             }
 
-            return resultList;
+            return resultList.ToArray();
         }
 
 
@@ -139,11 +146,16 @@ namespace SpecialFunctions
         /// <returns>Finding root</returns>
         public static double FindNthRoot(double number, int degree, double precision)
         {
-            if (precision < 0)
-                throw new ArgumentOutOfRangeException();
+            if (precision < 0 || precision > 1)
+                throw new ArgumentOutOfRangeException($"{nameof(precision)} must be from 0 to 1", nameof(precision));
+
+            if (degree < 1)
+            {
+                throw new ArgumentOutOfRangeException($"{nameof(degree)} can't be less then 1", nameof(degree));
+            }
 
             if (number < 0 && degree % 2 == 0)
-                throw new ArgumentOutOfRangeException();
+                throw new ArgumentOutOfRangeException($"can't to get even root from negative number", nameof(degree), nameof(number));
 
             double prevResult = number / degree;
             double curResult = prevResult;
@@ -157,6 +169,19 @@ namespace SpecialFunctions
             return curResult;
         }
 
+        #endregion
+
+
+        #region Private Methods
+        private static bool IsContainsDigit(int number, int digit)
+        {
+            while (number != 0)
+            {
+                if (number % 10 == digit) return true;
+                number /= 10;
+            }
+            return false;
+        }
         #endregion
     }
 }
