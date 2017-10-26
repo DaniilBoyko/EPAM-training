@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,26 +10,7 @@ namespace NumberFunctions
 {
     public static class Extensions
     {
-        private static bool CheckDouble(double number, out string binaryString)
-        {
-            binaryString = "";
-
-            if (double.IsNegativeInfinity(1 / number))
-                binaryString = new string('0', 64);
-            if (double.IsPositiveInfinity(1 / number))
-                binaryString = "1" + new string('0', 63);
-            if (double.IsPositiveInfinity(number))
-                binaryString = "0" + new string('1', 11) + new string('0', 52);
-            if (double.IsNegativeInfinity(number))
-                binaryString = new string('1', 12) + new string('0', 52);
-            if (double.IsNaN(number))
-                binaryString = new string('1', 13) + new string('0', 51);
-
-            if (binaryString == "")
-                return false;
-            else
-                return true;
-        }
+        #region Puplic Methods
 
         /// <summary>
         /// Convert dobule number to binary string
@@ -36,10 +19,50 @@ namespace NumberFunctions
         /// <returns>Binary string</returns>
         public static string GetBinaryString(this double number)
         {
-            if (CheckDouble(number, out string binaryString))
-                return binaryString;
+            long longBytes = new DoubleLongUnion { Double = number }.Long;
+            string resultString = "";
 
-            return "";
+            for (int i = 0; i < DoubleBits; i++)
+            {
+                if (longBytes == longBytes >> 1 << 1)
+                    resultString = "0" + resultString;
+                else
+                    resultString = "1" + resultString;
+                longBytes >>= 1;
+            }
+
+            return resultString;
         }
+
+        #endregion
+
+        #region Constants
+
+        private const int DoubleBits = 64;
+
+        #endregion
+
+        #region Private Structs
+
+        [StructLayout(LayoutKind.Explicit)]
+        private struct DoubleLongUnion
+        {
+            [FieldOffset(0)] private long n_long;
+            [FieldOffset(0)] private double n_double;
+
+            public long Long
+            {
+                get => n_long;
+                set => n_long = value;
+            }
+
+            public double Double
+            {
+                get => n_double;
+                set => n_double = value;
+            }
+        }
+
+        #endregion
     }
 }
