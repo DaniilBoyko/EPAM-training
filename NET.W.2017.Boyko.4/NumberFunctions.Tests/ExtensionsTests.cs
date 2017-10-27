@@ -9,7 +9,7 @@ using NUnit.Framework;
 namespace NumberFunctions.Tests
 {
     [TestFixture]
-    class ExtensionsTests
+    public class ExtensionsTests
     {
 
         [TestCase(-255.255, ExpectedResult = "1100000001101111111010000010100011110101110000101000111101011100")]
