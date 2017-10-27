@@ -1,0 +1,6 @@
+E:\EPAM-training\NET.W.2017.Boyko.5\Polinoms\bin\Debug\Polinoms.dll
+E:\EPAM-training\NET.W.2017.Boyko.5\Polinoms\bin\Debug\Polinoms.pdb
+E:\EPAM-training\NET.W.2017.Boyko.5\Polinoms\obj\Debug\Polinoms.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.5\Polinoms\obj\Debug\Polinoms.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.5\Polinoms\obj\Debug\Polinoms.dll
+E:\EPAM-training\NET.W.2017.Boyko.5\Polinoms\obj\Debug\Polinoms.pdb
