@@ -46,18 +46,31 @@ namespace Polynoms
 
         #region Constructors
 
+        /// <summary>
+        /// Create new instance of Polynom
+        /// </summary>
+        /// <param name="letter">the letter of polynom</param>
+        /// <param name="coefficients">the coefficients of polynom</param>
         private Polynom(char letter, params double[] coefficients)
         {
             Letter = letter;
             Coefficients = coefficients;
         }
 
+        /// <summary>
+        /// Create new instance of Polynom
+        /// </summary>
+        /// <param name="coefficients">the coefficients of polynom</param>
         public Polynom(params double[] coefficients) : this('x', coefficients) { }
 
         #endregion
 
         #region Override Methods
 
+        /// <summary>
+        /// Build string representation of polynom.
+        /// </summary>
+        /// <returns>String representation of polynom.</returns>
         public override string ToString()
         {
             if (Coefficients.Length == 1) return Coefficients[0].ToString(CultureInfo.InvariantCulture);
@@ -94,6 +107,11 @@ namespace Polynoms
             return resultStr.ToString();
         }
 
+        /// <summary>
+        /// Compare polynom with other object.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns>If equals - true otherwise - false.</returns>
         public override bool Equals(object obj)
         {
             if (obj == null || GetType() != obj.GetType())
@@ -111,6 +129,10 @@ namespace Polynoms
             return true;
         }
 
+        /// <summary>
+        /// Calculate hash code of polynom.
+        /// </summary>
+        /// <returns>Hash code of polynom.</returns>
         public override int GetHashCode()
         {
             int hashCode = Coefficients[0].GetHashCode();
@@ -132,7 +154,10 @@ namespace Polynoms
                 return false;
             return polynom1.Equals(polynom2);
         }
-
+        
+        /// <summary>
+        /// </summary>
+        /// <returns>Clone of polynom.</returns>
         public object Clone()
         {
             return new Polynom(Letter, Coefficients);
