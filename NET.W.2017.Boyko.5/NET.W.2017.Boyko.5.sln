@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polynoms", "Polinoms\Polyno
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polynoms.Tests", "Polinoms.Tests\Polynoms.Tests.csproj", "{2066E3A2-45F9-4A07-A205-9D7218CFE1E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorts", "Sorts\Sorts.csproj", "{EC51E3BA-33C9-46EF-8705-A18D681D9597}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorts.Tests", "Sorts.Tests\Sorts.Tests.csproj", "{D39A2ED4-0633-4DDF-B5FD-6CEC25D0F348}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{2066E3A2-45F9-4A07-A205-9D7218CFE1E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2066E3A2-45F9-4A07-A205-9D7218CFE1E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2066E3A2-45F9-4A07-A205-9D7218CFE1E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC51E3BA-33C9-46EF-8705-A18D681D9597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC51E3BA-33C9-46EF-8705-A18D681D9597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC51E3BA-33C9-46EF-8705-A18D681D9597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC51E3BA-33C9-46EF-8705-A18D681D9597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D39A2ED4-0633-4DDF-B5FD-6CEC25D0F348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D39A2ED4-0633-4DDF-B5FD-6CEC25D0F348}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D39A2ED4-0633-4DDF-B5FD-6CEC25D0F348}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D39A2ED4-0633-4DDF-B5FD-6CEC25D0F348}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

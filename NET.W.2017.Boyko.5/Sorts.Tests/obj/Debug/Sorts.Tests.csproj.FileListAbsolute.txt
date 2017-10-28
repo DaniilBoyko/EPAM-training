@@ -1,0 +1,10 @@
+E:\EPAM-training\NET.W.2017.Boyko.5\Sorts.Tests\bin\Debug\Sorts.Tests.dll
+E:\EPAM-training\NET.W.2017.Boyko.5\Sorts.Tests\bin\Debug\Sorts.Tests.pdb
+E:\EPAM-training\NET.W.2017.Boyko.5\Sorts.Tests\bin\Debug\nunit.framework.dll
+E:\EPAM-training\NET.W.2017.Boyko.5\Sorts.Tests\bin\Debug\Sorts.dll
+E:\EPAM-training\NET.W.2017.Boyko.5\Sorts.Tests\bin\Debug\Sorts.pdb
+E:\EPAM-training\NET.W.2017.Boyko.5\Sorts.Tests\bin\Debug\nunit.framework.xml
+E:\EPAM-training\NET.W.2017.Boyko.5\Sorts.Tests\obj\Debug\Sorts.Tests.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.5\Sorts.Tests\obj\Debug\Sorts.Tests.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.5\Sorts.Tests\obj\Debug\Sorts.Tests.dll
+E:\EPAM-training\NET.W.2017.Boyko.5\Sorts.Tests\obj\Debug\Sorts.Tests.pdb
