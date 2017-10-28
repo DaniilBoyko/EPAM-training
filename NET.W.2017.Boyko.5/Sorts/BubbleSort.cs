@@ -11,6 +11,11 @@ namespace Sorts
     {
         #region Public Methods
 
+        /// <summary>
+        /// Calculates the sum of array elements.
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns>Sum of array elements.</returns>
         public static double Sum(double[] array)
         {
             CheckArray(array);
@@ -21,6 +26,11 @@ namespace Sorts
             return sum;
         }
 
+        /// <summary>
+        /// Calculates the maximum element in the array.
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns>The maximum element in the array.</returns>
         public static double MaxNumber(double[] array)
         {
             CheckArray(array);
@@ -32,6 +42,11 @@ namespace Sorts
             return max;
         }
 
+        /// <summary>
+        /// Calculates the minimum element in the arrya.
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns>The minimum element in the array.</returns>
         public static double MinNumber(double[] array)
         {
             CheckArray(array);
@@ -43,6 +58,9 @@ namespace Sorts
             return min;
         }
 
+        /// <summary>
+        /// Compare two double numbers for decrease
+        /// </summary>
         public class Decrease : IComparer<double>
         {
             public int Compare(double x, double y)
@@ -53,6 +71,9 @@ namespace Sorts
             }
         }
 
+        /// <summary>
+        /// Compare two double numbers for increase
+        /// </summary>
         public class Increase : IComparer<double>
         {
             public int Compare(double x, double y)
@@ -63,7 +84,13 @@ namespace Sorts
             }
         }
 
-        public static void SortJaggedArray(double[][] array, Func<double[], double> calcRow, IComparer<double> comparable)
+        /// <summary>
+        /// Sort array elements
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="calcRow">Sign for each line. It is function.</param>
+        /// <param name="comparer">Comparer for values, which calcRow function return</param>
+        public static void SortJaggedArray(double[][] array, Func<double[], double> calcRow, IComparer<double> comparer)
         {
             CheckArray(array);
 
@@ -75,7 +102,7 @@ namespace Sorts
             {
                 for (int j = array.Length - 1; j > i; j--)
                 {
-                    if (comparable.Compare(rowsElements[j - 1], rowsElements[j]) == -1)
+                    if (comparer.Compare(rowsElements[j - 1], rowsElements[j]) == -1)
                     {
                         Swap(ref rowsElements[j - 1], ref rowsElements[j]);
                         Swap(ref array[j - 1], ref array[j]);
