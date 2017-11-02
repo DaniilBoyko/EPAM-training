@@ -10,7 +10,6 @@ namespace Sorts.Tests
     [TestFixture]
     public class BubbleSortTests
     {
-
         public static object[] CaseSourceTestDataIncreaseByMax =
         {
             new object[] 

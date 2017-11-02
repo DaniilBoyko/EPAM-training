@@ -8,3 +8,4 @@ E:\EPAM-training\NET.W.2017.Boyko.5\Polinoms.Tests\bin\Debug\nunit.framework.dll
 E:\EPAM-training\NET.W.2017.Boyko.5\Polinoms.Tests\bin\Debug\Polinoms.dll
 E:\EPAM-training\NET.W.2017.Boyko.5\Polinoms.Tests\bin\Debug\Polinoms.pdb
 E:\EPAM-training\NET.W.2017.Boyko.5\Polinoms.Tests\bin\Debug\nunit.framework.xml
+E:\EPAM-training\NET.W.2017.Boyko.5\Polinoms.Tests\bin\Debug\Polinoms.dll.config
