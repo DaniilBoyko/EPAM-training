@@ -146,28 +146,28 @@ namespace Sorts.Tests
         [Test, TestCaseSource(nameof(CaseSourceTestDataIncreaseByMax))]
         public void SortJaggedArrayMethod_SortByIncreaseMaxElements(double[][] array, double[][] resultArray)
         {
-            BubbleSort.SortJaggedArray(array, BubbleSort.MaxNumber, new BubbleSort.Increase());
+            BubbleSort.SortJaggedArray(array, new BubbleSort.MaxNumber(), new BubbleSort.Increase());
             Assert.That(array, Is.EqualTo(resultArray));
         }
 
         [Test, TestCaseSource(nameof(CaseSourceTestDataDecreaseByMax))]
         public void SortJaggedArrayMethod_SortByDecreaseMaxElements(double[][] array, double[][] resultArray)
         {
-            BubbleSort.SortJaggedArray(array, BubbleSort.MaxNumber, new BubbleSort.Decrease());
+            BubbleSort.SortJaggedArray(array, new BubbleSort.MaxNumber(), new BubbleSort.Decrease());
             Assert.That(array, Is.EqualTo(resultArray));
         }
 
         [Test, TestCaseSource(nameof(CaseSourceTestDataDecreaseByMin))]
         public void SortJaggedArrayMethod_SortByDecreaseMinElements(double[][] array, double[][] resultArray)
         {
-            BubbleSort.SortJaggedArray(array, BubbleSort.MinNumber, new BubbleSort.Decrease());
+            BubbleSort.SortJaggedArray(array, new BubbleSort.MinNumber(), new BubbleSort.Decrease());
             Assert.That(array, Is.EqualTo(resultArray));
         }
 
         [Test, TestCaseSource(nameof(CaseSourceTestDataIncreaseBySum))]
         public void SortJaggedArrayMethod_SortByIncreaseSumElements(double[][] array, double[][] resultArray)
         {
-            BubbleSort.SortJaggedArray(array, BubbleSort.Sum, new BubbleSort.Increase());
+            BubbleSort.SortJaggedArray(array, new BubbleSort.Sum(), new BubbleSort.Increase());
             Assert.That(array, Is.EqualTo(resultArray));
         }
     }

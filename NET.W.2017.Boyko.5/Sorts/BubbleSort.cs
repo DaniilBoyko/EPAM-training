@@ -9,54 +9,10 @@ namespace Sorts
 {
     public class BubbleSort
     {
-        #region Public Methods
 
-        /// <summary>
-        /// Calculates the sum of array elements.
-        /// </summary>
-        /// <param name="array"></param>
-        /// <returns>Sum of array elements.</returns>
-        public static double Sum(double[] array)
-        {
-            CheckArray(array);
+        #region Public
 
-            double sum = 0;
-            foreach (var number in array)
-                sum += number;
-            return sum;
-        }
-
-        /// <summary>
-        /// Calculates the maximum element in the array.
-        /// </summary>
-        /// <param name="array"></param>
-        /// <returns>The maximum element in the array.</returns>
-        public static double MaxNumber(double[] array)
-        {
-            CheckArray(array);
-
-            double max = array[0];
-            foreach (var number in array)
-                if (max < number)
-                    max = number;
-            return max;
-        }
-
-        /// <summary>
-        /// Calculates the minimum element in the arrya.
-        /// </summary>
-        /// <param name="array"></param>
-        /// <returns>The minimum element in the array.</returns>
-        public static double MinNumber(double[] array)
-        {
-            CheckArray(array);
-
-            double min = array[0];
-            foreach (var number in array)
-                if (min > number)
-                    min = number;
-            return min;
-        }
+        #region public Inner Classes
 
         /// <summary>
         /// Compare two double numbers for decrease
@@ -85,18 +41,72 @@ namespace Sorts
         }
 
         /// <summary>
+        /// Contains method for calculation sum of array elements.
+        /// </summary>
+        public class Sum : Interfaces.ICalculateArray
+        {
+            public double CalculateArray(double[] array)
+            {
+                CheckArray(array);
+
+                double sum = 0;
+                foreach (var number in array)
+                    sum += number;
+                return sum;
+            }
+        }
+
+        /// <summary>
+        /// Contains method for calculation max number of array elements.
+        /// </summary>
+        public class MaxNumber : Interfaces.ICalculateArray
+        {
+            public double CalculateArray(double[] array)
+            {
+                CheckArray(array);
+
+                double max = array[0];
+                foreach (var number in array)
+                    if (max < number)
+                        max = number;
+                return max;
+            }
+        }
+
+        /// <summary>
+        /// Contains method for calculation min number of array elements.
+        /// </summary>
+        public class MinNumber : Interfaces.ICalculateArray
+        {
+            public double CalculateArray(double[] array)
+            {
+                CheckArray(array);
+
+                double min = array[0];
+                foreach (var number in array)
+                    if (min > number)
+                        min = number;
+                return min;
+            }
+        }
+
+        #endregion public Inner Classes
+
+        #region public Methods
+
+        /// <summary>
         /// Sort array elements
         /// </summary>
         /// <param name="array"></param>
-        /// <param name="calcRow">Sign for each line. It is function.</param>
+        /// <param name="calcArray">Sign for each line. It is function.</param>
         /// <param name="comparer">Comparer for values, which calcRow function return</param>
-        public static void SortJaggedArray(double[][] array, Func<double[], double> calcRow, IComparer<double> comparer)
+        public static void SortJaggedArray(double[][] array, Interfaces.ICalculateArray calcArray, IComparer<double> comparer)
         {
             CheckArray(array);
 
             double[] rowsElements = new double[array.Length];
             for (int i = 0; i < array.Length; i++)
-                rowsElements[i] = calcRow(array[i]);
+                rowsElements[i] = calcArray.CalculateArray(array[i]);
 
             for (int i = 0; i < array.Length; i++)
             {
@@ -111,11 +121,20 @@ namespace Sorts
             }
         }
 
-        #endregion
+        #endregion public Methods
 
-        #region Private Methods
+        #endregion Public
 
-        private static bool CheckArray(Array array)
+
+        #region Private
+
+        #region private Methods
+
+        /// <summary>
+        /// Check arrya for null and empty.
+        /// </summary>
+        /// <param name="array"></param>
+        private static void CheckArray(Array array)
         {
             if (array == null)
                 throw new ArgumentNullException(nameof(array));
@@ -123,9 +142,15 @@ namespace Sorts
             if (array.Length == 0)
                 throw new ArgumentException($"{nameof(array)} should contains 1 or more elements", nameof(array));
 
-            return true;
+            return;
         }
 
+        /// <summary>
+        /// Swap two values.
+        /// </summary>
+        /// <typeparam name="T">template of type</typeparam>
+        /// <param name="a">first value</param>
+        /// <param name="b">second value</param>
         private static void Swap<T>(ref T a, ref T b)
         {
             T c = a;
@@ -133,6 +158,9 @@ namespace Sorts
             b = c;
         }
 
-        #endregion  
+        #endregion  private Methods
+
+        #endregion Private
+
     }
 }
