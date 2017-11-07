@@ -1,0 +1,6 @@
+E:\EPAM-training\NET.W.2017.Boyko.8\Bank\bin\Debug\Bank.dll
+E:\EPAM-training\NET.W.2017.Boyko.8\Bank\bin\Debug\Bank.pdb
+E:\EPAM-training\NET.W.2017.Boyko.8\Bank\obj\Debug\Bank.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.8\Bank\obj\Debug\Bank.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.8\Bank\obj\Debug\Bank.dll
+E:\EPAM-training\NET.W.2017.Boyko.8\Bank\obj\Debug\Bank.pdb

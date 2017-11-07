@@ -32,11 +32,11 @@ namespace Library.Tests.ConsoleApp
                     Console.WriteLine(book);
 
                 Console.WriteLine("-----FIND BOOK:\n");
-                Book bk = bookListService.FindBookByTag(Book.Tags.CountPages, 891);
+                Book bk = bookListService.FindBookByTag(Book.Tag.CountPages, 891);
                 Console.WriteLine(bk);
 
                 Console.WriteLine("-----SORT BOOKS BY COUNT PAGES:\n");
-                bookListService.SortDescendingByTag(Book.Tags.CountPages);
+                bookListService.SortDescendingByTag(Book.Tag.CountPages);
                 foreach (Book book in bookListService)
                     Console.WriteLine(book);
 

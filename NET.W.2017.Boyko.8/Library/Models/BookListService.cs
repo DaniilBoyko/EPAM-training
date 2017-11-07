@@ -231,7 +231,7 @@ namespace Library.Models.Services
         /// <param name="tag">tag for search</param>
         /// <param name="value">the value of tag</param>
         /// <returns>Finding book or null.</returns>
-        public Book FindBookByTag(Book.Tags tag, object value)
+        public Book FindBookByTag(Book.Tag tag, object value)
         {
             return FindBookByTag(tag.ToString(), value);
         }
@@ -249,7 +249,7 @@ namespace Library.Models.Services
         /// Sort in ascending order list of books by tag.
         /// </summary>
         /// <param name="tag">tag for sorting</param>
-        public void SortAscendingByTag(Book.Tags tag)
+        public void SortAscendingByTag(Book.Tag tag)
         {
             SortAscendingByTag(tag.ToString());
         }
@@ -258,7 +258,7 @@ namespace Library.Models.Services
         /// Sort in descending order list of books by tag.
         /// </summary>
         /// <param name="tag">tag for sorting</param>
-        public void SortDescendingByTag(Book.Tags tag)
+        public void SortDescendingByTag(Book.Tag tag)
         {
             SortAscendingByTag(tag);
             Books.Reverse();

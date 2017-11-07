@@ -20,7 +20,7 @@ namespace Library.Models
         public int CountPages { get; set; }
         public double Price { get; set; }
 
-        public enum Tags { Isbn, Author, Title, Publisher, PublicationYear, CountPages, Price}
+        public enum Tag { Isbn, Author, Title, Publisher, PublicationYear, CountPages, Price}
 
         #endregion public Properties
 
