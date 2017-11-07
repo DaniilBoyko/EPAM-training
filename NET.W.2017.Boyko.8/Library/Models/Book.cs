@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Library.Models
 {
-    [Serializable]
     public class Book : IComparable, IEquatable<Book>, ICloneable
     {
         #region Public
