@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bank.Models.Accounts
 {
+    [Serializable]
     class GoldAccount : Account
     {
         #region Public

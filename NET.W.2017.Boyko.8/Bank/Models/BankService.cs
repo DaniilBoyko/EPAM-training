@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Bank.Models.Interfaces;
 using Bank.Models.Exceptions;
+using Bank.Models.Accounts;
 
 namespace Bank.Models
 {
-    class BankService
+    public class BankService
     {
         #region Public 
 
@@ -22,6 +23,7 @@ namespace Bank.Models
         {
             if (fileWorker == null)
                 throw new ArgumentNullException(nameof(fileWorker));
+            Accounts = new List<Account>();
             FileWorker = fileWorker;
         }
 
@@ -95,7 +97,7 @@ namespace Bank.Models
         public void CloseCurrentAccount()
         {
             if (CurrentAccount.Amount > 0)
-                throw new AccountHasMoneyException("Current account not selected. Please, select current account.");
+                throw new AccountHasMoneyException("Current account has money. Please withdraw money.");
             Accounts.Remove(CurrentAccount);
             CurrentAccount = null;
         }

@@ -1,0 +1,9 @@
+E:\EPAM-training\NET.W.2017.Boyko.8\Bank.Tests.ConsoleApp\obj\Debug\Bank.Tests.ConsoleApp.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.8\Bank.Tests.ConsoleApp\obj\Debug\Bank.Tests.ConsoleApp.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.8\Bank.Tests.ConsoleApp\bin\Debug\Bank.Tests.ConsoleApp.exe.config
+E:\EPAM-training\NET.W.2017.Boyko.8\Bank.Tests.ConsoleApp\bin\Debug\Bank.Tests.ConsoleApp.exe
+E:\EPAM-training\NET.W.2017.Boyko.8\Bank.Tests.ConsoleApp\bin\Debug\Bank.Tests.ConsoleApp.pdb
+E:\EPAM-training\NET.W.2017.Boyko.8\Bank.Tests.ConsoleApp\bin\Debug\Bank.dll
+E:\EPAM-training\NET.W.2017.Boyko.8\Bank.Tests.ConsoleApp\bin\Debug\Bank.pdb
+E:\EPAM-training\NET.W.2017.Boyko.8\Bank.Tests.ConsoleApp\obj\Debug\Bank.Tests.ConsoleApp.exe
+E:\EPAM-training\NET.W.2017.Boyko.8\Bank.Tests.ConsoleApp\obj\Debug\Bank.Tests.ConsoleApp.pdb

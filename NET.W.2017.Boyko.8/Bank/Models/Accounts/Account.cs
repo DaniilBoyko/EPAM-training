@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Bank.Models.Exceptions;
 
-namespace Bank.Models
+namespace Bank.Models.Accounts
 {
+    [Serializable]
     public abstract class Account
     {
         #region Public
@@ -96,7 +97,6 @@ namespace Bank.Models
             stringBuilder.AppendFormat("Name of owner: {0}\n", Name);
             stringBuilder.AppendFormat("Surname of owner: {0}\n", Surname);
             stringBuilder.AppendFormat("Amount: {0}\n", Amount);
-            stringBuilder.AppendFormat("Points: {0}\n", Points);
             stringBuilder.AppendFormat("Points: {0}\n", Points);
             stringBuilder.AppendFormat("Account type: {0}\n", GetAccountType());
             stringBuilder.AppendFormat("Account ID: {0}\n", Id);
