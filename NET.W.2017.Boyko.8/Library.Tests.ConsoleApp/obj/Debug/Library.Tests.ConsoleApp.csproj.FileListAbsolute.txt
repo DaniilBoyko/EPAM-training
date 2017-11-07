@@ -1,0 +1,9 @@
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests.ConsoleApp\bin\Debug\Library.Tests.ConsoleApp.exe.config
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests.ConsoleApp\bin\Debug\Library.Tests.ConsoleApp.exe
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests.ConsoleApp\bin\Debug\Library.Tests.ConsoleApp.pdb
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests.ConsoleApp\bin\Debug\Library.dll
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests.ConsoleApp\bin\Debug\Library.pdb
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests.ConsoleApp\obj\Debug\Library.Tests.ConsoleApp.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests.ConsoleApp\obj\Debug\Library.Tests.ConsoleApp.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests.ConsoleApp\obj\Debug\Library.Tests.ConsoleApp.exe
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests.ConsoleApp\obj\Debug\Library.Tests.ConsoleApp.pdb
