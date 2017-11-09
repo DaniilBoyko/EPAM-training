@@ -1,35 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Bank;
-
-/*
- * - Можно добавить интерфейс IBookListService
- * - Поменять FileWorker на IBookStorage
- * - В IBookStorage не привязывать к List<Book>
- * - 
- * - Найти по тегу - требуется интерфейс IFinder например - это стратегия
- * 
- */
-
+﻿//// <copyright file="Program.cs" company="RelCode">Boyko Daniil</copyright>
 namespace Bank.Tests.ConsoleApp
 {
-    class Program
+    /*
+     * - Можно добавить интерфейс IBookListService
+     * - Поменять FileWorker на IBookStorage
+     * - В IBookStorage не привязывать к List<Book>
+     * - 
+     * - Найти по тегу - требуется интерфейс IFinder например - это стратегия
+     * 
+     */
+
+    using System;
+
+    /// <summary>
+    /// Show abilities of the Bank.
+    /// </summary>
+    public class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// Startup point of the program
+        /// </summary>
+        /// <param name="args">array of arguments</param>
+        public static void Main(string[] args)
         {
             try
             {
                 string path = AppDomain.CurrentDomain.BaseDirectory + "BankAccountsStorage.txt";
                 Models.BankStorage fileWorker = new Models.BankStorage();
                 Models.BankService bankService = new Models.BankService(fileWorker);
-                //bankService.CreateNewAccount(Models.AccountCreator.AccountType.Gold, "Pit", "Marlow", 231.3);
-                //bankService.CreateNewAccount(Models.AccountCreator.AccountType.Gold, "Kate", "Marlow", 2321);
-                //bankService.ShowCurrentAccountInfo();
+                ////bankService.CreateNewAccount(Models.AccountCreator.AccountType.Gold, "Pit", "Marlow", 231.3);
+                ////bankService.CreateNewAccount(Models.AccountCreator.AccountType.Gold, "Kate", "Marlow", 2321);
+                ////bankService.ShowCurrentAccountInfo();
                 bankService.LoadAccountsFromFile(path);
-
 
                 Console.WriteLine("CREATE NEW ACCOUNT:\n");
                 bankService.CreateNewAccount(Models.AccountCreator.AccountType.Base, "Daniil", "Boyko");
@@ -59,7 +61,6 @@ namespace Bank.Tests.ConsoleApp
                 bankService.DepositToCurrentAccount(100);
                 bankService.WithdrawFromCurrentAccount(1000);
                 bankService.ShowCurrentAccountInfo();
-
             }
             catch (Exception e)
             {

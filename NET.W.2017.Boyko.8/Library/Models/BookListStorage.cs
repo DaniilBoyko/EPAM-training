@@ -1,19 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Library.Models.Interfaces;
-
-/*
+﻿//// <copyright file="BookListStorage.cs" company="RelCode">Boyko Daniil</copyright>
+namespace Library.Models
+{
+    /*
  * 
  * 
  * - Data transfer object - объект 
  * 
  */
-namespace Library.Models
-{
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using Interfaces;
+
+    /// <summary>
+    /// This class implements interface IBookStorage for save and load books.
+    /// </summary>
     public class BookListStorage : IBookStorage
     {
         #region Public
@@ -48,14 +49,16 @@ namespace Library.Models
         }
 
         /// <summary>
-        /// Writle list of books to file.
+        /// Write list of books to file.
         /// </summary>
         /// <param name="books">list of books</param>
         /// <param name="path">path to file</param>
         public void WriteBooks(IEnumerable<Book> books, string path)
         {
             if (books == null)
+            {
                 throw new ArgumentNullException(nameof(books));
+            }
 
             using (BinaryWriter binWriter = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate)))
             {

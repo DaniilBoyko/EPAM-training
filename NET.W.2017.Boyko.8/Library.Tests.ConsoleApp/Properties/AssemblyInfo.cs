@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿//// <copyright file="AssemblyInfo.cs" company="RelCode">Boyko Daniil</copyright>
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 

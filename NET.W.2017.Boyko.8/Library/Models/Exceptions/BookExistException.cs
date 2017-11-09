@@ -1,13 +1,19 @@
-﻿using System;
-
+﻿//// <copyright file="BookExistException.cs" company="RelCode">Boyko Daniil</copyright>
 namespace Library.Models.Exceptions
 {
-    class BookExistException : Exception
+    using System;
+
+    /// <summary>
+    /// Exception for book list service when book not exist.
+    /// </summary>
+    public class BookExistException : Exception
     {
         /// <summary>
-        /// Create new instance of BookExistException.
+        /// Initializes a new instance of the <see cref="BookExistException"/> class.
         /// </summary>
         /// <param name="message">message of exception</param>
-        public BookExistException(string message) : base(message) { }
+        public BookExistException(string message) : base(message)
+        {
+        }
     }
 }

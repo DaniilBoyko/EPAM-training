@@ -195,135 +195,157 @@ namespace Library.Models
         }
 
         /// <summary>
-        /// Contains publication year of the book.
+        /// Gets or sets publication year of the book.
         /// </summary>
         /// <exception cref="ArgumentException">If passing year less then BOTTOM_YEAR_BORDER or more the current year</exception>
         public int PublicationYear
         {
-            get => publicationYear;
+            get => this.publicationYear;
             set
             {
                 if (value < BottomYearBorder || value > DateTime.Now.Year)
-                    throw new ArgumentException($"{nameof(PublicationYear)} can't be less then {BottomYearBorder} and more then current year", nameof(PublicationYear));
-                publicationYear = value;
+                {
+                    throw new ArgumentException(
+                        $"{nameof(this.PublicationYear)} can't be less then {BottomYearBorder} and more then current year",
+                        nameof(this.PublicationYear));
+                }
+
+                this.publicationYear = value;
             }
         }
 
         /// <summary>
-        /// Contains count pages in the book.
+        /// Gets or sets count pages in the book.
         /// </summary>
         /// <exception cref="ArgumentException">If passing count pages less then BOTTOM_PAGES_BORDER or more then TOP_PAGES_BORDER</exception>
         public int CountPages
         {
-            get => countPages;
+            get => this.countPages;
             set
             {
                 if (value <= BottomPagesBorder || value >= TopPagesBorder)
-                    throw new ArgumentException($"{nameof(CountPages)} can't be less then {BottomPagesBorder} and more the {TopPagesBorder}", nameof(CountPages));
-                countPages = value;
+                {
+                    throw new ArgumentException(
+                        $"{nameof(this.CountPages)} can't be less then {BottomPagesBorder} and more the {TopPagesBorder}",
+                        nameof(this.CountPages));
+                }
+
+                this.countPages = value;
             }
         }
 
         /// <summary>
-        /// Contains price of the book.
+        /// Gets or sets price of the book.
         /// </summary>
         /// <exception cref="ArgumentException">If passing price less then zero.</exception>
         public double Price
         {
-            get => price;
+            get => this.price;
             set
             {
                 if (value < 0)
-                    throw new ArgumentException($"{nameof(Price)} can't be less then zero", nameof(Price));
-                price = value;
+                {
+                    throw new ArgumentException($"{nameof(this.Price)} can't be less then zero", nameof(this.Price));
+                }
+
+                this.price = value;
             }
         }
-
-
-        
-
+   
         #endregion // !public Properties
         
-
         #region public Constructors
 
         /// <summary>
-        /// Create the instance of Book.
+        /// Initializes a new instance of the <see cref="Book"/> class.
         /// </summary>
         /// <param name="isbn">International Standard Book Number</param>
-        /// <param name="author">aouthor of the book</param>
+        /// <param name="author">author of the book</param>
         /// <param name="title">title of the book</param>
         /// <param name="publisher">publisher of the book</param>
         /// <param name="publicationYear">publication year of the book</param>
-        /// <param name="countPages">count pagse of the book</param>
+        /// <param name="countPages">count pages of the book</param>
         /// <param name="price">price of the book</param>
-        public Book(string isbn, string author, string title, string publisher, int publicationYear, int countPages,
-            double price)
+        public Book(string isbn, string author, string title, string publisher, int publicationYear, int countPages, double price)
         {
-            Isbn = isbn;
-            Author = author;
-            Title = title;
-            Publisher = publisher;
-            PublicationYear = publicationYear;
-            CountPages = countPages;
-            Price = price;
+            this.Isbn = isbn;
+            this.Author = author;
+            this.Title = title;
+            this.Publisher = publisher;
+            this.PublicationYear = publicationYear;
+            this.CountPages = countPages;
+            this.Price = price;
         }
 
         /// <summary>
-        /// Create the instance of Book.
+        /// Initializes a new instance of the <see cref="Book"/> class.
         /// </summary>
         /// <param name="isbn">International Standard Book Number</param>
-        /// <param name="author">aouthor of the book</param>
+        /// <param name="author">author of the book</param>
         /// <param name="title">title of the book</param>
-        public Book(string isbn, string author, string title) : this(isbn, author, title, "", 0, 0, 0) { }
+        public Book(string isbn, string author, string title) : this(isbn, author, title, string.Empty, 0, 0, 0)
+        {
+        }
 
         /// <summary>
-        /// Create the instance of Book.
+        /// Initializes a new instance of the <see cref="Book"/> class.
         /// </summary>
         /// <param name="isbn">International Standard Book Number</param>
-        /// <param name="author">aouthor of the book</param>
+        /// <param name="author">author of the book</param>
         /// <param name="title">title of the book</param>
         /// <param name="publisher">publisher of the book</param>
-        public Book(string isbn, string author, string title, string publisher) : this(isbn, author, title, publisher, 0, 0, 0) { }
+        public Book(string isbn, string author, string title, string publisher) : this(isbn, author, title, publisher, 0, 0, 0)
+        {
+        }
 
         /// <summary>
-        /// Create the instance of Book.
+        /// Initializes a new instance of the <see cref="Book"/> class.
         /// </summary>
         /// <param name="isbn">International Standard Book Number</param>
-        /// <param name="author">aouthor of the book</param>
+        /// <param name="author">author of the book</param>
         /// <param name="title">title of the book</param>
         /// <param name="publisher">publisher of the book</param>
         /// <param name="publicationYear">publication year of the book</param>
         public Book(string isbn, string author, string title, string publisher, int publicationYear) :
-            this(isbn, author, title, publisher, publicationYear, 0, 0) { }
+            this(isbn, author, title, publisher, publicationYear, 0, 0)
+        {
+        }
 
         /// <summary>
-        /// Create the instance of Book.
+        /// Initializes a new instance of the <see cref="Book"/> class.
         /// </summary>
         /// <param name="isbn">International Standard Book Number</param>
-        /// <param name="author">aouthor of the book</param>
+        /// <param name="author">author of the book</param>
         /// <param name="title">title of the book</param>
         /// <param name="publisher">publisher of the book</param>
         /// <param name="publicationYear">publication year of the book</param>
-        /// <param name="countPages">count pagse of the book</param>
+        /// <param name="countPages">count pages of the book</param>
         public Book(string isbn, string author, string title, string publisher, int publicationYear, int countPages) :
-            this(isbn, author, title, publisher, publicationYear, countPages, 0) { }
+            this(isbn, author, title, publisher, publicationYear, countPages, 0)
+        {
+        }
 
         #endregion // !public Constructors
-
 
         #region public Methods
 
         /// <summary>
         /// Compare two books by tag.
         /// </summary>
-        /// <param name="book"></param>
+        /// <param name="book">book for compare</param>
         /// <param name="tagString">tag for compare</param>
         /// <returns>If greater - 1, if equal - 0, otherwise - (-1)</returns>
         public int CompareToByTag(Book book, string tagString)
         {
-            if (ReferenceEquals(book, null)) return 1;
-            if (ReferenceEquals(this, book)) return 0;
+            if (ReferenceEquals(book, null))
+            {
+                return 1;
+            }
+
+            if (ReferenceEquals(this, book))
+            {
+                return 0;
+            }
 
             Tag tag;
             try
@@ -337,13 +359,13 @@ namespace Library.Models
 
             switch (tag)
             {
-                case Tag.Isbn: return String.Compare(Isbn, book.Isbn, StringComparison.Ordinal);
-                case Tag.Author: return String.Compare(Author, book.Author, StringComparison.Ordinal);
-                case Tag.Title: return String.Compare(Title, book.Title, StringComparison.Ordinal);
-                case Tag.Publisher: return String.Compare(Publisher, book.Publisher, StringComparison.Ordinal);
-                case Tag.PublicationYear: return PublicationYear.CompareTo(book.PublicationYear);
-                case Tag.CountPages: return CountPages.CompareTo(book.CountPages);
-                case Tag.Price: return Price.CompareTo(book.Price);
+                case Tag.Isbn: return string.Compare(this.Isbn, book.Isbn, StringComparison.Ordinal);
+                case Tag.Author: return string.Compare(this.Author, book.Author, StringComparison.Ordinal);
+                case Tag.Title: return string.Compare(this.Title, book.Title, StringComparison.Ordinal);
+                case Tag.Publisher: return string.Compare(this.Publisher, book.Publisher, StringComparison.Ordinal);
+                case Tag.PublicationYear: return this.PublicationYear.CompareTo(book.PublicationYear);
+                case Tag.CountPages: return this.CountPages.CompareTo(book.CountPages);
+                case Tag.Price: return this.Price.CompareTo(book.Price);
                 default: throw new ArgumentException("Incompetable tag", nameof(tag));
             }
         }
@@ -351,21 +373,35 @@ namespace Library.Models
         /// <summary>
         /// Compare two books.
         /// </summary>
-        /// <param name="book"></param>
+        /// <param name="book">book for equal</param>
         /// <returns>If books equal - true, otherwise - false.</returns>
         public bool Equals(Book book)
         {
-            if (ReferenceEquals(book, null)) return false;
-            if (ReferenceEquals(this, book)) return true;
-            if (GetType() != book.GetType()) return false;
+            if (ReferenceEquals(book, null))
+            {
+                return false;
+            }
 
-            if (Isbn.Equals(book.Isbn) &&
-                Author.Equals(book.Author) &&
-                Title.Equals(book.Title) &&
-                Publisher.Equals(book.Publisher) &&
-                PublicationYear.Equals(book.PublicationYear) &&
-                CountPages.Equals(book.CountPages) &&
-                Price.Equals(book.Price)) return true;
+            if (ReferenceEquals(this, book))
+            {
+                return true;
+            }
+
+            if (GetType() != book.GetType())
+            {
+                return false;
+            }
+
+            if (this.Isbn.Equals(book.Isbn) &&
+                this.Author.Equals(book.Author) &&
+                this.Title.Equals(book.Title) &&
+                this.Publisher.Equals(book.Publisher) &&
+                this.PublicationYear.Equals(book.PublicationYear) &&
+                this.CountPages.Equals(book.CountPages) &&
+                this.Price.Equals(book.Price))
+            {
+                return true;
+            }
 
             return false;
         }
@@ -376,23 +412,28 @@ namespace Library.Models
         /// <returns>Clone of Book.</returns>
         public Book Clone()
         {
-            return new Book(Isbn, Author, Title, Publisher, PublicationYear, CountPages, Price);
+            return new Book(this.Isbn, this.Author, this.Title, this.Publisher, this.PublicationYear, this.CountPages, this.Price);
         }
 
         /// <summary>
         /// Compare two books.
         /// </summary>
-        /// <param name="book"></param>
+        /// <param name="book">book for compare</param>
         /// <returns>If book title more - (1), if book title less - (-1), else 0.</returns>
         public int CompareTo(Book book)
         {
-            if (ReferenceEquals(book, null)) return -1;
-            if (ReferenceEquals(this, book)) return 0;
+            if (ReferenceEquals(book, null))
+            {
+                return -1;
+            }
 
-            return String.Compare(Title, book.Title, StringComparison.Ordinal);
+            if (ReferenceEquals(this, book))
+            {
+                return 0;
+            }
+
+            return string.Compare(this.Title, book.Title, StringComparison.Ordinal);
         }
-
-
 
         #region public Interface Methods
 
@@ -403,12 +444,23 @@ namespace Library.Models
         /// <returns>If book title more - (1), if book title less - (-1), else 0.</returns>
         public int CompareTo(object obj)
         {
-            if (ReferenceEquals(obj, null)) return -1;
-            if (ReferenceEquals(this, obj)) return 0;
-            if (GetType() != obj.GetType()) return -1;
+            if (ReferenceEquals(obj, null))
+            {
+                return -1;
+            }
+
+            if (ReferenceEquals(this, obj))
+            {
+                return 0;
+            }
+
+            if (GetType() != obj.GetType())
+            {
+                return -1;
+            }
 
             Book book = (Book)obj;
-            return CompareTo(book);
+            return this.CompareTo(book);
         }
 
         /// <summary>
@@ -417,11 +469,10 @@ namespace Library.Models
         /// <returns>Clone of Book.</returns>
         object ICloneable.Clone()
         {
-            return new Book(Isbn, Author, Title, Publisher, PublicationYear, CountPages, Price);
+            return new Book(this.Isbn, this.Author, this.Title, this.Publisher, this.PublicationYear, this.CountPages, this.Price);
         }
 
         #endregion // !public Interface Methods
-
 
         #region public Override Methods
 
@@ -433,13 +484,13 @@ namespace Library.Models
         {
             StringBuilder stringBuilder = new StringBuilder();
 
-            stringBuilder.AppendFormat("ISBN: {0}\n", Isbn);
-            stringBuilder.AppendFormat("Author: {0}\n", Author);
-            stringBuilder.AppendFormat("Title: {0}\n", Title);
-            stringBuilder.AppendFormat("Publisher: {0}\n", Publisher);
-            stringBuilder.AppendFormat("Publication year: {0}\n", PublicationYear);
-            stringBuilder.AppendFormat("Count pages: {0}\n", CountPages);
-            stringBuilder.AppendFormat("Price: {0}\n", Price);
+            stringBuilder.AppendFormat("ISBN: {0}\n", this.Isbn);
+            stringBuilder.AppendFormat("Author: {0}\n", this.Author);
+            stringBuilder.AppendFormat("Title: {0}\n", this.Title);
+            stringBuilder.AppendFormat("Publisher: {0}\n", this.Publisher);
+            stringBuilder.AppendFormat("Publication year: {0}\n", this.PublicationYear);
+            stringBuilder.AppendFormat("Count pages: {0}\n", this.CountPages);
+            stringBuilder.AppendFormat("Price: {0}\n", this.Price);
 
             return stringBuilder.ToString();
         }
@@ -447,15 +498,26 @@ namespace Library.Models
         /// <summary>
         /// Compare book and object.
         /// </summary>
-        /// <param name="obj"></param>
+        /// <param name="obj">object for equals</param>
         /// <returns>If equal - true, otherwise - false.</returns>
         public override bool Equals(object obj)
         {
-            if (ReferenceEquals(obj, null)) return false;
-            if (ReferenceEquals(this, obj)) return true;
-            if (GetType() != obj.GetType()) return false;
+            if (ReferenceEquals(obj, null))
+            {
+                return false;
+            }
 
-            return Equals((Book)obj);
+            if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+
+            if (GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            return this.Equals((Book)obj);
         }
 
         /// <summary>
@@ -464,13 +526,13 @@ namespace Library.Models
         /// <returns>Hash code of the book.</returns>
         public override int GetHashCode()
         {
-            int hashCode = Isbn.GetHashCode();
-            hashCode ^= Author.GetHashCode();
-            hashCode ^= Title.GetHashCode();
-            hashCode ^= Publisher.GetHashCode();
-            hashCode ^= PublicationYear.GetHashCode();
-            hashCode ^= CountPages.GetHashCode();
-            hashCode ^= Price.GetHashCode();
+            int hashCode = this.Isbn.GetHashCode();
+            hashCode ^= this.Author.GetHashCode();
+            hashCode ^= this.Title.GetHashCode();
+            hashCode ^= this.Publisher.GetHashCode();
+            hashCode ^= this.PublicationYear.GetHashCode();
+            hashCode ^= this.CountPages.GetHashCode();
+            hashCode ^= this.Price.GetHashCode();
             return hashCode;
         }
 
