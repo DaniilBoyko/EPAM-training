@@ -1,35 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bank.Models.Accounts
+﻿namespace Bank.Models.Accounts
 {
+    using System;
+
+    /// <summary>
+    /// Account with base privileges.
+    /// </summary>
     [Serializable]
-    class BaseAccount : Account
+    public class BaseAccount : Account
     {
         #region Public
 
         #region public Constructors
 
         /// <summary>
-        /// Create an instance of BaseAccount.
+        /// Initializes a new instance of the <see cref="BaseAccount"/> class.
         /// </summary>
         /// <param name="name">name of the owner</param>
         /// <param name="surname">surname of the owner</param>
-        public BaseAccount(string name, string surname) : base(name, surname) { }
+        public BaseAccount(string name, string surname) : base(name, surname)
+        {
+        }
 
         /// <summary>
-        /// Create an instance of BaseAccount.
+        /// Initializes a new instance of the <see cref="BaseAccount"/> class.
         /// </summary>
         /// <param name="name">name of the owner</param>
         /// <param name="surname">surname of the owner</param>
         /// <param name="amount">start money on the account</param>
-        public BaseAccount(string name, string surname, double amount) : base(name, surname, amount) { }
+        public BaseAccount(string name, string surname, double amount) : base(name, surname, amount)
+        {
+        }
 
         #endregion
-
 
         #region public Methods
 
@@ -55,7 +57,7 @@ namespace Bank.Models.Accounts
         /// <returns>Calculating points.</returns>
         protected override int AddPoints(double amount)
         {
-            return (int) (amount / 10);
+            return (int)(amount / 10);
         }
 
         /// <summary>
@@ -65,7 +67,7 @@ namespace Bank.Models.Accounts
         /// <returns>Calculating points.</returns>
         protected override int SubtractPoints(double amount)
         {
-            return (int) (amount / 10 / 2);
+            return (int)(amount / 10 / 2);
         }
 
         #endregion

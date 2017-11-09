@@ -1,16 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Bank.Models.Accounts;
-using Bank.Models.Exceptions;
-
-namespace Bank.Models
+﻿namespace Bank.Models
 {
+    using Accounts;
+    using Exceptions;
+
+    /// <summary>
+    /// Class for create an instance of classes: BaseAccount, GoldAccount, PlatinumAccount
+    /// </summary>
     public static class AccountCreator
     {
-        public enum AccountType { Base, Gold, Platinum }
+        /// <summary>
+        /// Contains account types.
+        /// </summary>
+        public enum AccountType
+        {
+            /// <summary>
+            /// Base account type.
+            /// </summary>
+            Base,
+
+            /// <summary>
+            /// Gold account type.
+            /// </summary>
+            Gold,
+
+            /// <summary>
+            /// Platinum account type.
+            /// </summary>
+            Platinum
+        }
 
         /// <summary>
         /// Create an instance of account

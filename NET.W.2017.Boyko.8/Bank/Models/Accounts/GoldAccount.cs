@@ -1,35 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bank.Models.Accounts
+﻿namespace Bank.Models.Accounts
 {
+    using System;
+
+    /// <summary>
+    /// Account with gold privileges.
+    /// </summary>
     [Serializable]
-    class GoldAccount : Account
+    public class GoldAccount : Account
     {
         #region Public
 
         #region public Constructors
 
         /// <summary>
-        /// Create an instance of BaseAccount.
+        /// Initializes a new instance of the <see cref="GoldAccount"/> class.
         /// </summary>
         /// <param name="name">name of the owner</param>
         /// <param name="surname">surname of the owner</param>
-        public GoldAccount(string name, string surname) : base(name, surname) { }
+        public GoldAccount(string name, string surname) : base(name, surname)
+        {
+        }
 
         /// <summary>
-        /// Create an instance of BaseAccount.
+        /// Initializes a new instance of the <see cref="GoldAccount"/> class.
         /// </summary>
         /// <param name="name">name of the owner</param>
         /// <param name="surname">surname of the owner</param>
         /// <param name="amount">start money on the account</param>
-        public GoldAccount(string name, string surname, double amount) : base(name, surname, amount) { }
+        public GoldAccount(string name, string surname, double amount) : base(name, surname, amount)
+        {
+        }
 
         #endregion
-
 
         #region public Methods
 

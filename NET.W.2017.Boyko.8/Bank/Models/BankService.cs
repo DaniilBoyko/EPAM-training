@@ -7,6 +7,11 @@ using Bank.Models.Interfaces;
 using Bank.Models.Exceptions;
 using Bank.Models.Accounts;
 
+/*
+ * - Обязательная зависимость - в конструкторе
+ * - Необязательная зависимость просто как параметр метода, здесь лучше как необзательную зависисмость сделать.
+ * - Можно убрать лист и работать только с одним счетом.
+ */
 namespace Bank.Models
 {
     public class BankService
@@ -135,8 +140,7 @@ namespace Bank.Models
         }
 
         #endregion public Methods
-
-
+        
         #endregion Public
 
 

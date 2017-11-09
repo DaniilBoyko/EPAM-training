@@ -182,7 +182,7 @@ namespace Library.Models.Services
             if (book == null)
                 throw new ArgumentNullException(nameof(book));
             if (!ContainsBook(book))
-                throw new BookExistException($"Book doesn't exist in list.");
+                throw new BookExistException("Book doesn\'t exist in list.");
 
             Books.Remove(book);
         }

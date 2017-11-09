@@ -6,6 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Library.Models.Interfaces;
 
+/*
+ * 
+ * 
+ * - Data transfer object - объект 
+ * 
+ */
 namespace Library.Models
 {
     public class FileWorker : IFileWorker

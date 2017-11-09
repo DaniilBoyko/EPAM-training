@@ -5,6 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Bank;
 
+/*
+ * - Можно добавить интерфейс IBookListService
+ * - Поменять FileWorker на IBookStorage
+ * - В IBookStorage не привязывать к List<Book>
+ * - 
+ * - Найти по тегу - требуется интерфейс IFinder например - это стратегия
+ * 
+ */
+
 namespace Bank.Tests.ConsoleApp
 {
     class Program
