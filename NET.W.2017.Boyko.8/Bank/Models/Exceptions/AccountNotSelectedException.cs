@@ -1,17 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//// <copyright file="AccountNotSelectedException.cs" company="RelCode">Boyko Daniil</copyright>
 namespace Bank.Models.Exceptions
 {
-    class AccountNotSelectedException : Exception
+    using System;
+
+    /// <summary>
+    /// Exception of bank service, when account not selected.
+    /// </summary>
+    public class AccountNotSelectedException : Exception
     {
         /// <summary>
-        /// Create an instance of AccountNotSelectedAxception.
+        /// Initializes a new instance of the <see cref="AccountNotSelectedException"/> class.
         /// </summary>
         /// <param name="message">message of exception</param>
-        public AccountNotSelectedException(string message) : base(message) { }
+        public AccountNotSelectedException(string message) : base(message)
+        {
+        }
     }
 }

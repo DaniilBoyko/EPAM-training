@@ -1,17 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//// <copyright file="NotEnoughMoneyException.cs" company="RelCode">Boyko Daniil</copyright>
 namespace Bank.Models.Exceptions
 {
-    class NotEnoughMoneyException : Exception
+    using System;
+
+    /// <summary>
+    /// Exception for account, when not enough money for withdraw.
+    /// </summary>
+    public class NotEnoughMoneyException : Exception
     {
         /// <summary>
-        /// Create an instance of NotEnoughMoneyException
+        /// Initializes a new instance of the <see cref="NotEnoughMoneyException"/> class.
         /// </summary>
         /// <param name="message">message of exception</param>
-        public NotEnoughMoneyException(string message) : base(message) { }
+        public NotEnoughMoneyException(string message) : base(message)
+        {
+        }
     }
 }

@@ -1,16 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
-using Bank.Models.Interfaces;
-using Bank.Models.Accounts;
-
+﻿//// <copyright file="BankStorage.cs" company="RelCode">Boyko Daniil</copyright>
 namespace Bank.Models
 {
-    public class FileWorker : IFileWorker
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Runtime.Serialization.Formatters.Binary;
+    using Accounts;
+    using Interfaces;
+
+    /// <summary>
+    /// Implementation of IFileWorker for work with file.
+    /// </summary>
+    public class BankStorage : IBankStorage
     {
         #region Public
 
@@ -21,7 +22,7 @@ namespace Bank.Models
         /// </summary>
         /// <param name="path">path to file</param>
         /// <returns>List of accounts.</returns>
-        public List<Account> LoadAccountsFromFile(string path)
+        public IEnumerable<Account> LoadAccounts(string path)
         {
             var accounts = new List<Account>();
 
@@ -31,7 +32,7 @@ namespace Bank.Models
                 {
                     int size = binReader.ReadInt32();
                     byte[] byteArray = binReader.ReadBytes(size);
-                    Account account = ByteArrayToAccount(byteArray);
+                    Account account = this.ByteArrayToAccount(byteArray);
                     accounts.Add(account);
                 }
             }
@@ -40,20 +41,22 @@ namespace Bank.Models
         }
 
         /// <summary>
-        /// Writle list of accounts to file.
+        /// Write list of accounts to file.
         /// </summary>
         /// <param name="accounts">list of books</param>
         /// <param name="path">path to file</param>
-        public void SaveAccountsToFile(List<Account> accounts, string path)
+        public void SaveAccounts(IEnumerable<Account> accounts, string path)
         {
             if (accounts == null)
+            { 
                 throw new ArgumentNullException(nameof(accounts));
+            }
 
             using (BinaryWriter binWriter = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate)))
             {
                 foreach (Account account in accounts)
                 {
-                    byte[] byteArray = AccountToByteArray(account);
+                    byte[] byteArray = this.AccountToByteArray(account);
                     binWriter.Write(byteArray.Length);
                     binWriter.Write(byteArray);
                 }
@@ -66,10 +69,17 @@ namespace Bank.Models
 
         #region Private
 
+        /// <summary>
+        /// Convert account to byte array.
+        /// </summary>
+        /// <param name="account">converting account</param>
+        /// <returns>The array of bytes.</returns>
         private byte[] AccountToByteArray(Account account)
         {
             if (account == null)
+            {
                 return null;
+            }
 
             BinaryFormatter bf = new BinaryFormatter();
             MemoryStream ms = new MemoryStream();
@@ -78,6 +88,11 @@ namespace Bank.Models
             return ms.ToArray();
         }
 
+        /// <summary>
+        /// Convert byte array to account.
+        /// </summary>
+        /// <param name="arrBytes">array of bytes</param>
+        /// <returns>Converting account.</returns>
         private Account ByteArrayToAccount(byte[] arrBytes)
         {
             MemoryStream memStream = new MemoryStream();

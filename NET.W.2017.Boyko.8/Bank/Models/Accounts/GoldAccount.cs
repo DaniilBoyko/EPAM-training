@@ -1,4 +1,5 @@
-﻿namespace Bank.Models.Accounts
+﻿//// <copyright file="GoldAccount.cs" company="RelCode">Boyko Daniil</copyright>
+namespace Bank.Models.Accounts
 {
     using System;
 

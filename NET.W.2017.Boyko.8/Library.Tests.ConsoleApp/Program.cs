@@ -41,12 +41,12 @@ namespace Library.Tests.ConsoleApp
                     Console.WriteLine(book);
 
                 Console.WriteLine("-----SAVE BOOKS TO \"BookListStorage.txt\"\n");
-                bookListService.SetFileWorker(new FileWorker());
+                bookListService.SetFileWorker(new BookListStorage());
                 bookListService.SaveBooksToFile(AppDomain.CurrentDomain.BaseDirectory + "BookListStorage.txt");
 
                 Console.WriteLine("-----LOAD BOOKS FROM \"BookListStorage.txt\"\n");
                 BookListService bookListService2 = new BookListService();
-                bookListService2.SetFileWorker(new FileWorker());
+                bookListService2.SetFileWorker(new BookListStorage());
                 bookListService2.LoadBooksFromFile(AppDomain.CurrentDomain.BaseDirectory + "BookListStorage.txt");
                 foreach (Book book in bookListService2)
                     Console.WriteLine(book);

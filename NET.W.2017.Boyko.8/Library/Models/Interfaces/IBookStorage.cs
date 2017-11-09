@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Library.Models.Interfaces
 {
-    public interface IFileWorker
+    public interface IBookStorage
     {
-        List<Book> ReadBooksFromFile(string path);
-        void WriteBooksToFile(List<Book> books, string path);
+        IEnumerable<Book> ReadBooks(string path);
+
+        void WriteBooks(IEnumerable<Book> books, string path);
     }
 }

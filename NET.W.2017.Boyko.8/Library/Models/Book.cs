@@ -1,4 +1,5 @@
-﻿namespace Library.Models
+﻿//// <copyright file="Book.cs" company="RelCode">Boyko Daniil</copyright>
+namespace Library.Models
 {
     using System;
     using System.Text;
@@ -14,27 +15,63 @@
 
         #region private Consts
 
+        /// <summary>
+        /// Contains bottom year border for book.
+        /// </summary>
         private const int BottomYearBorder = 100;
+
+        /// <summary>
+        /// Contains bottom pages border for book.
+        /// </summary>
         private const int BottomPagesBorder = 3;
+
+        /// <summary>
+        /// Contains top pages border for book.
+        /// </summary>
         private const int TopPagesBorder = 3000;
 
         #endregion // !private Consts
 
-
         #region private Fields 
 
-        private string _isbn;
-        private string _aughotr;
-        private string _title;
-        private string _publisher;
-        private int _publicationYear;
-        private int _countPages;
-        private double _price;
+        /// <summary>
+        /// Contains international standard book number of the book.
+        /// </summary>
+        private string isbn;
+
+        /// <summary>
+        /// Stores author.
+        /// </summary>
+        private string author;
+
+        /// <summary>
+        /// Stores title of the book.
+        /// </summary>
+        private string title;
+
+        /// <summary>
+        /// Contains publisher of the book.
+        /// </summary>
+        private string publisher;
+
+        /// <summary>
+        /// Stores publication year of the book.
+        /// </summary>
+        private int publicationYear;
+
+        /// <summary>
+        /// Stores count pages of the book.
+        /// </summary>
+        private int countPages;
+
+        /// <summary>
+        /// Stores price of the book. 
+        /// </summary>
+        private double price;
 
         #endregion // !private Fields
 
         #endregion /// !Private
-
 
         #region Public
 
@@ -49,26 +86,32 @@
             /// ISBN of the book.
             /// </summary>
             Isbn,
+
             /// <summary>
             /// Author of the book.
             /// </summary>
             Author,
+
             /// <summary>
             /// Title of the book.
             /// </summary>
             Title,
+
             /// <summary>
             /// Publisher of the book.
             /// </summary>
             Publisher,
+
             /// <summary>
             /// Publication year of the book.
             /// </summary>
             PublicationYear,
+
             /// <summary>
             /// Count pages of the book.
             /// </summary>
             CountPages,
+
             /// <summary>
             /// Price of the book.
             /// </summary>
@@ -77,67 +120,77 @@
 
         #endregion // !public Consts
 
-
         #region public Properties
 
         /// <summary>
-        /// Contains book isbn.
+        /// Gets international standard book number.
         /// </summary>
         /// <exception cref="ArgumentException">If passing string null or empty.</exception>
         public string Isbn
         {
-            get => _isbn;
+            get => this.isbn;
             private set
             {
                 if (string.IsNullOrEmpty(value))
-                    throw new ArgumentException($"{nameof(Isbn)} can't be null or empty.", nameof(Isbn));
-                _isbn = value;
-            }
+                {
+                    throw new ArgumentException($"{nameof(this.Isbn)} can't be null or empty.", nameof(this.Isbn));
+                }
 
+                this.isbn = value;
+            }
         }
 
         /// <summary>
-        /// Contains name of author of the book.
+        /// Gets name of author of the book.
         /// </summary>
         /// <exception cref="ArgumentException">If passing string null or empty.</exception>
         public string Author
         {
-            get => _aughotr;
-            set
+            get => this.author;
+            private set
             {
                 if (string.IsNullOrEmpty(value))
-                    throw new ArgumentException($"{nameof(Author)} can't be empty.", nameof(Author));
-                _aughotr = value;
+                {
+                    throw new ArgumentException($"{nameof(this.Author)} can't be empty.", nameof(this.Author));
+                }
+
+                this.author = value;
             }
         }
 
         /// <summary>
-        /// Contains title of the book.
+        /// Gets title of the book.
         /// </summary>
         /// <exception cref="ArgumentException">If passing string is null or empty</exception>
         public string Title
         {
-            get => _title;
-            set
+            get => this.title;
+            private set
             {
                 if (string.IsNullOrEmpty(value))
-                    throw new ArgumentException($"{nameof(Title)} can't be null or empty", nameof(Title));
-                _title = value;
+                {
+                    throw new ArgumentException($"{nameof(this.Title)} can't be null or empty", nameof(this.Title));
+                }
+
+                this.title = value;
             }
         }
 
         /// <summary>
-        /// Contains publisher of the book.
+        /// Gets or sets publisher of the book.
         /// </summary>
         /// <exception cref="ArgumentException">If passing string null or empty.</exception>
         public string Publisher
         {
-            get => _publisher;
+            get => this.publisher;
             set
             {
                 if (string.IsNullOrEmpty(value))
-                    throw new ArgumentException($"{nameof(Publisher)} can't be null or empty", nameof(Publisher));
-                _publisher = value;
+                {
+                    throw new ArgumentException($"{nameof(this.Publisher)} can't be null or empty", nameof(this.Publisher));
+                }
+
+                this.publisher = value;
             }
         }
 
@@ -147,12 +200,12 @@
         /// <exception cref="ArgumentException">If passing year less then BOTTOM_YEAR_BORDER or more the current year</exception>
         public int PublicationYear
         {
-            get => _publicationYear;
+            get => publicationYear;
             set
             {
                 if (value < BottomYearBorder || value > DateTime.Now.Year)
                     throw new ArgumentException($"{nameof(PublicationYear)} can't be less then {BottomYearBorder} and more then current year", nameof(PublicationYear));
-                _publicationYear = value;
+                publicationYear = value;
             }
         }
 
@@ -162,12 +215,12 @@
         /// <exception cref="ArgumentException">If passing count pages less then BOTTOM_PAGES_BORDER or more then TOP_PAGES_BORDER</exception>
         public int CountPages
         {
-            get => _countPages;
+            get => countPages;
             set
             {
                 if (value <= BottomPagesBorder || value >= TopPagesBorder)
                     throw new ArgumentException($"{nameof(CountPages)} can't be less then {BottomPagesBorder} and more the {TopPagesBorder}", nameof(CountPages));
-                _countPages = value;
+                countPages = value;
             }
         }
 
@@ -177,12 +230,12 @@
         /// <exception cref="ArgumentException">If passing price less then zero.</exception>
         public double Price
         {
-            get => _price;
+            get => price;
             set
             {
                 if (value < 0)
                     throw new ArgumentException($"{nameof(Price)} can't be less then zero", nameof(Price));
-                _price = value;
+                price = value;
             }
         }
 

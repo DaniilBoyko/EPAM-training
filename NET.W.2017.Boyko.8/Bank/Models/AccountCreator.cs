@@ -1,4 +1,5 @@
-﻿namespace Bank.Models
+﻿//// <copyright file="AccountCreator.cs" company="RelCode">Boyko Daniil</copyright>
+namespace Bank.Models
 {
     using Accounts;
     using Exceptions;

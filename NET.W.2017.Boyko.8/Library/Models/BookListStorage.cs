@@ -14,7 +14,7 @@ using Library.Models.Interfaces;
  */
 namespace Library.Models
 {
-    public class FileWorker : IFileWorker
+    public class BookListStorage : IBookStorage
     {
         #region Public
 
@@ -25,7 +25,7 @@ namespace Library.Models
         /// </summary>
         /// <param name="path">path to file</param>
         /// <returns>List of books.</returns>
-        public List<Book> ReadBooksFromFile(string path)
+        public IEnumerable<Book> ReadBooks(string path)
         {
             var books = new List<Book>();
 
@@ -52,7 +52,7 @@ namespace Library.Models
         /// </summary>
         /// <param name="books">list of books</param>
         /// <param name="path">path to file</param>
-        public void WriteBooksToFile(List<Book> books, string path)
+        public void WriteBooks(IEnumerable<Book> books, string path)
         {
             if (books == null)
                 throw new ArgumentNullException(nameof(books));

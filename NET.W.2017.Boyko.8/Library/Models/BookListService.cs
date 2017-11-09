@@ -18,7 +18,7 @@ namespace Library.Models.Services
         #region private Properties
 
         private List<Book> Books { get; set; }
-        private IFileWorker FileWorker { get; set; }
+        private IBookStorage FileWorker { get; set; }
 
         #endregion private Properties
 
@@ -115,7 +115,7 @@ namespace Library.Models.Services
         /// Create an instance of BookListSevice.
         /// </summary>
         /// <param name="fileWorker">contains methods of work with file</param>
-        public BookListService(IFileWorker fileWorker)
+        public BookListService(IBookStorage fileWorker)
         {
             FileWorker = fileWorker;
         }
@@ -130,7 +130,7 @@ namespace Library.Models.Services
         /// Set file worker.
         /// </summary>
         /// <param name="fileWorker"></param>
-        public void SetFileWorker(IFileWorker fileWorker)
+        public void SetFileWorker(IBookStorage fileWorker)
         {
             FileWorker = fileWorker ?? throw new ArgumentNullException(nameof(fileWorker));
         }
@@ -144,7 +144,7 @@ namespace Library.Models.Services
             if (FileWorker == null)
                 throw new Exception("FileWorker is null. Please, set FileWorker.");
 
-            Books = FileWorker.ReadBooksFromFile(path);
+            Books = FileWorker.ReadBooks(path).ToList();
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace Library.Models.Services
             if (FileWorker == null)
                 throw new Exception("FileWorker is null. Please, set FileWorker.");
 
-            FileWorker.WriteBooksToFile(Books, path);
+            FileWorker.WriteBooks(Books, path);
         }
 
         /// <summary>

@@ -1,17 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//// <copyright file="AccountNotFoundException.cs" company="RelCode">Boyko Daniil</copyright>
 namespace Bank.Models.Exceptions
 {
-    class AccountNotFoundException : Exception
+    using System;
+
+    /// <summary>
+    /// Exception for bank service, when account not found.
+    /// </summary>
+    public class AccountNotFoundException : Exception
     {
         /// <summary>
-        /// Create new instance of AccountNotFoundException
+        /// Initializes a new instance of the <see cref="AccountNotFoundException"/> class.
         /// </summary>
         /// <param name="message">message of exception</param>
-        public AccountNotFoundException(string message) : base(message) { }
+        public AccountNotFoundException(string message) : base(message)
+        {
+        }
     }
 }

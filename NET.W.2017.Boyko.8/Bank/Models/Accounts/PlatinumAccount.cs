@@ -1,35 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//// <copyright file="PlatinumAccount.cs" company="RelCode">Boyko Daniil</copyright>
 namespace Bank.Models.Accounts
 {
+    using System;
+
+    /// <summary>
+    /// Account with platinum privileges.
+    /// </summary>
     [Serializable]
-    class PlatinumAccount : Account
+    public class PlatinumAccount : Account
     {
         #region Public
 
         #region public Constructors
 
         /// <summary>
-        /// Create an instance of BaseAccount.
+        /// Initializes a new instance of the <see cref="PlatinumAccount"/> class.
         /// </summary>
         /// <param name="name">name of the owner</param>
         /// <param name="surname">surname of the owner</param>
-        public PlatinumAccount(string name, string surname) : base(name, surname) { }
+        public PlatinumAccount(string name, string surname) : base(name, surname)
+        {
+        }
 
         /// <summary>
-        /// Create an instance of BaseAccount.
+        /// Initializes a new instance of the <see cref="PlatinumAccount"/> class.
         /// </summary>
         /// <param name="name">name of the owner</param>
         /// <param name="surname">surname of the owner</param>
         /// <param name="amount">start money on the account</param>
-        public PlatinumAccount(string name, string surname, double amount) : base(name, surname, amount) { }
+        public PlatinumAccount(string name, string surname, double amount) : base(name, surname, amount)
+        {
+        }
 
         #endregion
-
 
         #region public Methods
 

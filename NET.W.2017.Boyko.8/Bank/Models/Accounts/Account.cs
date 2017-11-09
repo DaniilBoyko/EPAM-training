@@ -1,8 +1,9 @@
-﻿/*
- * Добавить в сервис изменяемую логику генерации номера счета.
- */
+﻿//// <copyright file="Account.cs" company="RelCode">Boyko Daniil</copyright>
 namespace Bank.Models.Accounts
 {
+    /*
+ * Добавить в сервис изменяемую логику генерации номера счета.
+ */
     using System;
     using System.Text;
     using Exceptions;

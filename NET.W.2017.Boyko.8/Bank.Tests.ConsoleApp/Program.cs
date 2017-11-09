@@ -23,7 +23,7 @@ namespace Bank.Tests.ConsoleApp
             try
             {
                 string path = AppDomain.CurrentDomain.BaseDirectory + "BankAccountsStorage.txt";
-                Models.FileWorker fileWorker = new Models.FileWorker();
+                Models.BankStorage fileWorker = new Models.BankStorage();
                 Models.BankService bankService = new Models.BankService(fileWorker);
                 //bankService.CreateNewAccount(Models.AccountCreator.AccountType.Gold, "Pit", "Marlow", 231.3);
                 //bankService.CreateNewAccount(Models.AccountCreator.AccountType.Gold, "Kate", "Marlow", 2321);

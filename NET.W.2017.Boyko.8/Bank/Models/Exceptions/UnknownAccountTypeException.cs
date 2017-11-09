@@ -1,17 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//// <copyright file="UnknownAccountTypeException.cs" company="RelCode">Boyko Daniil</copyright>
 namespace Bank.Models.Exceptions
 {
-    class UnknownAccountTypeException : Exception
+    using System;
+
+    /// <summary>
+    /// Exception for fabric, which create accounts.
+    /// </summary>
+    public class UnknownAccountTypeException : Exception
     {
         /// <summary>
-        /// Create an instance of UnknownAccountTypeException.
+        /// Initializes a new instance of the <see cref="UnknownAccountTypeException"/> class.
         /// </summary>
         /// <param name="message">message of exception</param>
-        public UnknownAccountTypeException(string message) : base(message) { }
+        public UnknownAccountTypeException(string message) : base(message)
+        {
+        }
     }
 }
