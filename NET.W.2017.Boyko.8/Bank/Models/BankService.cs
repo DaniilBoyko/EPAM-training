@@ -1,5 +1,4 @@
-﻿//// <copyright file="BankService.cs" company="RelCode">Boyko Daniil</copyright>
-namespace Bank.Models
+﻿namespace Bank.Models
 {
     /*
  * - Обязательная зависимость - в конструкторе
@@ -30,7 +29,7 @@ namespace Bank.Models
         /// <summary>
         /// Gets or sets bank storage.
         /// </summary>
-        private IBankStorage BankStorage { get; set; }
+        private IBankStorage BankStorage { get; }
 
         /// <summary>
         /// Gets or sets current account.
@@ -51,8 +50,8 @@ namespace Bank.Models
         /// <param name="fileWorker">contains methods of save and load accounts</param>
         public BankService(IBankStorage fileWorker)
         {
-            this.Accounts = new List<Account>();
-            this.BankStorage = fileWorker ?? throw new ArgumentNullException(nameof(fileWorker));
+            Accounts = new List<Account>();
+            BankStorage = fileWorker ?? throw new ArgumentNullException(nameof(fileWorker));
         }
 
         #endregion
@@ -65,7 +64,7 @@ namespace Bank.Models
         /// <param name="path">path to file</param>
         public void LoadAccountsFromFile(string path)
         {
-            this.Accounts = this.BankStorage.LoadAccounts(path).ToList();
+            Accounts = BankStorage.LoadAccounts(path).ToList();
         }
 
         /// <summary>
@@ -74,7 +73,7 @@ namespace Bank.Models
         /// <param name="path">path to file</param>
         public void SaveAccountsToFile(string path)
         {
-            this.BankStorage.SaveAccounts(this.Accounts, path);
+            BankStorage.SaveAccounts(Accounts, path);
         }
 
         /// <summary>
@@ -84,12 +83,12 @@ namespace Bank.Models
         /// <returns>True if success, false otherwise.</returns>
         public bool DepositToCurrentAccount(double amount)
         {
-            if (this.CurrentAccount == null)
+            if (CurrentAccount == null)
             {
                 throw new AccountNotSelectedException("Current account not selected. Please, select current account.");
             }
 
-            if (this.CurrentAccount.Deposit(amount))
+            if (CurrentAccount.Deposit(amount))
             {
                 return true;
             }
@@ -104,12 +103,12 @@ namespace Bank.Models
         /// <returns>True if success, false otherwise.</returns>
         public bool WithdrawFromCurrentAccount(double amount)
         {
-            if (this.CurrentAccount == null)
+            if (CurrentAccount == null)
             {
                 throw new AccountNotSelectedException("Current account not selected. Please, select current account.");
             }
 
-            if (this.CurrentAccount.Withdraw(amount))
+            if (CurrentAccount.Withdraw(amount))
             {
                 return true;
             }
@@ -127,8 +126,8 @@ namespace Bank.Models
         public void CreateNewAccount(AccountCreator.AccountType accountType, string name, string surname, double amount = 0)
         {
             Account account = AccountCreator.CreateAccount(accountType, name, surname, amount);
-            this.Accounts.Add(account);
-            this.CurrentAccount = account;
+            Accounts.Add(account);
+            CurrentAccount = account;
         }
 
         /// <summary>
@@ -136,13 +135,13 @@ namespace Bank.Models
         /// </summary>
         public void CloseCurrentAccount()
         {
-            if (this.CurrentAccount.Amount > 0)
+            if (CurrentAccount.Amount > 0)
             {
                 throw new AccountHasMoneyException("Current account has money. Please withdraw money.");
             }
 
-            this.Accounts.Remove(this.CurrentAccount);
-            this.CurrentAccount = null;
+            Accounts.Remove(CurrentAccount);
+            CurrentAccount = null;
         }
 
         /// <summary>
@@ -150,12 +149,12 @@ namespace Bank.Models
         /// </summary>
         public void ShowCurrentAccountInfo()
         {
-            if (this.CurrentAccount == null)
+            if (CurrentAccount == null)
             { 
                 throw new AccountNotSelectedException("Current account not selected. Please, select current account.");
             }
 
-            Console.WriteLine(this.CurrentAccount);
+            Console.WriteLine(CurrentAccount);
         }
 
         /// <summary>
@@ -167,7 +166,7 @@ namespace Bank.Models
         public void SelectCurrentAccount(string id, string name, string surname)
         {
             Account account = null;
-            foreach (Account act in this.Accounts)
+            foreach (Account act in Accounts)
             {
                 if (act.Id.Equals(id) && act.Name.Equals(name) && act.Surname.Equals(surname))
                 {
@@ -176,7 +175,7 @@ namespace Bank.Models
                 }
             }
 
-            this.CurrentAccount = account ?? throw new AccountNotFoundException("Account not found.");
+            CurrentAccount = account ?? throw new AccountNotFoundException("Account not found.");
         }
 
         #endregion public Methods

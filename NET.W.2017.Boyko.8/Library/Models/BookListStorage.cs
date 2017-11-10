@@ -1,24 +1,16 @@
-﻿//// <copyright file="BookListStorage.cs" company="RelCode">Boyko Daniil</copyright>
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using Library.Models.Interfaces;
+
 namespace Library.Models
 {
-    /*
- * 
- * 
- * - Data transfer object - объект 
- * 
- */
-    using System;
-    using System.Collections.Generic;
-    using System.IO;
-    using Interfaces;
-
+    /// <inheritdoc />
     /// <summary>
     /// This class implements interface IBookStorage for save and load books.
     /// </summary>
     public class BookListStorage : IBookStorage
     {
-        #region Public
-
         #region public Interface Methods
 
         /// <summary>
@@ -76,7 +68,5 @@ namespace Library.Models
         }
 
         #endregion public Interface Methods
-
-        #endregion Public
     }
 }

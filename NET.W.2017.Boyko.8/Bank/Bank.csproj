@@ -51,8 +51,8 @@
     <Compile Include="Models\Exceptions\AccountNotSelectedException.cs" />
     <Compile Include="Models\Exceptions\NotEnoughMoneyException.cs" />
     <Compile Include="Models\Exceptions\UnknownAccountTypeException.cs" />
-    <Compile Include="Models\FileWorker.cs" />
-    <Compile Include="Models\Interfaces\IFileWorker.cs" />
+    <Compile Include="Models\BankStorage.cs" />
+    <Compile Include="Models\Interfaces\IBankStorage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

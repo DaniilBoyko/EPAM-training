@@ -1,8 +1,7 @@
-﻿//// <copyright file="IBookStorage.cs" company="RelCode">Boyko Daniil</copyright>
+﻿using System.Collections.Generic;
+
 namespace Library.Models.Interfaces
 {
-    using System.Collections.Generic;
-
     /// <summary>
     /// Interface for read and write books to storage.
     /// </summary>

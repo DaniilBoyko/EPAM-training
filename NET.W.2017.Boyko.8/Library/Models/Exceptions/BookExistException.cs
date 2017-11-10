@@ -1,8 +1,7 @@
-﻿//// <copyright file="BookExistException.cs" company="RelCode">Boyko Daniil</copyright>
+﻿using System;
+
 namespace Library.Models.Exceptions
 {
-    using System;
-
     /// <summary>
     /// Exception for book list service when book not exist.
     /// </summary>
