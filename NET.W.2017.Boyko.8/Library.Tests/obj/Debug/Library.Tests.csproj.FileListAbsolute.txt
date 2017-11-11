@@ -1,0 +1,10 @@
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests\bin\Debug\Library.Tests.dll
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests\bin\Debug\Library.Tests.pdb
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests\bin\Debug\Library.dll
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests\bin\Debug\nunit.framework.dll
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests\bin\Debug\Library.pdb
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests\bin\Debug\nunit.framework.xml
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests\obj\Debug\Library.Tests.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests\obj\Debug\Library.Tests.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests\obj\Debug\Library.Tests.dll
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests\obj\Debug\Library.Tests.pdb

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Text;
 
 namespace Library.Models
@@ -8,7 +9,7 @@ namespace Library.Models
     /// Contains main field for storing information.
     /// Contains some methods for manipulation with data.
     /// </summary>
-    public class Book : IComparable, IEquatable<Book>, ICloneable
+    public class Book : IComparable, IEquatable<Book>, ICloneable, IFormattable
     {
         #region private Constants
 
@@ -379,6 +380,38 @@ namespace Library.Models
         object ICloneable.Clone()
         {
             return new Book(Isbn, Author, Title, Publisher, PublicationYear, CountPages, Price);
+        }
+
+        /// <summary>
+        /// Convert book to special format.
+        /// </summary>
+        /// <param name="format">format</param>
+        /// <param name="formatProvider">format provider</param>
+        /// <returns>String format.</returns>
+        /// <exception cref="FormatException">When pass incorrect format.</exception>
+        public string ToString(string format, IFormatProvider formatProvider)
+        {
+            if (string.IsNullOrEmpty(format))
+            {
+                return ToString();
+            }
+
+            if (formatProvider == null)
+            {
+                formatProvider = CultureInfo.CurrentCulture;
+            }
+
+            switch (format.ToUpperInvariant())
+            {
+                case "I": return Isbn.ToString(formatProvider);
+                case "A": return Author.ToString(formatProvider);
+                case "T": return Title.ToString(formatProvider);
+                case "PS": return $"\"{Publisher}\"";
+                case "Y": return PublicationYear.ToString(formatProvider);
+                case "PG": return CountPages.ToString(formatProvider);
+                case "PR": return Price.ToString("C", formatProvider);
+                default: throw new FormatException($"The {format} format string is not supported.");
+            }
         }
 
         #endregion // !public Interface Methods
