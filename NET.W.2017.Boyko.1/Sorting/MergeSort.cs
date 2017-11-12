@@ -1,15 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sorting
 {
+    /// <summary>
+    /// Class for sorting array with merge sort method.
+    /// </summary>
+    /// <typeparam name="T">type elements in array</typeparam>
     public class MergeSort<T>
         where T : IComparable
     {
-        #region API
+        #region public Methods
+
+        /// <summary>
+        /// Sort elements in array.
+        /// </summary>
+        /// <param name="array">passing array</param>
         public static void Sort(T[] array)
         {
             CheckSortParameters.CheckParamArray(array);
@@ -17,22 +22,38 @@ namespace Sorting
             result.CopyTo(array, 0);
         }
 
+        /// <summary>
+        /// Sort elements in array.
+        /// </summary>
+        /// <param name="array">passing array</param>
+        /// <param name="left">leftArray border of sorting</param>
+        /// <param name="rihgt">rightArray border of sorting</param>
         public static void Sort(T[] array, int left, int rihgt)
         {
             CheckSortParameters.CheckFullParam(array, left, rihgt);
             T[] partArray = GetSubArray(array, left, rihgt);
             Sort(partArray);
             for (int i = left; i < rihgt; i++)
+            {
                 array[i] = partArray[i];
+            }
         }
-        #endregion
 
+        #endregion // !public Methods
 
-        #region Private methods
+        #region private Methods
+
+        /// <summary>
+        /// The main algorithm for sorting.
+        /// </summary>
+        /// <param name="array">sorting array</param>
+        /// <returns>New array after sorting.</returns>
         private static T[] SortWithMerge(T[] array)
         {
             if (array.Length <= 1)
+            {
                 return array;
+            }
 
             int middle = array.Length / 2;
 
@@ -43,34 +64,59 @@ namespace Sorting
             return result;
         }
 
-        private static T[] Merge(T[] left, T[] right)
+        /// <summary>
+        /// Merge two arrays.
+        /// </summary>
+        /// <param name="leftArray">leftArray array</param>
+        /// <param name="rightArray">rightArray array</param>
+        /// <returns>New array after merging.</returns>
+        private static T[] Merge(T[] leftArray, T[] rightArray)
         {
-            T[] result = new T[right.Length + left.Length];
+            T[] result = new T[rightArray.Length + leftArray.Length];
             int i = 0, j = 0, k = 0;
-            while (left.Length > i && right.Length > j)
+            while (leftArray.Length > i && rightArray.Length > j)
             {
-                if (!(left[i].CompareTo(right[j]) == 1))
-                    result[k++] = left[i++];
+                if (leftArray[i].CompareTo(rightArray[j]) != 1)
+                {
+                    result[k++] = leftArray[i++];
+                }
                 else
-                    result[k++] = right[j++];
+                {
+                    result[k++] = rightArray[j++];
+                }
             }
 
-            if (left.Length > i)
-                GetSubArray(left, i, left.Length).CopyTo(result, k);
-            if (right.Length > j)
-                GetSubArray(right, j, right.Length).CopyTo(result, k);
+            if (leftArray.Length > i)
+            {
+                GetSubArray(leftArray, i, leftArray.Length).CopyTo(result, k);
+            }
+
+            if (rightArray.Length > j)
+            {
+                GetSubArray(rightArray, j, rightArray.Length).CopyTo(result, k);
+            }
 
             return result;
         }
         
+        /// <summary>
+        /// Get sub array.
+        /// </summary>
+        /// <param name="array">array from sub</param>
+        /// <param name="left">left border</param>
+        /// <param name="right">right border</param>
+        /// <returns>New sub array</returns>
         private static T[] GetSubArray(T[] array, int left, int right)
         {
             T[] resutlArray = new T[Math.Min(right - left, array.Length - left)];
             for (int i = left, j = 0; i < right && i < array.Length; i++, j++)
+            {
                 resutlArray[j] = array[i];
+            }
 
             return resutlArray;
         }
-        #endregion 
+
+        #endregion // !private Methods
     }
 }
