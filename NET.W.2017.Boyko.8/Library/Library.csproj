@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\BookListStorage.cs" />
+    <Compile Include="Models\Formatters\BookCustomFormatter.cs" />
     <Compile Include="Models\Interfaces\IBookStorage.cs" />
     <Compile Include="Models\BookListService.cs" />
     <Compile Include="Models\Book.cs" />
