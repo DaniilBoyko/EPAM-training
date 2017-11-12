@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Sorts.Interfaces
+﻿namespace Sorts.Interfaces
 {
     /// <summary>
-    /// Contains function for conversion double arrya to double value.
+    /// Contains function for conversion double array to double value.
     /// </summary>
     public interface ICalculateArray
     {

@@ -1,23 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
-using Polinoms;
 
 namespace Polinoms.Tests
 {
     [TestFixture]
     public class PolynomTests
     {
-
         [TestCase(new double[] { -1, 1, 1 }, ExpectedResult = "-x^2 + x + 1")]
         [TestCase(new double[] { 0, 23.2, 123.2 }, ExpectedResult = "23,2x + 123,2")]
         [TestCase(new double[] { -1, -1, -1 }, ExpectedResult = "-x^2 - x - 1")]
-        [TestCase(new double[] { 1.2, 23.2, 123.2}, ExpectedResult = "1,2x^2 + 23,2x + 123,2")]
+        [TestCase(new double[] { 1.2, 23.2, 123.2 }, ExpectedResult = "1,2x^2 + 23,2x + 123,2")]
         [TestCase(new double[] { 0, 0, 0 }, ExpectedResult = "0")]
-        [TestCase(new double[] { 0}, ExpectedResult = "0")]
+        [TestCase(new double[] { 0 }, ExpectedResult = "0")]
         [TestCase(new double[] { 1, 0, 1 }, ExpectedResult = "x^2 + 1")]
         [TestCase(new double[] { 1, 0, 0, 1 }, ExpectedResult = "x^3 + 1")]
         [TestCase(new double[] { -1, 0, 0, -1 }, ExpectedResult = "-x^3 - 1")]
