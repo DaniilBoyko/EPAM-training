@@ -44,7 +44,7 @@ namespace Sorts
         /// </summary>
         /// <param name="array">sorting array</param>
         /// <param name="comparer">comparer</param>
-        public static void SortJaggedArray(double[][] array, IComparer<double[]> comparer)
+        public static void SortJaggedArray1(double[][] array, IComparer<double[]> comparer)
         {
             for (int i = 0; i < array.Length; i++)
             {
@@ -63,9 +63,38 @@ namespace Sorts
         /// </summary>
         /// <param name="array">sorting array</param>
         /// <param name="delegateComparer">delegate for compare</param>
-        public static void SortJaggedArray(double[][] array, Func<double[], double[], int> delegateComparer)
+        public static void SortJaggedArray1(double[][] array, Func<double[], double[], int> delegateComparer)
         {
-            SortJaggedArray(array, new DelegateComparer(delegateComparer));
+            SortJaggedArray1(array, new DelegateComparer(delegateComparer));
+        }
+
+        /// <summary>
+        /// Sort jagged array.
+        /// </summary>
+        /// <param name="array">sorting array</param>
+        /// <param name="comparer">comparer</param>
+        public static void SortJaggedArray2(double[][] array, IComparer<double[]> comparer)
+        {
+            SortJaggedArray2(array, comparer.Compare);
+        }
+
+        /// <summary>
+        /// Sort jagged array.
+        /// </summary>
+        /// <param name="array">sorting array</param>
+        /// <param name="delegateComparer">delegate for compare</param>
+        public static void SortJaggedArray2(double[][] array, Func<double[], double[], int> delegateComparer)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = array.Length - 1; j > i; j--)
+                {
+                    if (delegateComparer(array[j - 1], array[j]) < 0)
+                    {
+                        Swap(ref array[j - 1], ref array[j]);
+                    }
+                }
+            }
         }
 
         #endregion // !public Methods

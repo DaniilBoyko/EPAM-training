@@ -151,6 +151,20 @@ namespace Sorts.Tests
         };
 
         [Test, TestCaseSource(nameof(_caseSourceTestDataIncreaseByMax))]
+        public void SortJaggedArrayMethod_SortByIncreaseMaxElementsWithComparator(double[][] array, double[][] resultArray)
+        {
+            BubbleSort.SortJaggedArray1(array, new IncreaseByMax());
+            Assert.That(array, Is.EqualTo(resultArray));
+        }
+
+        [Test, TestCaseSource(nameof(_caseSourceTestDataIncreaseByMax))]
+        public void SortJaggedArrayMethod_SortByIncreaseMaxElementsWithDelegate(double[][] array, double[][] resultArray)
+        {
+            BubbleSort.SortJaggedArray1(array, new IncreaseByMax().Compare);
+            Assert.That(array, Is.EqualTo(resultArray));
+        }
+
+        [Test, TestCaseSource(nameof(_caseSourceTestDataIncreaseByMax))]
         public void SortJaggedArrayMethod_SortByIncreaseMaxElements(double[][] array, double[][] resultArray)
         {
             BubbleSort.SortJaggedArray(array, new BubbleSort.MaxNumber(), new BubbleSort.Increase());
