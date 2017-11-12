@@ -1,18 +1,14 @@
 ﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Runtime.ExceptionServices;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NumberFunctions
 {
+    /// <summary>
+    /// Class for calculation greatest common divisor.
+    /// </summary>
     public class NumbersGcd
     {
-        #region Public Methods
+        #region public Methods
 
         /// <summary>
         /// Calculate greatest common divisor of two numbers by the Euclidean algorithm
@@ -23,7 +19,9 @@ namespace NumberFunctions
         public static int EuclideanGcd(int number1, int number2)
         {
             if (CheckNumbersForGcd(ref number1, ref number2, out int resultGcd))
+            {
                 return resultGcd;
+            }
                 
             while (number2 != 0)
             {
@@ -31,6 +29,7 @@ namespace NumberFunctions
                 number2 = number1 % number2;
                 number1 = temp;
             }
+
             return number1;
         }
 
@@ -86,7 +85,7 @@ namespace NumberFunctions
         /// </summary>
         /// <param name="executionTime">time of execution</param>
         /// <param name="numbers"></param>
-        /// <returns>Greatest common divisorof all numbers</returns>
+        /// <returns>Greatest common divisor all numbers</returns>
         public static int EuclideanGcd(out long executionTime, params int[] numbers)
         {
             return ExecutionTimeGcd(EuclideanGcd, numbers, out executionTime);
@@ -101,7 +100,9 @@ namespace NumberFunctions
         public static int StainGcd(int number1, int number2)
         {
             if (CheckNumbersForGcd(ref number1, ref number2, out int resultGcd))
+            {
                 return resultGcd;
+            }
 
             int shift;
             for (shift = 0; ((number1 | number2) & 1) == 0; shift++)
@@ -111,22 +112,31 @@ namespace NumberFunctions
             }
 
             while ((number1 & 1) == 0)
+            {
                 number1 >>= 1;
+            }
+
             do
             {
                 while ((number2 & 1) == 0)
+                {
                     number2 >>= 1;
+                }
+
                 if (number1 > number2)
+                {
                     Swap(ref number1, ref number2);
+                }
+
                 number2 = number2 - number1;
-            } while (number2 != 0);
+            }
+            while (number2 != 0);
 
             return number1 << shift;
         }
 
-
         /// <summary>
-        /// Calculate greatest common divisor of two numbers by the Stain algorithm with calcultaion execution time
+        /// Calculate greatest common divisor of two numbers by the Stain algorithm with calculation execution time
         /// </summary>
         /// <param name="number1"></param>
         /// <param name="number2"></param>
@@ -166,7 +176,7 @@ namespace NumberFunctions
         /// Calculate greatest common divisor of more then one number by the Stain algorithm
         /// </summary>
         /// <param name="numbers"></param>
-        /// <returns>Greatest common divisorof all numbers</returns>
+        /// <returns>Greatest common divisor all numbers</returns>
         public static int StainGcd(params int[] numbers)
         {
             return CalculateGcd(StainGcd, numbers);
@@ -177,15 +187,15 @@ namespace NumberFunctions
         /// </summary>
         /// <param name="numbers"></param>
         /// <param name="executionTime">execution time</param>
-        /// <returns>Greatest common divisorof all numbers</returns>
+        /// <returns>Greatest common divisor all numbers</returns>
         public static int StainGcd(out long executionTime, params int[] numbers)
         {
             return ExecutionTimeGcd(StainGcd, numbers, out executionTime);
         }
 
-        #endregion
+        #endregion // !public Methods
 
-        #region Private Methods
+        #region private Methods
 
         private static bool CheckNumbersForGcd(ref int number1, ref int number2, out int gcd)
         {
@@ -194,11 +204,24 @@ namespace NumberFunctions
             gcd = 0;
 
             if (number1 == 0 && number2 == 0)
+            {
                 throw new ArgumentException($"{nameof(number1)} and {nameof(number2)} can't be both zero");
+            }
 
-            if (number1 == 0) gcd = number2;
-            if (number2 == 0) gcd = number1;
-            if (number1 > 0 && number2 > 0) return false;
+            if (number1 == 0)
+            {
+                gcd = number2;
+            }
+
+            if (number2 == 0)
+            {
+                gcd = number1;
+            }
+
+            if (number1 > 0 && number2 > 0)
+            {
+                return false;
+            }
 
             return true;
         }
@@ -210,8 +233,7 @@ namespace NumberFunctions
             b = temp;
         }
 
-
-        //Comon calculations methods
+        ////Comon calculations methods
         private static int CalculateGcd(Func<int, int, int> calculateGcd, int number1, int number2, int number3)
         {
             return calculateGcd(calculateGcd(number1, number2), number3);
@@ -220,21 +242,25 @@ namespace NumberFunctions
         private static int CalculateGcd(Func<int, int, int> calculateGcd, params int[] numbers)
         {
             if (numbers == null)
+            {
                 throw new ArgumentNullException(nameof(numbers));
+            }
 
             if (numbers.Length < 2)
+            {
                 throw new ArgumentException($"{nameof(numbers)} should contains two of more numbers", nameof(numbers));
+            }
 
             int resultGcd = numbers[0];
             for (int i = 1; i < numbers.Length; i++)
             {
                 resultGcd = calculateGcd(resultGcd, numbers[i]);
             }
+
             return resultGcd;
         }
 
-
-        //Comon methods for calculations and get execution time
+        ////Comon methods for calculations and get execution time
         private static int ExecutionTimeGcd(Func<int, int, int> calculateGcd, int number1, int nubmer2, out long executionTime)
         {
             Stopwatch stopwatch = new Stopwatch();
@@ -274,6 +300,6 @@ namespace NumberFunctions
             return result;
         }
 
-        #endregion
+        #endregion // !private Methods
     }
 }

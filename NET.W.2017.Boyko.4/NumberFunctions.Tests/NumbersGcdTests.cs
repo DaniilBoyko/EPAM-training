@@ -12,7 +12,6 @@ namespace NumberFunctions.Tests
     [TestFixture]
     public class NumbersGcdTests
     {
-
         public static IEnumerable<TestCaseData> FindGcdOfTwoNumbersTestCaseDatas
         {
             get
@@ -50,13 +49,11 @@ namespace NumberFunctions.Tests
         {
             get
             {
-                yield return new TestCaseData(new[] {1, 2, 3, 4, 5, 6}).Returns(1);
-                yield return new TestCaseData(new[] {3, 6, 15, 3, 27, 9}).Returns(3);
-                yield return new TestCaseData(new[] {-9, 27, 81, -900}).Returns(9);
+                yield return new TestCaseData(new[] { 1, 2, 3, 4, 5, 6 }).Returns(1);
+                yield return new TestCaseData(new[] { 3, 6, 15, 3, 27, 9 }).Returns(3);
+                yield return new TestCaseData(new[] { -9, 27, 81, -900 }).Returns(9);
             }
-            
         }
-
 
         #region EuclideanGcd
 
@@ -80,7 +77,6 @@ namespace NumberFunctions.Tests
 
         #endregion
 
-
         #region StainGcd
 
         [Test, TestCaseSource(nameof(FindGcdOfTwoNumbersTestCaseDatas))]
@@ -102,6 +98,5 @@ namespace NumberFunctions.Tests
         }
 
         #endregion
-      
     }
 }
