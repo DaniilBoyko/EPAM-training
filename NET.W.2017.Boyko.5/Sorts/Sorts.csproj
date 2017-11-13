@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BubbleSort.cs" />
-    <Compile Include="DelegateComparer.cs" />
+    <Compile Include="ComparisonAdapter.cs" />
     <Compile Include="Interfaces\ICalculateArray.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

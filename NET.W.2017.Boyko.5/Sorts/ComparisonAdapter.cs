@@ -9,20 +9,20 @@ namespace Sorts
     /// <summary>
     /// Class for compare two double arrays.
     /// </summary>
-    public class DelegateComparer : IComparer<double[]>
+    public class ComparisonAdapter : IComparer<double[]>
     {
         /// <summary>
         /// Delegate for compare.
         /// </summary>
-        private readonly Func<double[], double[], int> _comparer;
+        private readonly Comparison<double[]> _comparison;
 
         /// <summary>
-        /// Constructor initialize a new instance of the <see cref="DelegateComparer"/> class.
+        /// Constructor initialize a new instance of the <see cref="ComparisonAdapter"/> class.
         /// </summary>
-        /// <param name="comparer"></param>
-        public DelegateComparer(Func<double[], double[], int> comparer)
+        /// <param name="comparison"></param>
+        public ComparisonAdapter(Comparison<double[]> comparison)
         {
-            _comparer = comparer ?? throw new ArgumentNullException(nameof(comparer));
+            _comparison = comparison ?? throw new ArgumentNullException(nameof(comparison));
         }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace Sorts
         /// <returns>Integer representation of compare.</returns>
         public int Compare(double[] x, double[] y)
         {
-            return _comparer(x, y);
+            return _comparison(x, y);
         }
     }
 }

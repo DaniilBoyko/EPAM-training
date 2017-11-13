@@ -63,9 +63,9 @@ namespace Sorts
         /// </summary>
         /// <param name="array">sorting array</param>
         /// <param name="delegateComparer">delegate for compare</param>
-        public static void SortJaggedArray1(double[][] array, Func<double[], double[], int> delegateComparer)
+        public static void SortJaggedArray1(double[][] array, Comparison<double[]> comparison)
         {
-            SortJaggedArray1(array, new DelegateComparer(delegateComparer));
+            SortJaggedArray1(array, new ComparisonAdapter(comparison));
         }
 
         /// <summary>
@@ -83,13 +83,13 @@ namespace Sorts
         /// </summary>
         /// <param name="array">sorting array</param>
         /// <param name="delegateComparer">delegate for compare</param>
-        public static void SortJaggedArray2(double[][] array, Func<double[], double[], int> delegateComparer)
+        public static void SortJaggedArray2(double[][] array, Comparison<double[]> comparison)
         {
             for (int i = 0; i < array.Length; i++)
             {
                 for (int j = array.Length - 1; j > i; j--)
                 {
-                    if (delegateComparer(array[j - 1], array[j]) < 0)
+                    if (comparison(array[j - 1], array[j]) < 0)
                     {
                         Swap(ref array[j - 1], ref array[j]);
                     }
