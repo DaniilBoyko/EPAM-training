@@ -1,23 +1,34 @@
-﻿namespace Bank.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Bank.Models.Accounts;
+using Bank.Models.Exceptions;
+using Bank.Models.Interfaces;
+
+namespace Bank.Models
 {
     /*
- * - Обязательная зависимость - в конструкторе
- * - Необязательная зависимость просто как параметр метода, здесь лучше как необзательную зависисмость сделать.
- * - Можно убрать лист и работать только с одним счетом.
- */
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using Accounts;
-    using Exceptions;
-    using Interfaces;
+    * - Можно убрать лист и работать только с одним счетом.
+    */
 
     /// <summary>
     /// Class for manipulation bank accounts.
     /// </summary>
     public class BankService
     {
-        #region Private
+        #region public Constructors
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BankService"/> class.
+        /// </summary>
+        /// <param name="bankStorage">contains methods of save and load accounts</param>
+        public BankService(IBankStorage bankStorage)
+        {
+            Accounts = new List<Account>();
+            BankStorage = bankStorage ?? throw new ArgumentNullException(nameof(bankStorage));
+        }
+
+        #endregion
 
         #region private Properties
 
@@ -36,25 +47,7 @@
         /// </summary>
         private Account CurrentAccount { get; set; }
 
-        #endregion
-
-        #endregion
-
-        #region Public 
-
-        #region public Constructors
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BankService"/> class.
-        /// </summary>
-        /// <param name="fileWorker">contains methods of save and load accounts</param>
-        public BankService(IBankStorage fileWorker)
-        {
-            Accounts = new List<Account>();
-            BankStorage = fileWorker ?? throw new ArgumentNullException(nameof(fileWorker));
-        }
-
-        #endregion
+        #endregion // !private Properties
 
         #region public Methods
 
@@ -62,7 +55,7 @@
         /// Load accounts from file.
         /// </summary>
         /// <param name="path">path to file</param>
-        public void LoadAccountsFromFile(string path)
+        public void LoadAccounts(string path)
         {
             Accounts = BankStorage.LoadAccounts(path).ToList();
         }
@@ -71,7 +64,7 @@
         /// Save accounts to file.
         /// </summary>
         /// <param name="path">path to file</param>
-        public void SaveAccountsToFile(string path)
+        public void SaveAccounts(string path)
         {
             BankStorage.SaveAccounts(Accounts, path);
         }
@@ -178,8 +171,6 @@
             CurrentAccount = account ?? throw new AccountNotFoundException("Account not found.");
         }
 
-        #endregion public Methods
-        
-        #endregion Public
+        #endregion // !public Methods
     }
 }

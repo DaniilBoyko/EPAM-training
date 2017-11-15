@@ -23,11 +23,11 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <sourcecode name="Program.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="BookComparer.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017.11.09 09:40:51.698</styleCop>
       <settingsFile>2017.11.10 20:46:18.368</settingsFile>
-      <sourceFile>2017.11.10 22:34:58.573</sourceFile>
+      <sourceFile>2017.11.12 01:23:31.325</sourceFile>
       <parser>2017.11.09 09:40:51.698</parser>
       <StyleCop.CSharp.DocumentationRules>2017.11.09 09:40:51.698</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>149807098</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -46,11 +46,11 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <sourcecode name="BookComparer.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="Program.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017.11.09 09:40:51.698</styleCop>
       <settingsFile>2017.11.10 20:46:18.368</settingsFile>
-      <sourceFile>2017.11.12 01:23:31.325</sourceFile>
+      <sourceFile>2017.11.15 17:27:05.541</sourceFile>
       <parser>2017.11.09 09:40:51.698</parser>
       <StyleCop.CSharp.DocumentationRules>2017.11.09 09:40:51.698</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>149807098</StyleCop.CSharp.DocumentationRules.FilesHashCode>

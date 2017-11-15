@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NLog;
 
 namespace Library.Models
@@ -12,15 +8,6 @@ namespace Library.Models
     /// </summary>
     public class NLogLogger : Interfaces.ILogger
     {
-        #region private Fields
-
-        /// <summary>
-        /// Store example of logger.
-        /// </summary>
-        private readonly Logger logger;
-
-        #endregion //!private Fields
-
         #region public Constructors
 
         /// <summary>
@@ -29,21 +16,68 @@ namespace Library.Models
         /// <param name="logger">NLog logger</param>
         public NLogLogger(Logger logger)
         {
-            this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            Logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         #endregion // !public Constructors
 
-        #region public Interface Methods
+        #region private Properties
 
         /// <summary>
-        /// Log error.
+        /// Store example of logger.
         /// </summary>
-        /// <param name="additionalMessage">additional message</param>
-        /// <param name="exception">exception</param>
+        private Logger Logger { get; }
+
+        #endregion //!private Fields
+
+        #region public Interface Methods
+
+        /// <inheritdoc></inheritdoc>
         public void Error(string additionalMessage, Exception exception)
         {
-            this.logger.Error(exception, additionalMessage);
+            Logger.Error(exception, additionalMessage);
+        }
+
+        /// <inheritdoc></inheritdoc>
+        public void Error(string additionalMessage)
+        {
+            Logger.Error(additionalMessage);
+        }
+
+        /// <inheritdoc></inheritdoc>
+        public void Fatal(string additionalMessage, Exception exception)
+        {
+            Logger.Fatal(exception, additionalMessage);
+        }
+
+        /// <inheritdoc></inheritdoc>
+        public void Fatal(string additionalMessage)
+        {
+            Logger.Fatal(additionalMessage);
+        }
+
+        /// <inheritdoc></inheritdoc>
+        public void Warn(string additionalMessage)
+        {
+            Logger.Warn(additionalMessage);
+        }
+
+        /// <inheritdoc></inheritdoc>
+        public void Trace(string additionalMessage)
+        {
+            Logger.Trace(additionalMessage);
+        }
+
+        /// <inheritdoc></inheritdoc>
+        public void Debug(string additionalMessage)
+        {
+            Logger.Debug(additionalMessage);
+        }
+
+        /// <inheritdoc></inheritdoc>
+        public void Info(string additionalMessage)
+        {
+            Logger.Info(additionalMessage);
         }
 
         #endregion // !public Interface Methods

@@ -1,8 +1,9 @@
-﻿//// <copyright file="Program.cs" company="RelCode">Boyko Daniil</copyright>
+﻿using System;
+using Library.Models;
+
 namespace Library.Tests.ConsoleApp
 {
-    using System;
-    using Models;
+
 
     /// <summary>
     /// Show all abilities of Library

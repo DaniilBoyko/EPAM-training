@@ -31,7 +31,7 @@ namespace Library.Models
         /// <summary>
         /// Logger of the book service.
         /// </summary>
-        private Interfaces.ILogger Logger { get; set; }
+        private Interfaces.ILogger Logger { get; }
 
         /// <summary>
         /// Gets or sets list of books.
