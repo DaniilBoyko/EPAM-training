@@ -6,21 +6,9 @@ using System.Threading.Tasks;
 
 namespace Search
 {
-    public class BinarySearch <T>
-        where T:IComparable
+    public class BinarySearch<T> where T : IComparable
     {
-        private static void CheckArray(T[] array)
-        {
-            for (int i = 1; i < array.Length; i++)
-            {
-                if (array[i].CompareTo(array[i - 1]) == -1)
-                {
-                    throw new ArgumentException("Array must be sorted.", nameof(array));
-                }
-            }
-        }
-
-        public static int Fined(T[] array, T element)
+        public static int Find(T[] array, T element)
         {
             if (element == null)
             {
@@ -45,14 +33,37 @@ namespace Search
             {
                 mid = (first + last) / 2;
                 if (element.CompareTo(array[mid]) == 1)
+                {
                     first = mid + 1;
+                }
+
                 if (element.CompareTo(array[mid]) == -1)
+                {
                     last = mid - 1;
+                }
+
                 if (element.CompareTo(array[mid]) == 0)
+                {
                     return mid;
+                }
             }
 
             return -1;
         }
+
+        #region private Methods
+
+        private static void CheckArray(T[] array)
+        {
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i].CompareTo(array[i - 1]) == -1)
+                {
+                    throw new ArgumentException("Array must be sorted.", nameof(array));
+                }
+            }
+        }
+
+        #endregion // !private Methods
     }
 }

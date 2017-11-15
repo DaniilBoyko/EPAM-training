@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watch", "Watch\Watch.csproj", "{8CC17C07-4983-46E2-95D6-2DB3F7D3A6C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watch.Tests", "Watch.Tests\Watch.Tests.csproj", "{2E1C81DD-88C6-422C-98C9-15764CFBAA89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watch.Tests.Console", "Watch.Tests\Watch.Tests.Console.csproj", "{2E1C81DD-88C6-422C-98C9-15764CFBAA89}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search", "Search\Search.csproj", "{616AD059-3F65-46A8-9A73-A900276840D3}"
 EndProject

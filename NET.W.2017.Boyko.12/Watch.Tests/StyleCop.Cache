@@ -4,30 +4,7 @@
     <timestamps>
       <styleCop>2017.11.09 09:40:51.698</styleCop>
       <settingsFile>2017.11.10 20:46:18.368</settingsFile>
-      <sourceFile>2017.11.10 02:35:11.373</sourceFile>
-      <parser>2017.11.09 09:40:51.698</parser>
-      <StyleCop.CSharp.DocumentationRules>2017.11.09 09:40:51.698</StyleCop.CSharp.DocumentationRules>
-      <StyleCop.CSharp.DocumentationRules.FilesHashCode>149807098</StyleCop.CSharp.DocumentationRules.FilesHashCode>
-      <StyleCop.CSharp.LayoutRules>2017.11.09 09:40:51.698</StyleCop.CSharp.LayoutRules>
-      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
-      <StyleCop.CSharp.MaintainabilityRules>2017.11.09 09:40:51.698</StyleCop.CSharp.MaintainabilityRules>
-      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
-      <StyleCop.CSharp.NamingRules>2017.11.09 09:40:51.698</StyleCop.CSharp.NamingRules>
-      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
-      <StyleCop.CSharp.OrderingRules>2017.11.09 09:40:51.698</StyleCop.CSharp.OrderingRules>
-      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
-      <StyleCop.CSharp.ReadabilityRules>2017.11.09 09:40:51.698</StyleCop.CSharp.ReadabilityRules>
-      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
-      <StyleCop.CSharp.SpacingRules>2017.11.09 09:40:51.698</StyleCop.CSharp.SpacingRules>
-      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
-    </timestamps>
-    <violations />
-  </sourcecode>
-  <sourcecode name="BookComparer.cs" parser="StyleCop.CSharp.CsParser">
-    <timestamps>
-      <styleCop>2017.11.09 09:40:51.698</styleCop>
-      <settingsFile>2017.11.10 20:46:18.368</settingsFile>
-      <sourceFile>2017.11.12 01:23:31.325</sourceFile>
+      <sourceFile>2017.11.15 18:17:30.829</sourceFile>
       <parser>2017.11.09 09:40:51.698</parser>
       <StyleCop.CSharp.DocumentationRules>2017.11.09 09:40:51.698</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>149807098</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -50,7 +27,7 @@
     <timestamps>
       <styleCop>2017.11.09 09:40:51.698</styleCop>
       <settingsFile>2017.11.10 20:46:18.368</settingsFile>
-      <sourceFile>2017.11.15 20:50:18.157</sourceFile>
+      <sourceFile>2017.11.15 21:16:29.769</sourceFile>
       <parser>2017.11.09 09:40:51.698</parser>
       <StyleCop.CSharp.DocumentationRules>2017.11.09 09:40:51.698</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>149807098</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -69,7 +46,7 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <project key="-1365699869">
+  <project key="604175576">
     <configuration>DEBUG;TRACE</configuration>
   </project>
 </stylecopresultscache>

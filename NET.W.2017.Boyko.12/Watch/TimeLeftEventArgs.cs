@@ -1,18 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Watch
 {
+    /// <summary>
+    /// Argument for send to listeners of Watch.
+    /// </summary>
     public class TimeLeftEventArgs : EventArgs
     {
-        public string Message { get; set; }
-
+        /// <summary>
+        /// Constructor initialize the instance of the <see cref="TimeLeftEventArgs"/> class.
+        /// </summary>
+        /// <param name="message">message</param>
         public TimeLeftEventArgs(string message)
         {
-            Message = message;
+            this.Message = message;
         }
+
+        /// <summary>
+        /// Message to send.
+        /// </summary>
+        public string Message { get; set; }
     }
 }

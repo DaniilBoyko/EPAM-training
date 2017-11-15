@@ -27,8 +27,8 @@ namespace Fibonacci.Tests
         [TestCase(-1, ExpectedException = typeof(ArgumentOutOfRangeException))]
         [TestCase(1, ExpectedResult = new long[] { 1 })]
         [TestCase(2, ExpectedResult = new long[] { 1, 1 })]
-        [TestCase(3, ExpectedResult = new long[] { 1, 1, 2})]
-        [TestCase(4, ExpectedResult = new long[] { 1, 1, 2, 3})]
+        [TestCase(3, ExpectedResult = new long[] { 1, 1, 2 })]
+        [TestCase(4, ExpectedResult = new long[] { 1, 1, 2, 3 })]
         [TestCase(5, ExpectedResult = new long[] { 1, 1, 2, 3, 5 })]
         [TestCase(6, ExpectedResult = new long[] { 1, 1, 2, 3, 5, 8 })]
         public long[] GetNumberTests_GetFibonacciNumbersSequence(int index)

@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Computer.cs" />
-    <Compile Include="NotifyAny.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="Models\Computer.cs" />
+    <Compile Include="Models\NotifyAny.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="TimeLeftEventArgs.cs" />
     <Compile Include="Watch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

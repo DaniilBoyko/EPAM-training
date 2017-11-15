@@ -20,7 +20,7 @@ namespace Fibonacci
                 return 1;
             }
 
-            long[] prevNumbers = new long[] {1, 1};
+            long[] prevNumbers = new long[] { 1, 1 };
 
             for (int i = 2; i < index; i++)
             {
@@ -41,12 +41,12 @@ namespace Fibonacci
 
             if (index == 1)
             {
-                return new long[] {1};
+                return new long[] { 1 };
             }
 
             if (index == 2)
             {
-                return new long[] {1, 1};
+                return new long[] { 1, 1 };
             }
 
             long[] numbers = new long[index];

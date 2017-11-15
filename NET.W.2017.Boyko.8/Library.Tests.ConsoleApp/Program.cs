@@ -3,8 +3,6 @@ using Library.Models;
 
 namespace Library.Tests.ConsoleApp
 {
-
-
     /// <summary>
     /// Show all abilities of Library
     /// </summary>

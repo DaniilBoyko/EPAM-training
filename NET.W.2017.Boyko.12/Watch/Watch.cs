@@ -1,60 +1,125 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Threading;
 
 namespace Watch
 {
+    /// <summary>
+    /// Notify listeners when time is left.
+    /// </summary>
     public class Watch
     {
-        private long seconds;
+        #region private Fields
+
+        /// <summary>
+        /// Store milliseconds of the watch.
+        /// </summary>
+        private long milSeconds;
+
+        /// <summary>
+        /// Store thread waiting of the watch.
+        /// </summary>
         private Thread thread;
-        private long Seconds
+
+        #endregion // !private Fields
+
+        #region public Constructors
+
+        /// <summary>
+        /// Constructor initialize the instance of the <see cref="Watch"/> class.
+        /// </summary>
+        /// <param name="milSeconds"></param>
+        public Watch(long milSeconds)
         {
-            get => seconds;
+            MilSeconds = milSeconds;
+        }
+
+        #endregion // !public Constructors
+
+        #region public Delegates and Events
+
+        /// <summary>
+        /// Delegate for time left event.
+        /// </summary>
+        /// <param name="sender">sender</param>
+        /// <param name="e">TimeLeftEventArgs</param>
+        public delegate void TimeLeftEventHandler(object sender, TimeLeftEventArgs e);
+
+        /// <summary>
+        /// Event for notify listeners of watch.
+        /// </summary>
+        public event TimeLeftEventHandler TimeLeft;
+
+        #endregion // !poubic Delegates and Events
+
+        #region private Properties
+
+        /// <summary>
+        /// Get or set seconds.
+        /// </summary>
+        private long MilSeconds
+        {
+            get => milSeconds;
             set
             {
                 if (value <= 0)
                 {
-                    throw new ArgumentNullException("Seconds can't be less then one");
+                    throw new ArgumentNullException(nameof(milSeconds));
                 }
-                   
-                seconds = value;
+
+                milSeconds = value;
             }
         }
 
-        public delegate void TimeLeftEventHandler(object sender, TimeLeftEventArgs e);
+        #endregion // !private Properties
 
-        public event TimeLeftEventHandler TimeLeft;
+        #region public Methods
 
-        protected virtual void OnTimeLeft(TimeLeftEventArgs e)
-        {
-            TimeLeft?.Invoke(this, e);
-        }
-
-        public Watch(long seconds)
-        {
-            Seconds = seconds;
-        }
-
-        public void SetSeconds(int sec)
+        /// <summary>
+        /// Set waiting seconds of watch.
+        /// </summary>
+        /// <param name="milseconds"></param>
+        public void SetSeconds(int milseconds)
         {
             thread?.Abort();
-            Seconds = sec;
+            MilSeconds = milSeconds;
         }
 
+        /// <summary>
+        /// Start watch.
+        /// </summary>
         public void Start()
         {
             thread = new Thread(() => Run(this));
             thread.Start();
         }
 
+        #endregion // !public Methods
+
+        #region protected Methods
+
+        /// <summary>
+        /// Call when time left.
+        /// </summary>
+        /// <param name="e">arguments</param>
+        protected virtual void OnTimeLeft(TimeLeftEventArgs e)
+        {
+            TimeLeft?.Invoke(this, e);
+        }
+
+        #endregion // !protected Methods
+
+        #region private Methods
+
+        /// <summary>
+        /// Run thread in watch.
+        /// </summary>
+        /// <param name="watch">instance of watch</param>
         private static void Run(Watch watch)
         {
-            Thread.Sleep((int)watch.Seconds * 1000);
-            watch.OnTimeLeft(new TimeLeftEventArgs("Time is LEFTTTT!!!"));
+            Thread.Sleep((int)watch.MilSeconds);
+            watch.OnTimeLeft(new TimeLeftEventArgs("Time is LEFT!!!"));
         }
+
+        #endregion // !private Methods
     }
 }
