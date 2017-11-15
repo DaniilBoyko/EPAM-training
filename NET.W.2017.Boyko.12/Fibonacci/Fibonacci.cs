@@ -1,13 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fibonacci
 {
+    /// <summary>
+    /// Contains methods for getting fibonacci numbers.
+    /// </summary>
     public static class Fibonacci
     {
+        /// <summary>
+        /// Get one number of fibonacci sequence.
+        /// </summary>
+        /// <param name="index">number of element in sequence</param>
+        /// <returns>Number of fibonacci sequence.</returns>
         public static long GetNumber(int index)
         {
             if (index <= 0)
@@ -20,7 +24,7 @@ namespace Fibonacci
                 return 1;
             }
 
-            long[] prevNumbers = new long[] { 1, 1 };
+            long[] prevNumbers = { 1, 1 };
 
             for (int i = 2; i < index; i++)
             {
@@ -32,6 +36,11 @@ namespace Fibonacci
             return prevNumbers[1];
         }
 
+        /// <summary>
+        /// Get sequence of fibonacci sequence.
+        /// </summary>
+        /// <param name="index">the greates number of element in fibonacci sequence</param>
+        /// <returns>Sequence of fibonacci sequence.</returns>
         public static long[] GetSequence(int index)
         {
             if (index <= 0)

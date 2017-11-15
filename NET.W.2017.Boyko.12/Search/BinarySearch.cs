@@ -1,13 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Search
 {
+    /// <summary>
+    /// Contains method for binary search
+    /// </summary>
+    /// <typeparam name="T">type of the elements in array</typeparam>
     public class BinarySearch<T> where T : IComparable
     {
+        #region public Methods
+
+        /// <summary>
+        /// Find index of element in array.
+        /// </summary>
+        /// <param name="array">array</param>
+        /// <param name="element">element</param>
+        /// <returns></returns>
         public static int Find(T[] array, T element)
         {
             if (element == null)
@@ -51,8 +59,14 @@ namespace Search
             return -1;
         }
 
+        #endregion // !public Methods
+
         #region private Methods
 
+        /// <summary>
+        /// Check array for ascending.
+        /// </summary>
+        /// <param name="array">array</param>
         private static void CheckArray(T[] array)
         {
             for (int i = 1; i < array.Length; i++)
