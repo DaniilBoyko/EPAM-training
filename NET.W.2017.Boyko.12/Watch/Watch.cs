@@ -9,17 +9,11 @@ namespace Watch
 {
     public class Watch
     {
-
         private long seconds;
         private Thread thread;
-
         private long Seconds
         {
-            get
-            {
-                return seconds;
-                
-            }
+            get => seconds;
             set
             {
                 if (value <= 0)
@@ -30,8 +24,6 @@ namespace Watch
                 seconds = value;
             }
         }
-
-        #region public Properties
 
         public delegate void TimeLeftEventHandler(object sender, TimeLeftEventArgs e);
 
@@ -49,8 +41,7 @@ namespace Watch
 
         public void SetSeconds(int sec)
         {
-            if (thread != null)
-                thread.Abort();
+            thread?.Abort();
             Seconds = sec;
         }
 
@@ -65,8 +56,5 @@ namespace Watch
             Thread.Sleep((int)watch.Seconds * 1000);
             watch.OnTimeLeft(new TimeLeftEventArgs("Time is LEFTTTT!!!"));
         }
-
-
-        #endregion
     }
 }

@@ -1,0 +1,10 @@
+E:\EPAM-training\NET.W.2017.Boyko.12\Search.Tests\bin\Debug\Search.Tests.dll
+E:\EPAM-training\NET.W.2017.Boyko.12\Search.Tests\bin\Debug\Search.Tests.pdb
+E:\EPAM-training\NET.W.2017.Boyko.12\Search.Tests\bin\Debug\nunit.framework.dll
+E:\EPAM-training\NET.W.2017.Boyko.12\Search.Tests\bin\Debug\Search.dll
+E:\EPAM-training\NET.W.2017.Boyko.12\Search.Tests\bin\Debug\Search.pdb
+E:\EPAM-training\NET.W.2017.Boyko.12\Search.Tests\bin\Debug\nunit.framework.xml
+E:\EPAM-training\NET.W.2017.Boyko.12\Search.Tests\obj\Debug\Search.Tests.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.12\Search.Tests\obj\Debug\Search.Tests.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.12\Search.Tests\obj\Debug\Search.Tests.dll
+E:\EPAM-training\NET.W.2017.Boyko.12\Search.Tests\obj\Debug\Search.Tests.pdb

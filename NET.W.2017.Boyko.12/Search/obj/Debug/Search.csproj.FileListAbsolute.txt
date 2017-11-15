@@ -1,0 +1,6 @@
+E:\EPAM-training\NET.W.2017.Boyko.12\Search\bin\Debug\Search.dll
+E:\EPAM-training\NET.W.2017.Boyko.12\Search\bin\Debug\Search.pdb
+E:\EPAM-training\NET.W.2017.Boyko.12\Search\obj\Debug\Search.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.12\Search\obj\Debug\Search.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.12\Search\obj\Debug\Search.dll
+E:\EPAM-training\NET.W.2017.Boyko.12\Search\obj\Debug\Search.pdb
