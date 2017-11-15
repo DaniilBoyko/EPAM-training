@@ -1,0 +1,6 @@
+E:\EPAM-training\NET.W.2017.Boyko.12\Fibonacci\bin\Debug\Fibonacci.dll
+E:\EPAM-training\NET.W.2017.Boyko.12\Fibonacci\bin\Debug\Fibonacci.pdb
+E:\EPAM-training\NET.W.2017.Boyko.12\Fibonacci\obj\Debug\Fibonacci.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.12\Fibonacci\obj\Debug\Fibonacci.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.12\Fibonacci\obj\Debug\Fibonacci.dll
+E:\EPAM-training\NET.W.2017.Boyko.12\Fibonacci\obj\Debug\Fibonacci.pdb

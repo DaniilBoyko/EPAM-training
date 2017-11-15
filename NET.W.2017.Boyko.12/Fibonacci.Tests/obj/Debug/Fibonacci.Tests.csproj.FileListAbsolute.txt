@@ -1,0 +1,10 @@
+E:\EPAM-training\NET.W.2017.Boyko.12\Fibonacci.Tests\bin\Debug\Fibonacci.Tests.dll
+E:\EPAM-training\NET.W.2017.Boyko.12\Fibonacci.Tests\bin\Debug\Fibonacci.Tests.pdb
+E:\EPAM-training\NET.W.2017.Boyko.12\Fibonacci.Tests\bin\Debug\Fibonacci.dll
+E:\EPAM-training\NET.W.2017.Boyko.12\Fibonacci.Tests\bin\Debug\nunit.framework.dll
+E:\EPAM-training\NET.W.2017.Boyko.12\Fibonacci.Tests\bin\Debug\Fibonacci.pdb
+E:\EPAM-training\NET.W.2017.Boyko.12\Fibonacci.Tests\bin\Debug\nunit.framework.xml
+E:\EPAM-training\NET.W.2017.Boyko.12\Fibonacci.Tests\obj\Debug\Fibonacci.Tests.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.12\Fibonacci.Tests\obj\Debug\Fibonacci.Tests.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.12\Fibonacci.Tests\obj\Debug\Fibonacci.Tests.dll
+E:\EPAM-training\NET.W.2017.Boyko.12\Fibonacci.Tests\obj\Debug\Fibonacci.Tests.pdb
