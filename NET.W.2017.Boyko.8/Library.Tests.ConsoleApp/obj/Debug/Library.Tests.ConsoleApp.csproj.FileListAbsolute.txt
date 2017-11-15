@@ -7,3 +7,6 @@ E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests.ConsoleApp\obj\Debug\Library.T
 E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests.ConsoleApp\obj\Debug\Library.Tests.ConsoleApp.csproj.CoreCompileInputs.cache
 E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests.ConsoleApp\obj\Debug\Library.Tests.ConsoleApp.exe
 E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests.ConsoleApp\obj\Debug\Library.Tests.ConsoleApp.pdb
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests.ConsoleApp\bin\Debug\NLog.config
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests.ConsoleApp\bin\Debug\NLog.dll
+E:\EPAM-training\NET.W.2017.Boyko.8\Library.Tests.ConsoleApp\bin\Debug\NLog.xml

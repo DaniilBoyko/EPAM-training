@@ -4,3 +4,6 @@ E:\EPAM-training\NET.W.2017.Boyko.8\Library\obj\Debug\Library.csproj.CoreCompile
 E:\EPAM-training\NET.W.2017.Boyko.8\Library\obj\Debug\Library.dll
 E:\EPAM-training\NET.W.2017.Boyko.8\Library\obj\Debug\Library.pdb
 E:\EPAM-training\NET.W.2017.Boyko.8\Library\obj\Debug\Library.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.8\Library\bin\Debug\NLog.config
+E:\EPAM-training\NET.W.2017.Boyko.8\Library\bin\Debug\NLog.dll
+E:\EPAM-training\NET.W.2017.Boyko.8\Library\bin\Debug\NLog.xml

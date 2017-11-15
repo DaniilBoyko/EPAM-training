@@ -15,7 +15,7 @@ namespace Library.Tests.ConsoleApp
         /// <param name="args">array of arguments</param>
         public static void Main(string[] args)
         {
-            string path = AppDomain.CurrentDomain.BaseDirectory + "BookListStorage.txt";
+            string path = AppDomain.CurrentDomain.BaseDirectory + "sdf/asdf/23!_/ / istStorage.txt";
             BookListService bookListService = new BookListService();
 
             try
@@ -50,12 +50,12 @@ namespace Library.Tests.ConsoleApp
                 }
 
                 Console.WriteLine("-----SAVE BOOKS TO \"BookListStorage.txt\"\n");
-                var bookStorage = new BookListStorage();
-                bookListService.SaveBooksToFile(bookStorage, path);
+                var bookStorage = new BookListStorage(path);
+                bookListService.SaveBooksToFile(bookStorage);
 
                 Console.WriteLine("-----LOAD BOOKS FROM \"BookListStorage.txt\"\n");
                 BookListService bookListService2 = new BookListService();
-                bookListService2.LoadBooksFromFile(bookStorage, path);
+                bookListService2.LoadBooksFromFile(bookStorage);
                 foreach (Book book in bookListService2)
                 {
                     Console.WriteLine(book);

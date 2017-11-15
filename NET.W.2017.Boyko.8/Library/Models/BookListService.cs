@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Library.Models.Exceptions;
 using Library.Models.Interfaces;
+using NLog;
 
 namespace Library.Models
 {
@@ -20,11 +21,17 @@ namespace Library.Models
         public BookListService()
         {
             Books = new List<Book>();
+            Logger = new NLogLogger(LogManager.GetCurrentClassLogger());
         }
 
         #endregion // !public Constructors
 
         #region private Properties
+
+        /// <summary>
+        /// Logger of the book service.
+        /// </summary>
+        private Interfaces.ILogger Logger { get; set; }
 
         /// <summary>
         /// Gets or sets list of books.
@@ -39,30 +46,44 @@ namespace Library.Models
         /// Load books from file.
         /// </summary>
         /// <param name="bookStorage">has method for load books</param>
-        /// <param name="path">path to file</param>
-        public void LoadBooksFromFile(IBookStorage bookStorage, string path)
+        public void LoadBooksFromFile(IBookStorage bookStorage)
         {
             if (bookStorage == null)
             {
                 throw new ArgumentNullException(nameof(bookStorage));
             }
 
-            Books = bookStorage.ReadBooks(path).ToList();
+            try
+            {
+                Books = bookStorage.ReadBooks().ToList();
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(string.Empty, ex);
+                throw;
+            }
         }
 
         /// <summary>
         /// Write books to file.
         /// </summary>
         /// <param name="bookStorage">has method for save books</param>
-        /// <param name="path">path to file</param>
-        public void SaveBooksToFile(IBookStorage bookStorage, string path)
+        public void SaveBooksToFile(IBookStorage bookStorage)
         {
             if (bookStorage == null)
             {
                 throw new ArgumentNullException(nameof(bookStorage));
             }
 
-            bookStorage.WriteBooks(Books, path);
+            try
+            {
+                bookStorage.WriteBooks(Books);
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(string.Empty, ex);
+                throw;
+            }
         }
 
         /// <summary>

@@ -11,18 +11,61 @@ namespace Library.Models
     /// </summary>
     public class BookListStorage : IBookStorage
     {
+        #region private Fields
+
+        /// <summary>
+        /// Store path to file.
+        /// </summary>
+        private string path;
+
+        #endregion // !private Fields
+
+        #region public Constructors
+
+        /// <summary>
+        /// Initialize the instance of the <see cref="BookListStorage"/> class.
+        /// </summary>
+        /// <param name="path"></param>
+        public BookListStorage(string path)
+        {
+            Path = path;
+        }
+
+        #endregion
+
+        #region private Properties
+
+        /// <summary>
+        /// Get or set path to the file.
+        /// </summary>
+        private string Path
+        {
+            get => path;
+
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Path can't be null or empty.");
+                }
+
+                path = value;
+            }
+        }
+
+        #endregion
+
         #region public Interface Methods
 
         /// <summary>
         /// Read books from file.
         /// </summary>
-        /// <param name="path">path to file</param>
         /// <returns>List of books.</returns>
-        public IEnumerable<Book> ReadBooks(string path)
+        public IEnumerable<Book> ReadBooks()
         {
             var books = new List<Book>();
 
-            using (var binReader = new BinaryReader(File.Open(path, FileMode.Open)))
+            using (var binReader = new BinaryReader(File.Open(Path, FileMode.Open)))
             {
                 while (binReader.PeekChar() > -1)
                 {
@@ -44,15 +87,14 @@ namespace Library.Models
         /// Write list of books to file.
         /// </summary>
         /// <param name="books">list of books</param>
-        /// <param name="path">path to file</param>
-        public void WriteBooks(IEnumerable<Book> books, string path)
+        public void WriteBooks(IEnumerable<Book> books)
         {
             if (books == null)
             {
                 throw new ArgumentNullException(nameof(books));
             }
 
-            using (BinaryWriter binWriter = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate)))
+            using (BinaryWriter binWriter = new BinaryWriter(File.Open(Path, FileMode.OpenOrCreate)))
             {
                 foreach (Book book in books)
                 {
