@@ -1,0 +1,9 @@
+E:\EPAM-training\NET.W.2017.Boyko.12\Watch.Tests\bin\Debug\Watch.Tests.exe.config
+E:\EPAM-training\NET.W.2017.Boyko.12\Watch.Tests\bin\Debug\Watch.Tests.exe
+E:\EPAM-training\NET.W.2017.Boyko.12\Watch.Tests\bin\Debug\Watch.Tests.pdb
+E:\EPAM-training\NET.W.2017.Boyko.12\Watch.Tests\bin\Debug\Watch.dll
+E:\EPAM-training\NET.W.2017.Boyko.12\Watch.Tests\bin\Debug\Watch.pdb
+E:\EPAM-training\NET.W.2017.Boyko.12\Watch.Tests\obj\Debug\Watch.Tests.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.12\Watch.Tests\obj\Debug\Watch.Tests.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.12\Watch.Tests\obj\Debug\Watch.Tests.exe
+E:\EPAM-training\NET.W.2017.Boyko.12\Watch.Tests\obj\Debug\Watch.Tests.pdb
