@@ -8,6 +8,13 @@ namespace Search
     /// <typeparam name="T">type of the elements in array</typeparam>
     public class BinarySearch<T> where T : IComparable
     {
+        //// Переделать на интерфейс и веделагт
+        /* IComparer<A> = Comparer<A>.Default;
+         * if (typeof(T).GetInterface("IComparable'1") != null || typeof(T).GetInterface("IComparable") != null)
+         * comparer = Comparer<T>.Default;
+         * else
+         * throw new ArgumentException
+         * */
         #region public Methods
 
         /// <summary>

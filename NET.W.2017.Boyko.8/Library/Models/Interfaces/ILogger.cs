@@ -1,5 +1,10 @@
 ﻿using System;
 
+/**
+ * Техника внедрения зависимости (dependency injection)
+ * 
+ * */
+
 namespace Library.Models.Interfaces
 {
     /// <summary>

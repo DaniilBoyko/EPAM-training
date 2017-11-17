@@ -38,16 +38,9 @@ namespace Watch
         #region public Delegates and Events
 
         /// <summary>
-        /// Delegate for time left event.
-        /// </summary>
-        /// <param name="sender">sender</param>
-        /// <param name="e">TimeLeftEventArgs</param>
-        public delegate void TimeLeftEventHandler(object sender, TimeLeftEventArgs e);
-
-        /// <summary>
         /// Event for notify listeners of watch.
         /// </summary>
-        public event TimeLeftEventHandler TimeLeft;
+        public event EventHandler<TimeLeftEventArgs> TimeLeft = delegate { };
 
         #endregion // !poubic Delegates and Events
 
@@ -103,7 +96,7 @@ namespace Watch
         /// <param name="e">arguments</param>
         protected virtual void OnTimeLeft(TimeLeftEventArgs e)
         {
-            TimeLeft?.Invoke(this, e);
+            TimeLeft(this, e);
         }
 
         #endregion // !protected Methods

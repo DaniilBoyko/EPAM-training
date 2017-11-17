@@ -1,5 +1,14 @@
 ﻿using System;
 
+/*
+ * Использовать BigInteger
+ * Локальная функция 
+ * Итератор
+ * Выносить метод проверки аргументов в отдельный метод, т. е. сделать обертку для того, чтобы проверка аргументов была не ленивой
+ * А лучше вынести во вложенную функцию.
+ * 
+ * */
+
 namespace Fibonacci
 {
     /// <summary>
@@ -39,7 +48,7 @@ namespace Fibonacci
         /// <summary>
         /// Get sequence of fibonacci sequence.
         /// </summary>
-        /// <param name="index">the greates number of element in fibonacci sequence</param>
+        /// <param name="index">the greatest number of element in fibonacci sequence</param>
         /// <returns>Sequence of fibonacci sequence.</returns>
         public static long[] GetSequence(int index)
         {

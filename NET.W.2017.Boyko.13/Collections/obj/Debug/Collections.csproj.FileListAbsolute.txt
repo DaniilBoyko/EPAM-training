@@ -1,0 +1,6 @@
+E:\EPAM-training\NET.W.2017.Boyko.13\Collections\bin\Debug\Collections.dll
+E:\EPAM-training\NET.W.2017.Boyko.13\Collections\bin\Debug\Collections.pdb
+E:\EPAM-training\NET.W.2017.Boyko.13\Collections\obj\Debug\Collections.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.13\Collections\obj\Debug\Collections.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.13\Collections\obj\Debug\Collections.dll
+E:\EPAM-training\NET.W.2017.Boyko.13\Collections\obj\Debug\Collections.pdb
