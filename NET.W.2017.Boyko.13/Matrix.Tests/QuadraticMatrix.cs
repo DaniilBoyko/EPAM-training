@@ -20,9 +20,9 @@ namespace Matrix.Tests
         {
             int[][] array = new int[][]
             {
-                new int[] {1, 2, 3},
-                new int[] {4, 5, 6},
-                new int[] {7, 8, 9},
+                new int[] { 1, 2, 3 },
+                new int[] { 4, 5, 6 },
+                new int[] { 7, 8, 9 },
             };
 
             QuadraticMatrix<int> quadraticMatrix = new QuadraticMatrix<int>(array);
@@ -39,9 +39,9 @@ namespace Matrix.Tests
         {
             int[][] array = new int[][]
             {
-                new int[] {1, 2, 3},
-                new int[] {4, 5, 6},
-                new int[] {7, 8, 9},
+                new int[] { 1, 2, 3 },
+                new int[] { 4, 5, 6 },
+                new int[] { 7, 8, 9 },
             };
 
             QuadraticMatrix<int> quadraticMatrix = new QuadraticMatrix<int>(array);
@@ -57,23 +57,22 @@ namespace Matrix.Tests
         {
             int[][] array1 = new int[][]
             {
-                new int[] {1, 2, 3},
-                new int[] {4, 5, 6},
-                new int[] {7, 8, 9},
+                new int[] { 1, 2, 3 },
+                new int[] { 4, 5, 6 },
+                new int[] { 7, 8, 9 },
             };
 
             int[][] array2 = new int[][]
             {
-                new int[] {1, 4, 3},
-                new int[] {33, 5, -6},
-                new int[] {7, -8, 99},
+                new int[] { 1, 4, 3 },
+                new int[] { 33, 5, -6 },
+                new int[] { 7, -8, 99 },
             };
 
             QuadraticMatrix<int> quadraticMatrix1 = new QuadraticMatrix<int>(array1);
             QuadraticMatrix<int> quadraticMatrix2 = new QuadraticMatrix<int>(array2);
             return (quadraticMatrix1 + quadraticMatrix2)[row, column];
         }
-
 
         [TestCase(1, 1, ExpectedResult = 9)]
         [TestCase(0, 0, ExpectedResult = 2)]
@@ -83,17 +82,16 @@ namespace Matrix.Tests
         {
             int[][] array1 = new int[][]
             {
-                new int[] {1, 2, 3},
-                new int[] {4, 5, 6},
-                new int[] {7, 8, 9},
+                new int[] { 1, 2, 3 },
+                new int[] { 4, 5, 6 },
+                new int[] { 7, 8, 9 },
             };
 
-            int[] array2 = new int[] {1, 4, 3};
+            int[] array2 = new int[] { 1, 4, 3 };
 
             QuadraticMatrix<int> quadraticMatrix1 = new QuadraticMatrix<int>(array1);
             DiagonalMatrix<int> quadraticMatrix2 = new DiagonalMatrix<int>(array2);
             return (quadraticMatrix1 + quadraticMatrix2)[row, column];
         }
-
     }
 }
