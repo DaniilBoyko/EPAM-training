@@ -1,0 +1,6 @@
+E:\EPAM-training\NET.W.2017.Boyko.13\Matrix\bin\Debug\Matrix.dll
+E:\EPAM-training\NET.W.2017.Boyko.13\Matrix\bin\Debug\Matrix.pdb
+E:\EPAM-training\NET.W.2017.Boyko.13\Matrix\obj\Debug\Matrix.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.13\Matrix\obj\Debug\Matrix.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.13\Matrix\obj\Debug\Matrix.dll
+E:\EPAM-training\NET.W.2017.Boyko.13\Matrix\obj\Debug\Matrix.pdb

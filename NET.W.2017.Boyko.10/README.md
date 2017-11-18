@@ -1,6 +1,6 @@
 ### [Ссылка на проект с книгой (папка Library)](https://github.com/DaniilBoyko/EPAM-training/tree/master/NET.W.2017.Boyko.8)
 ### [Ссылка на проект с алгоритмом Евклидa](https://github.com/DaniilBoyko/EPAM-training/tree/master/NET.W.2017.Boyko.4)
-### [Ссылка на проект с jagged array](https://github.com/DaniilBoyko/EPAM-training/tree/master/NET.W.2017.Boyko.4)
+### [Ссылка на проект с jagged array](https://github.com/DaniilBoyko/EPAM-training/tree/master/NET.W.2017.Boyko.5s)
 
 
 
