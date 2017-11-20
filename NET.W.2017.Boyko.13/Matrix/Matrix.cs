@@ -32,14 +32,14 @@ namespace Matrix
 
         #endregion // !public Constructors
 
-        #region public Ements
+        #region public Events
 
         /// <summary>
         /// Event for notify listeners when some cell changed.
         /// </summary>
         public event EventHandler<ChangeCellEventArgs> ChangeCell = delegate { };
 
-        #endregion
+        #endregion // !public Events
 
         #region public Properties
 

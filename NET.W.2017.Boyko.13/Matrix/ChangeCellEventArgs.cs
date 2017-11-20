@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Matrix
 {
+    /// <summary>
+    /// Argument for change cell event.
+    /// </summary>
     public class ChangeCellEventArgs : EventArgs
     {
         #region public Constructors
@@ -25,8 +24,14 @@ namespace Matrix
 
         #region public Properties
 
+        /// <summary>
+        /// Get row of change cell.
+        /// </summary>
         public int Row { get; }
 
+        /// <summary>
+        /// Get column of change cell.
+        /// </summary>
         public int Column { get; }
 
         #endregion // !public Properties

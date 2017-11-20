@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Collections
+namespace Collections.Queue
 {
     /// <summary>
     /// Model of the queue.

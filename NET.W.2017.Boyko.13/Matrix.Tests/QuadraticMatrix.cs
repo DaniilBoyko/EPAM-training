@@ -71,7 +71,7 @@ namespace Matrix.Tests
 
             QuadraticMatrix<int> quadraticMatrix1 = new QuadraticMatrix<int>(array1);
             QuadraticMatrix<int> quadraticMatrix2 = new QuadraticMatrix<int>(array2);
-            return (quadraticMatrix1 + quadraticMatrix2)[row, column];
+            return quadraticMatrix1.Add(quadraticMatrix2)[row, column];
         }
 
         [TestCase(1, 1, ExpectedResult = 9)]
@@ -91,7 +91,7 @@ namespace Matrix.Tests
 
             QuadraticMatrix<int> quadraticMatrix1 = new QuadraticMatrix<int>(array1);
             DiagonalMatrix<int> quadraticMatrix2 = new DiagonalMatrix<int>(array2);
-            return (quadraticMatrix1 + quadraticMatrix2)[row, column];
+            return quadraticMatrix1.Add(quadraticMatrix2)[row, column];
         }
     }
 }

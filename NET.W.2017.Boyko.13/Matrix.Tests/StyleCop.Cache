@@ -46,11 +46,14 @@
     </timestamps>
     <violations />
   </sourcecode>
+  <project key="-997516377">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
   <sourcecode name="QuadraticMatrix.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017.11.09 09:40:51.698</styleCop>
       <settingsFile>2017.11.10 20:46:18.368</settingsFile>
-      <sourceFile>2017.11.18 22:11:48.983</sourceFile>
+      <sourceFile>2017.11.20 18:27:36.087</sourceFile>
       <parser>2017.11.09 09:40:51.698</parser>
       <StyleCop.CSharp.DocumentationRules>2017.11.09 09:40:51.698</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>149807098</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -69,7 +72,4 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <project key="-997516377">
-    <configuration>DEBUG;TRACE</configuration>
-  </project>
 </stylecopresultscache>

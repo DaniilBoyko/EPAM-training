@@ -23,11 +23,11 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <sourcecode name="QueueEnumerator.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="BinaryTreeNode.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017.11.09 09:40:51.698</styleCop>
       <settingsFile>2017.11.10 20:46:18.368</settingsFile>
-      <sourceFile>2017.11.18 02:02:41.406</sourceFile>
+      <sourceFile>2017.11.20 13:37:40.979</sourceFile>
       <parser>2017.11.09 09:40:51.698</parser>
       <StyleCop.CSharp.DocumentationRules>2017.11.09 09:40:51.698</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>149807098</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -50,7 +50,7 @@
     <timestamps>
       <styleCop>2017.11.09 09:40:51.698</styleCop>
       <settingsFile>2017.11.10 20:46:18.368</settingsFile>
-      <sourceFile>2017.11.18 02:03:30.934</sourceFile>
+      <sourceFile>2017.11.20 18:11:18.301</sourceFile>
       <parser>2017.11.09 09:40:51.698</parser>
       <StyleCop.CSharp.DocumentationRules>2017.11.09 09:40:51.698</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>149807098</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -69,11 +69,11 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <sourcecode name="BinaryTreeNode.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="QueueEnumerator.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017.11.09 09:40:51.698</styleCop>
       <settingsFile>2017.11.10 20:46:18.368</settingsFile>
-      <sourceFile>2017.11.19 13:12:51.597</sourceFile>
+      <sourceFile>2017.11.20 18:11:30.796</sourceFile>
       <parser>2017.11.09 09:40:51.698</parser>
       <StyleCop.CSharp.DocumentationRules>2017.11.09 09:40:51.698</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>149807098</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -96,7 +96,7 @@
     <timestamps>
       <styleCop>2017.11.09 09:40:51.698</styleCop>
       <settingsFile>2017.11.10 20:46:18.368</settingsFile>
-      <sourceFile>2017.11.19 14:51:32.855</sourceFile>
+      <sourceFile>2017.11.20 18:11:39.324</sourceFile>
       <parser>2017.11.09 09:40:51.698</parser>
       <StyleCop.CSharp.DocumentationRules>2017.11.09 09:40:51.698</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>149807098</StyleCop.CSharp.DocumentationRules.FilesHashCode>

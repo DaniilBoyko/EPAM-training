@@ -18,7 +18,7 @@ namespace Collections.Tests
         [TestCase(new int[] { }, 1, ExpectedException = typeof(InvalidOperationException))]
         public int DequeueMethod_EnqueueElementFromQueue(int[] array, int count)
         {
-            collect.Queue<int> queue = new collect.Queue<int>(array);
+            Queue.Queue<int> queue = new Queue.Queue<int>(array);
             while (count-- > 1)
             {
                 queue.Dequeue();
@@ -32,7 +32,7 @@ namespace Collections.Tests
         [TestCase(new int[] { }, ExpectedException = typeof(InvalidOperationException))]
         public int PeekMethod_PeekElementFromHeadQueue(int[] array)
         {
-            collect.Queue<int> queue = new collect.Queue<int>(array);
+            Queue.Queue<int> queue = new Queue.Queue<int>(array);
             return queue.Peek();
         }
 
@@ -42,7 +42,7 @@ namespace Collections.Tests
         [TestCase(new int[] { }, ExpectedException = typeof(InvalidOperationException))]
         public int EnqueueMethod_EnqueueElementFromToQueueAndGetLast(int[] array)
         {
-            collect.Queue<int> queue = new collect.Queue<int>();
+            Queue.Queue<int> queue = new Queue.Queue<int>();
             foreach (var element in array)
             {
                 queue.Enqueue(element);
@@ -63,7 +63,7 @@ namespace Collections.Tests
         [TestCase(new int[] { 2, 4, 5, 6, 7, 8, 9, 19, 234 }, ExpectedResult = "245678919234")]
         public string GetEnumeratorMethod_EnumerateElementsOfTheQueue(int[] array)
         {
-            collect.Queue<int> queue = new collect.Queue<int>(array);
+            Queue.Queue<int> queue = new Queue.Queue<int>(array);
             StringBuilder builder = new StringBuilder();
             foreach (var element in queue)
             {
@@ -76,7 +76,7 @@ namespace Collections.Tests
         [TestCase(new int[] { 2, 4, 5, 6 }, 1, ExpectedException = typeof(InvalidOperationException))]
         public void GetEnumeratorMethod_EnumerateElementsOfTheQueueIfChange(int[] array, int value)
         {
-            collect.Queue<int> queue = new collect.Queue<int>(array);
+            Queue.Queue<int> queue = new Queue.Queue<int>(array);
             IEnumerator<int> enumerator = queue.GetEnumerator();
             enumerator.MoveNext();
             queue.Enqueue(value);

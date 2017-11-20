@@ -11,34 +11,57 @@ namespace Collections.Tree
     public class BinaryTree<T>
     {
         #region private Fields
+        /// <summary>
+        /// Store comparer for elements.
+        /// </summary>
+        private readonly IComparer<T> _comparer;
 
+        /// <summary>
+        /// Store head of the tree.
+        /// </summary>
         private BinaryTreeNode<T> _head;
-        private IComparer<T> _comparer;
-
         #endregion // !private Fields
 
         #region public Constructors
+        /// <summary>
+        /// Constructor initialize the instance of the <see cref="BinaryTree{T}"/> class.
+        /// </summary>
         public BinaryTree() : this(Comparer<T>.Default)
         {
         }
 
+        /// <summary>
+        /// Constructor initialize the instance of the <see cref="BinaryTree{T}"/> class.
+        /// </summary>
+        /// <param name="comparer">for compare values in nodes</param>
         public BinaryTree(Comparer<T> comparer)
         {
-            if (comparer == null)
-            {
-                throw new ArgumentNullException(nameof(comparer));
-            }
-
             _head = null;
             Count = 0;
-            _comparer = comparer;
+            _comparer = comparer ?? throw new ArgumentNullException(nameof(comparer));
         }
 
+        /// <summary>
+        /// Constructor initialize the instance of the <see cref="BinaryTree{T}"/> class.
+        /// </summary>
+        /// <param name="comparison">delegate for compare values</param>
+        public BinaryTree(Comparison<T> comparison) : this(Comparer<T>.Create(comparison))
+        {
+        }
         #endregion // !public Constructors
 
-        #region public Methods
+        #region public Properties
+        /// <summary>
+        /// Count elements in binary tree.
+        /// </summary>
         public int Count { get; private set; }
+        #endregion // !public Properties
 
+        #region public Methods
+        /// <summary>
+        /// Add value to the tree.
+        /// </summary>
+        /// <param name="value">adding value</param>
         public void Add(T value)
         {
             if (_head == null)
@@ -53,23 +76,33 @@ namespace Collections.Tree
             Count++;
         }
 
+        /// <summary>
+        /// Clear values in binary tree.
+        /// </summary>
         public void Clear()
         {
             _head = null;
             Count = 0;
         }
 
+        /// <summary>
+        /// Check for contains value in binary tree.
+        /// </summary>
+        /// <param name="value">searching value</param>
+        /// <returns>True if find, false otherwise.</returns>
         public bool Conatins(T value)
         {
-            BinaryTreeNode<T> parent;
-            return FindWithParent(value, out parent) != null;
+            return FindWithParent(value, out _) != null;
         }
 
+        /// <summary>
+        /// Remove value from binary tree.
+        /// </summary>
+        /// <param name="value">removing value</param>
+        /// <returns>True if remove success, false otherwise.</returns>
         public bool Remove(T value)
         {
-            BinaryTreeNode<T> parent;
-
-            var current = FindWithParent(value, out parent);
+            var current = FindWithParent(value, out var parent);
 
             if (current == null)
             {
@@ -155,14 +188,24 @@ namespace Collections.Tree
             return true;
         }
 
-        public IEnumerable<T> PreoredBypass()
+        /// <summary>
+        /// Pre order bypass of binary tree.
+        /// </summary>
+        /// <returns>Enumerable of bypass.</returns>
+        public IEnumerable<T> PreorderBypass()
         {
             BinaryTreeNode<T> current = _head;
             Stack<BinaryTreeNode<T>> stack = new Stack<BinaryTreeNode<T>>();
 
+            if (current == null)
+            {
+                yield break;
+            }
+
             while (true)
             {
                 yield return current.Value;
+
                 if (current.Left != null)
                 {
                     if (current.Right != null)
@@ -191,10 +234,49 @@ namespace Collections.Tree
                 }
             }
         }
+
+        /// <summary>
+        /// In order bypass of binary tree.
+        /// </summary>
+        /// <returns>Enumerable of bypass.</returns>
+        public IEnumerable<T> InorderBypass()
+        {
+            BinaryTreeNode<T> current = _head;
+            List<T> elements = new List<T>();
+
+            Bypass(current, elements, 2);
+
+            foreach (var element in elements)
+            {
+                yield return element;
+            }
+        }
+
+        /// <summary>
+        /// Post order bypass of binary tree.
+        /// </summary>
+        /// <returns>Enumerable of bypass.</returns>
+        public IEnumerable<T> PostorderBypass()
+        {
+            BinaryTreeNode<T> current = _head;
+            List<T> elements = new List<T>();
+
+            Bypass(current, elements, 3);
+
+            foreach (var element in elements)
+            {
+                yield return element;
+            }
+        }
         #endregion // !public Methods 
 
         #region private Methods
-
+        /// <summary>
+        /// Find value in binary tree and its parent.
+        /// </summary>
+        /// <param name="value">searching value</param>
+        /// <param name="parent">parent of searching value</param>
+        /// <returns>Node of searching value.</returns>
         private BinaryTreeNode<T> FindWithParent(T value, out BinaryTreeNode<T> parent)
         {
             var current = _head;
@@ -222,6 +304,11 @@ namespace Collections.Tree
             return current;
         }
 
+        /// <summary>
+        /// Add value to binary tree from node.
+        /// </summary>
+        /// <param name="node">node</param>
+        /// <param name="value">adding value</param>
         private void AddTo(BinaryTreeNode<T> node, T value)
         {
             if (_comparer.Compare(value, node.Value) < 0)
@@ -245,6 +332,40 @@ namespace Collections.Tree
                 {
                     AddTo(node.Right, value);
                 }
+            }
+        }
+
+        /// <summary>
+        /// Binary tree bypass.
+        /// </summary>
+        /// <param name="node">from node bypass</param>
+        /// <param name="list">list for adding values</param>
+        /// <param name="mode">mode of bypass</param>
+        private void Bypass(BinaryTreeNode<T> node, List<T> list, int mode)
+        {
+            if (mode == 1)
+            {
+                list.Add(node.Value);
+            }
+
+            if (node.Left != null)
+            {
+                Bypass(node.Left, list, mode);
+            }
+
+            if (mode == 2)
+            {
+                list.Add(node.Value);
+            }
+
+            if (node.Right != null)
+            {
+                Bypass(node.Right, list, mode);
+            }
+
+            if (mode == 3)
+            {
+                list.Add(node.Value);
             }
         }
         #endregion // !private Methods      

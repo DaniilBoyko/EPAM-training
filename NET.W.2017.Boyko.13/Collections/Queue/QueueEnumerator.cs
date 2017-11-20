@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Collections
+namespace Collections.Queue
 {
     public partial class Queue<T>
     { 
@@ -11,8 +11,8 @@ namespace Collections
             #region private Fields
 
             private readonly Queue<T> _queue;
+            private readonly int _version;
             private int _index;
-            private int _version;
             private T _currentElement;
 
             #endregion // !private Fields

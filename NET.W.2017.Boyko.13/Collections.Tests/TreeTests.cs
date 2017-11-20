@@ -53,7 +53,72 @@ namespace Collections.Tests
             int[] result = new int[array.Length];
             int i = 0;
 
-            foreach (var value in binaryTree.PreoredBypass())
+            foreach (var value in binaryTree.PreorderBypass())
+            {
+                result[i++] = value;
+            }
+
+            return result;
+        }
+
+        [TestCase(new int[] { 5, 9, 4, 1 }, ExpectedResult = new int[] { 1, 4, 5, 9 })]
+        [TestCase(new int[] { 5, 4, 9 }, ExpectedResult = new int[] { 4, 5, 9 })]
+        public int[] InoredBypassMethod_CreateTreeAndGetItInoredBypass(int[] array)
+        {
+            Tree.BinaryTree<int> binaryTree = new Tree.BinaryTree<int>();
+            foreach (var element in array)
+            {
+                binaryTree.Add(element);
+            }
+
+            int[] result = new int[array.Length];
+            int i = 0;
+
+            foreach (var value in binaryTree.InorderBypass())
+            {
+                result[i++] = value;
+            }
+
+            return result;
+        }
+
+        [TestCase]
+        public void InoredBypassMethod_CreateTreeWithStringAndGetItInoredBypass()
+        {
+            string[] elements = new string[] { "fffff", "kkkkkkkkk", "aaaa", "c" };
+            string[] expectedResult = new string[] { "c", "aaaa", "fffff", "kkkkkkkkk" };
+
+            Tree.BinaryTree<string> binaryTree = new Tree.BinaryTree<string>((left, right) => left.Length.CompareTo(right.Length));
+            foreach (var element in elements)
+            {
+                binaryTree.Add(element);
+            }
+
+            string[] result = new string[elements.Length];
+            int i = 0;
+
+            foreach (var value in binaryTree.InorderBypass())
+            {
+                result[i++] = value;
+            }
+
+            Assert.AreEqual(expectedResult, result);
+        }
+
+        [TestCase(new int[] { 5, 3, 4 }, ExpectedResult = new int[] { 4, 3, 5 })]
+        [TestCase(new int[] { 5, 4, 9 }, ExpectedResult = new int[] { 4, 9, 5 })]
+        public int[] PostoredBypassMethod_CreateTreeAndGetItPostoredBypass(int[] array)
+        {
+            Tree.BinaryTree<int> binaryTree = new Tree.BinaryTree<int>();
+            foreach (var element in array)
+            {
+                binaryTree.Add(element);
+            }
+
+            int[] result = new int[array.Length];
+            int i = 0;
+
+            foreach (var value in binaryTree.PostorderBypass())
             {
                 result[i++] = value;
             }
