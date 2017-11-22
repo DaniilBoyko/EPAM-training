@@ -1,0 +1,6 @@
+E:\EPAM-training\NET.W.2017.Boyko.15\DAL.Interfaces\bin\Debug\DAL.Interfaces.dll
+E:\EPAM-training\NET.W.2017.Boyko.15\DAL.Interfaces\bin\Debug\DAL.Interfaces.pdb
+E:\EPAM-training\NET.W.2017.Boyko.15\DAL.Interfaces\obj\Debug\DAL.Interfaces.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.15\DAL.Interfaces\obj\Debug\DAL.Interfaces.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.15\DAL.Interfaces\obj\Debug\DAL.Interfaces.dll
+E:\EPAM-training\NET.W.2017.Boyko.15\DAL.Interfaces\obj\Debug\DAL.Interfaces.pdb

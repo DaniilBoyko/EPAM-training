@@ -9,8 +9,6 @@ namespace Bank.Models.Accounts
     [Serializable]
     public class BaseAccount : Account
     {
-        #region Public
-
         #region public Constructors
 
         /// <summary>
@@ -45,11 +43,9 @@ namespace Bank.Models.Accounts
             return "Base";
         }
 
-        #endregion public Methods
+        #endregion // !public Methods
 
-        #endregion Public
-
-        #region Protected
+        #region protected override Methods
 
         /// <summary>
         /// Calculate add points according to amount of money.
@@ -71,6 +67,6 @@ namespace Bank.Models.Accounts
             return (int)(amount / 10 / 2);
         }
 
-        #endregion
+        #endregion // !protected override Methods
     }
 }
