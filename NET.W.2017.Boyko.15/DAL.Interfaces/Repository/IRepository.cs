@@ -39,8 +39,8 @@ namespace DAL.Interfaces.Repository
         /// <summary>
         /// Delete element.
         /// </summary>
-        /// <param name="eentity">deleting element</param>
-        void Delete(TEntity eentity);
+        /// <param name="entity">deleting element</param>
+        void Delete(TEntity entity);
 
         /// <summary>
         /// Update element.

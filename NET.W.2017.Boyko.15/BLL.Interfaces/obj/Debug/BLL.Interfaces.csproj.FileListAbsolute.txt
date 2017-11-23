@@ -1,6 +1,5 @@
 E:\EPAM-training\NET.W.2017.Boyko.15\BLL.Interfaces\bin\Debug\BLL.Interfaces.dll
 E:\EPAM-training\NET.W.2017.Boyko.15\BLL.Interfaces\bin\Debug\BLL.Interfaces.pdb
-E:\EPAM-training\NET.W.2017.Boyko.15\BLL.Interfaces\obj\Debug\BLL.Interfaces.csprojResolveAssemblyReference.cache
 E:\EPAM-training\NET.W.2017.Boyko.15\BLL.Interfaces\obj\Debug\BLL.Interfaces.csproj.CoreCompileInputs.cache
 E:\EPAM-training\NET.W.2017.Boyko.15\BLL.Interfaces\obj\Debug\BLL.Interfaces.dll
 E:\EPAM-training\NET.W.2017.Boyko.15\BLL.Interfaces\obj\Debug\BLL.Interfaces.pdb

@@ -65,8 +65,8 @@ namespace BLL.Mappers
             switch (accountType)
             {
                 case "Base": return CreateAccount(AccountType.Base, id, name, surname, amount, points);
-                case "Gold": return CreateAccount(AccountType.Base, id, name, surname, amount, points);
-                case "Platinum": return CreateAccount(AccountType.Base, id, name, surname, amount, points);
+                case "Gold": return CreateAccount(AccountType.Gold, id, name, surname, amount, points);
+                case "Platinum": return CreateAccount(AccountType.Platinum, id, name, surname, amount, points);
                 default: throw new UnknownAccountTypeException("Unknown account type");
             }
         }

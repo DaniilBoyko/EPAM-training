@@ -155,7 +155,7 @@ namespace BLL.Services
         /// <param name="id">id of bank account</param>
         public void SelectAccount(string id)
         {
-            Account account = AccountRepository.GetById(id).ToBllAccount();
+            Account account = AccountRepository.GetById(id)?.ToBllAccount();
             CurrentAccount = account ?? throw new AccountNotFoundException("Account not found.");
         }
         #endregion // !public Methods

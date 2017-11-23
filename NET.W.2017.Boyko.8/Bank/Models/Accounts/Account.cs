@@ -37,7 +37,7 @@ namespace Bank.Models.Accounts
         {
             if (amount < 0)
             {
-                throw new ArgumentOutOfRangeException($"{nameof(amount)} shouldn't bme less the zero.");
+                throw new ArgumentOutOfRangeException($"{nameof(amount)} shouldn't be less the zero.");
             }
 
             this.Id = Guid.NewGuid().ToString();
@@ -84,7 +84,7 @@ namespace Bank.Models.Accounts
         /// Deposit money to account.
         /// </summary>
         /// <param name="amount">amount of money</param>
-        /// <returns>True if OK, false otherwise.</returns>
+        /// <returns>True if operation success, false otherwise.</returns>
         public bool Deposit(double amount)
         {
             if (amount <= 0)
