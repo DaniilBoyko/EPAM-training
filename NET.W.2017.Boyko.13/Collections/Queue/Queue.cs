@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Collections.Queue
 {
@@ -12,6 +13,10 @@ namespace Collections.Queue
         #region private Constants
 
         private const int MinimumGrow = 4;
+        private const int StandartCapacity = 32;
+        private const float StandartGrowFactor = 2.0f;
+        private const float MinGrowFactor = 1.0f;
+        private const float MaxGrowFactor = 10.0f;
 
         #endregion // !private Constans
 
@@ -55,7 +60,7 @@ namespace Collections.Queue
         /// Constructor initialize the instance of the <see cref="Queue{T}"/> class default values of
         /// capacity and growFactor.
         /// </summary>
-        public Queue() : this(32, (float)2.0)
+        public Queue() : this(StandartCapacity, StandartGrowFactor)
         {
         }
 
@@ -63,7 +68,7 @@ namespace Collections.Queue
         /// Constructor initialize the instance of the <see cref="Queue{T}"/> class default value of grow factor.
         /// </summary>
         /// <param name="capacity">capacity of the start queue</param>
-        public Queue(int capacity) : this(capacity, (float)2.0)
+        public Queue(int capacity) : this(capacity, StandartGrowFactor)
         {
         }
 
@@ -79,7 +84,7 @@ namespace Collections.Queue
                 throw new ArgumentOutOfRangeException($"{nameof(capacity)} should be more then 0 or equals", nameof(capacity));
             }
 
-            if (growFactor < 1.0 || growFactor > 10.0)
+            if (growFactor < MinGrowFactor || growFactor > MaxGrowFactor)
             {
                 throw new ArgumentOutOfRangeException($"{nameof(capacity)} should be between (1.0, 10.0)", nameof(growFactor));
             }
@@ -96,7 +101,7 @@ namespace Collections.Queue
         /// of an ICollection.
         /// </summary>
         /// <param name="collection"></param>
-        public Queue(ICollection<T> collection) : this(collection?.Count ?? 32)
+        public Queue(IEnumerable<T> collection) : this(collection?.Count() ?? StandartCapacity)
         {
             if (collection == null)
             {

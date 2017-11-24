@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Collections.Tree;
 using NUnit.Framework;
 
 namespace Collections.Tests
@@ -109,11 +110,7 @@ namespace Collections.Tests
         [TestCase(new int[] { 5, 4, 9 }, ExpectedResult = new int[] { 4, 9, 5 })]
         public int[] PostoredBypassMethod_CreateTreeAndGetItPostoredBypass(int[] array)
         {
-            Tree.BinaryTree<int> binaryTree = new Tree.BinaryTree<int>();
-            foreach (var element in array)
-            {
-                binaryTree.Add(element);
-            }
+            Tree.BinaryTree<int> binaryTree = new Tree.BinaryTree<int>(array);
 
             int[] result = new int[array.Length];
             int i = 0;
@@ -124,6 +121,36 @@ namespace Collections.Tests
             }
 
             return result;
+        }
+
+        [TestCase(new int[] { 5, 9, 4, 1 }, ExpectedResult = new int[] { 1, 4, 5, 9 })]
+        [TestCase(new int[] { 5, 4, 9 }, ExpectedResult = new int[] { 4, 5, 9 })]
+        public int[] GetEnumeratorMethods_CreateTreeAndGetItEnumerator(int[] array)
+        {
+            Tree.BinaryTree<int> binaryTree = new Tree.BinaryTree<int>();
+            foreach (var element in array)
+            {
+                binaryTree.Add(element);
+            }
+
+            int[] result = new int[array.Length];
+            int i = 0;
+
+            foreach (var value in binaryTree)
+            {
+                result[i++] = value;
+            }
+
+            return result;
+        }
+
+        [Test]
+        public void CreateTreeMethod_CreateTree()
+        {
+            Tree.BinaryTree<TempClass> binaryTree = new BinaryTree<TempClass>();
+
+            binaryTree.Add(new TempClass { Value = 10 });
+            binaryTree.Add(new TempClass { Value = 10 });
         }
     }
 }

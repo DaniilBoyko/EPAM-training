@@ -8,7 +8,7 @@ using NUnit.Framework;
 namespace Matrix.Tests
 {
     [TestFixture]
-    public class QuadraticMatrix
+    public class QuadraticMatrixTests
     {
         [TestCase(1, 1, ExpectedResult = 5)]
         [TestCase(0, 0, ExpectedResult = 1)]

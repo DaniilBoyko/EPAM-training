@@ -8,7 +8,7 @@ namespace Collections.Tree
     /// Model of binary tree.
     /// </summary>
     /// <typeparam name="T">Type of elements in binary tree.</typeparam>
-    public class BinaryTree<T>
+    public partial class BinaryTree<T> : IEnumerable<T>
     {
         #region private Fields
         /// <summary>
@@ -47,6 +47,23 @@ namespace Collections.Tree
         /// <param name="comparison">delegate for compare values</param>
         public BinaryTree(Comparison<T> comparison) : this(Comparer<T>.Create(comparison))
         {
+        }
+
+        /// <summary>
+        /// Constructor initialize the instance of the <see cref="BinaryTree{T}"/> class.
+        /// </summary>
+        /// <param name="enumerable">Enumerable of elements.</param>
+        public BinaryTree(IEnumerable<T> enumerable) : this()
+        {
+            if (enumerable == null)
+            {
+                throw new ArgumentNullException(nameof(enumerable));
+            }
+
+            foreach (var element in enumerable)
+            {
+                Add(element);
+            }
         }
         #endregion // !public Constructors
 
@@ -195,44 +212,11 @@ namespace Collections.Tree
         public IEnumerable<T> PreorderBypass()
         {
             BinaryTreeNode<T> current = _head;
-            Stack<BinaryTreeNode<T>> stack = new Stack<BinaryTreeNode<T>>();
+            List<T> elements = new List<T>();
 
-            if (current == null)
-            {
-                yield break;
-            }
+            Bypass(current, elements, 1);
 
-            while (true)
-            {
-                yield return current.Value;
-
-                if (current.Left != null)
-                {
-                    if (current.Right != null)
-                    {
-                        stack.Push(current.Right);
-                    }
-
-                    current = current.Left;
-                    continue;
-                }
-
-                if (current.Right != null)
-                {
-                    current = current.Right;
-                    continue;
-                }
-
-                if (stack.Count != 0)
-                {
-                    current = stack.Pop();
-                    continue;
-                }
-                else
-                {
-                    break;
-                }
-            }
+            return elements;
         }
 
         /// <summary>
@@ -246,10 +230,7 @@ namespace Collections.Tree
 
             Bypass(current, elements, 2);
 
-            foreach (var element in elements)
-            {
-                yield return element;
-            }
+            return elements;
         }
 
         /// <summary>
@@ -263,14 +244,31 @@ namespace Collections.Tree
 
             Bypass(current, elements, 3);
 
-            foreach (var element in elements)
-            {
-                yield return element;
-            }
+            return elements;
         }
         #endregion // !public Methods 
 
+        #region public Interface Methods
+        /// <summary>
+        /// Get IEnumerator of binary tree.
+        /// </summary>
+        /// <returns>IEnumerator of binary tree.</returns>
+        public IEnumerator<T> GetEnumerator()
+        {
+            return InorderBypass().GetEnumerator();
+        }
+        #endregion // !public Interface Mthods
+
         #region private Methods
+        /// <summary>
+        /// Get IEnumerator.
+        /// </summary>
+        /// <returns>IEnumerator</returns>
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
         /// <summary>
         /// Find value in binary tree and its parent.
         /// </summary>
@@ -368,6 +366,6 @@ namespace Collections.Tree
                 list.Add(node.Value);
             }
         }
-        #endregion // !private Methods      
+        #endregion // !private Methods
     }
 }

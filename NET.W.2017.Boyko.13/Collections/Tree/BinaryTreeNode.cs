@@ -3,57 +3,47 @@
 namespace Collections.Tree
 {
     /// <summary>
-    /// Model of binary tree node.
+    /// Part of binary tree model, which contains binary tree node.
     /// </summary>
-    /// <typeparam name="T">Type of value in tree node.</typeparam>
-    public class BinaryTreeNode<T> : ICloneable
+    public partial class BinaryTree<T>
     {
-        #region public Constructors
         /// <summary>
-        /// Constructor initialize the instance of the <see cref="BinaryTreeNode{T}"/> class.
+        /// Model of binary tree node.
         /// </summary>
-        /// <param name="value"></param>
-        public BinaryTreeNode(T value)
+        /// <typeparam name="TK">Type of value in tree node.</typeparam>
+        private class BinaryTreeNode<TK>
         {
-            Value = value;
+            #region public Constructors
+
+            /// <summary>
+            /// Constructor initialize the instance of the <see cref="BinaryTreeNode{TK}"/> class.
+            /// </summary>
+            /// <param name="value"></param>
+            public BinaryTreeNode(TK value)
+            {
+                Value = value;
+            }
+
+            #endregion // !public Constructors
+
+            #region public Properties
+
+            /// <summary>
+            /// Left node.
+            /// </summary>
+            public BinaryTreeNode<TK> Left { get; internal set; }
+
+            /// <summary>
+            /// Right node.
+            /// </summary>
+            public BinaryTreeNode<TK> Right { get; internal set; }
+
+            /// <summary>
+            /// Value of node.
+            /// </summary>
+            public TK Value { get; }
+
+            #endregion
         }
-        #endregion // !public Constructors
-
-        #region public Properties
-        /// <summary>
-        /// Left node.
-        /// </summary>
-        public BinaryTreeNode<T> Left { get; internal set; }
-
-        /// <summary>
-        /// Right node.
-        /// </summary>
-        public BinaryTreeNode<T> Right { get; internal set; }
-
-        /// <summary>
-        /// Value of node.
-        /// </summary>
-        public T Value { get; }
-        #endregion
-
-        #region inteface Methods 
-        /// <summary>
-        /// Get clone of binary tree node.
-        /// </summary>
-        /// <returns>Clone of binary tree.</returns>
-        public BinaryTreeNode<T> Clone()
-        {
-            return new BinaryTreeNode<T>(Value);
-        }
-
-        /// <summary>
-        /// Get clone of binary tree node.
-        /// </summary>
-        /// <returns>Clone of binary tree.</returns>
-        object ICloneable.Clone()
-        {
-            return Clone();
-        }
-        #endregion // !interface Methods
     }
 }

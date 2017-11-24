@@ -45,6 +45,7 @@
     <Compile Include="Queue\QueueEnumerator.cs" />
     <Compile Include="Tree\BinaryTree.cs" />
     <Compile Include="Tree\BinaryTreeNode.cs" />
+    <Compile Include="Tree\TempClass.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
