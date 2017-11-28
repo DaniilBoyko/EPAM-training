@@ -6,22 +6,23 @@
         public abstract string ConvertPlainText(PlainText documentPart);
         public abstract string ConvertBoldText(BoldText document);
 
-        public string Convert(DocumentPart documentPart)
+        public string CollectionInformation { get; set; } = "";
+
+        public void Convert(DocumentPart documentPart)
         {
             if (documentPart.GetType() == typeof(Hyperlink))
             {
-                return ConvertHyperlink((Hyperlink) documentPart);
+                CollectionInformation += $"{ConvertHyperlink((Hyperlink) documentPart)}\n";
             }
             if (documentPart.GetType() == typeof(PlainText))
             {
-                return ConvertPlainText((PlainText) documentPart);
+                CollectionInformation += $"{ConvertPlainText((PlainText) documentPart)}\n";
             }
 
             if (documentPart.GetType() == typeof(BoldText))
             {
-                return ConvertBoldText((BoldText) documentPart);
+                CollectionInformation += $"{ConvertBoldText((BoldText) documentPart)}\n";
             }
-            return null;
         }
     }
 }

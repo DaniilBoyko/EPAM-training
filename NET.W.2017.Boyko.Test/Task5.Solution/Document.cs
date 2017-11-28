@@ -19,14 +19,12 @@ namespace Task5.Solution
 
         public string Convert(Converter converter)
         {
-            string output = string.Empty;
-
             foreach (DocumentPart part in this.parts)
             {
-                output += $"{converter.Convert(part)}\n";
+                converter.Convert(part);
             }
 
-            return output;
+            return converter.CollectionInformation;
         }
     }
 }
