@@ -10,3 +10,9 @@ C:\Users\MIB\Desktop\23.11.2017\Task1\obj\Debug\Task1.csprojResolveAssemblyRefer
 C:\Users\MIB\Desktop\23.11.2017\Task1\obj\Debug\Task1.csproj.CoreCompileInputs.cache
 C:\Users\MIB\Desktop\23.11.2017\Task1\obj\Debug\Task1.dll
 C:\Users\MIB\Desktop\23.11.2017\Task1\obj\Debug\Task1.pdb
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task1\bin\Debug\Task1.dll
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task1\bin\Debug\Task1.pdb
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task1\obj\Debug\Task1.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task1\obj\Debug\Task1.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task1\obj\Debug\Task1.dll
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task1\obj\Debug\Task1.pdb
