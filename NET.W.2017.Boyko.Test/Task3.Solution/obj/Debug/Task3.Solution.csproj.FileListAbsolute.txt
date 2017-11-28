@@ -1,0 +1,5 @@
+C:\Users\MIB\Desktop\23.11.2017\Task3.Solution\bin\Debug\Task3.Solution.dll
+C:\Users\MIB\Desktop\23.11.2017\Task3.Solution\bin\Debug\Task3.Solution.pdb
+C:\Users\MIB\Desktop\23.11.2017\Task3.Solution\obj\Debug\Task3.Solution.csproj.CoreCompileInputs.cache
+C:\Users\MIB\Desktop\23.11.2017\Task3.Solution\obj\Debug\Task3.Solution.dll
+C:\Users\MIB\Desktop\23.11.2017\Task3.Solution\obj\Debug\Task3.Solution.pdb

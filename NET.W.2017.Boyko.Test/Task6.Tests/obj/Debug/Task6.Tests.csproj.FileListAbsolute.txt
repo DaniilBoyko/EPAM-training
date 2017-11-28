@@ -1,0 +1,10 @@
+C:\Users\MIB\Desktop\23.11.2017\Task6.Tests\bin\Debug\Task6.Tests.dll
+C:\Users\MIB\Desktop\23.11.2017\Task6.Tests\bin\Debug\Task6.Tests.pdb
+C:\Users\MIB\Desktop\23.11.2017\Task6.Tests\bin\Debug\nunit.framework.dll
+C:\Users\MIB\Desktop\23.11.2017\Task6.Tests\bin\Debug\nunit.framework.xml
+C:\Users\MIB\Desktop\23.11.2017\Task6.Tests\obj\Debug\Task6.Tests.csprojResolveAssemblyReference.cache
+C:\Users\MIB\Desktop\23.11.2017\Task6.Tests\obj\Debug\Task6.Tests.csproj.CoreCompileInputs.cache
+C:\Users\MIB\Desktop\23.11.2017\Task6.Tests\obj\Debug\Task6.Tests.dll
+C:\Users\MIB\Desktop\23.11.2017\Task6.Tests\obj\Debug\Task6.Tests.pdb
+C:\Users\MIB\Desktop\23.11.2017\Task6.Tests\bin\Debug\Test6.Solution.dll
+C:\Users\MIB\Desktop\23.11.2017\Task6.Tests\bin\Debug\Test6.Solution.pdb

@@ -1,0 +1,14 @@
+C:\Users\MIB\Desktop\20.11.2017\Task5\bin\Debug\Task5.dll.config
+C:\Users\MIB\Desktop\20.11.2017\Task5\bin\Debug\Task5.dll
+C:\Users\MIB\Desktop\20.11.2017\Task5\bin\Debug\Task5.pdb
+C:\Users\MIB\Desktop\20.11.2017\Task5\obj\Debug\Task5.csproj.CoreCompileInputs.cache
+C:\Users\MIB\Desktop\20.11.2017\Task5\obj\Debug\Task5.dll
+C:\Users\MIB\Desktop\20.11.2017\Task5\obj\Debug\Task5.pdb
+C:\Users\MIB\Desktop\20.11.2017\Task5\obj\Debug\Task5.csprojResolveAssemblyReference.cache
+C:\Users\MIB\Desktop\23.11.2017\Task5\bin\Debug\Task5.dll.config
+C:\Users\MIB\Desktop\23.11.2017\Task5\bin\Debug\Task5.dll
+C:\Users\MIB\Desktop\23.11.2017\Task5\bin\Debug\Task5.pdb
+C:\Users\MIB\Desktop\23.11.2017\Task5\obj\Debug\Task5.csprojResolveAssemblyReference.cache
+C:\Users\MIB\Desktop\23.11.2017\Task5\obj\Debug\Task5.csproj.CoreCompileInputs.cache
+C:\Users\MIB\Desktop\23.11.2017\Task5\obj\Debug\Task5.dll
+C:\Users\MIB\Desktop\23.11.2017\Task5\obj\Debug\Task5.pdb

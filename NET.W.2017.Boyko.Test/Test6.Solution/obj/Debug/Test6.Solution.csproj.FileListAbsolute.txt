@@ -1,0 +1,6 @@
+C:\Users\MIB\Desktop\23.11.2017\Test6.Solution\bin\Debug\Test6.Solution.dll
+C:\Users\MIB\Desktop\23.11.2017\Test6.Solution\bin\Debug\Test6.Solution.pdb
+C:\Users\MIB\Desktop\23.11.2017\Test6.Solution\obj\Debug\Test6.Solution.csprojResolveAssemblyReference.cache
+C:\Users\MIB\Desktop\23.11.2017\Test6.Solution\obj\Debug\Test6.Solution.csproj.CoreCompileInputs.cache
+C:\Users\MIB\Desktop\23.11.2017\Test6.Solution\obj\Debug\Test6.Solution.dll
+C:\Users\MIB\Desktop\23.11.2017\Test6.Solution\obj\Debug\Test6.Solution.pdb
