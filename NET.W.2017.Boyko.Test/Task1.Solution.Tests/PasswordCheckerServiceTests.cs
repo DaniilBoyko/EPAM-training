@@ -40,8 +40,6 @@ namespace Task1.Solution.Tests
             conditionCreator.AddConditions(str => !str.Any(char.IsLetter), "Password hasn't alphanumerical chars");
             conditionCreator.AddConditions(str => !str.Any(char.IsNumber), "Password hasn't digits");
 
-
-
             // Assert
             Assert.That("Password is empty", Is.EqualTo(checker.VerifyPassword(conditionCreator.GetConditions(), string.Empty).Item2));
             Assert.That("Password length too short", Is.EqualTo(checker.VerifyPassword(conditionCreator.GetConditions(), "asdf").Item2));
