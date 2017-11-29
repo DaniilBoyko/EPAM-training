@@ -28,3 +28,8 @@ E:\EPAM-training\NET.W.2017.Boyko.Test\Task4.Tests\obj\Debug\Task4.Tests.csprojR
 E:\EPAM-training\NET.W.2017.Boyko.Test\Task4.Tests\obj\Debug\Task4.Tests.csproj.CoreCompileInputs.cache
 E:\EPAM-training\NET.W.2017.Boyko.Test\Task4.Tests\obj\Debug\Task4.Tests.dll
 E:\EPAM-training\NET.W.2017.Boyko.Test\Task4.Tests\obj\Debug\Task4.Tests.pdb
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task4.Tests\bin\Debug\Castle.Core.dll
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task4.Tests\bin\Debug\Moq.dll
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task4.Tests\bin\Debug\Castle.Core.xml
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task4.Tests\bin\Debug\Moq.pdb
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task4.Tests\bin\Debug\Moq.xml

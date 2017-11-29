@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task4.Solution
 {
+    /// <summary>
+    /// Calculate mean value.
+    /// </summary>
     public class Mean : IAveragingMethod
     {
+        /// <inheritdoc></inheritdoc>
         public double Calculate(IEnumerable<double> elements)
         {
             return elements.Sum() / elements.Count();

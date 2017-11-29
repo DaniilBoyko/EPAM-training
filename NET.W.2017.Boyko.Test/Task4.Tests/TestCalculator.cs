@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using Task4.Solution;
+using Moq;
 
 namespace Task4.Tests
 {
@@ -32,6 +33,20 @@ namespace Task4.Tests
             double actual = calculator.CalculateAverage(values, new Median());
 
             Assert.AreEqual(expected, actual, 0.000001);
+        }
+
+        [Test]
+        public void Test_CalculateAverage_Test_Call_Calculate()
+        {
+            // Arrange
+            var averagingmethod = new Mock<IAveragingMethod>();
+            Calculator calculator = new Calculator();
+
+            // Act
+            calculator.CalculateAverage(new double[] {1, 2, 4}, averagingmethod.Object);
+
+            // Assert
+            averagingmethod.Verify(avm => avm.Calculate(new double[] { 1, 2, 4 }), Times.Once);
         }
     }
 }
