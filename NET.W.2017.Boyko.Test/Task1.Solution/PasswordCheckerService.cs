@@ -1,21 +1,56 @@
 ﻿using System;
-using System.Linq;
-using Task1.Solution;
 
-namespace Task1
+namespace Task1.Solution
 {
+    /// <summary>
+    /// Service of check password.
+    /// </summary>
     public class PasswordCheckerService
     {
-        private IRepository repository;
+        /// <summary>
+        /// Store repository.
+        /// </summary>
+        private readonly IRepository _repository;
 
+        /// <summary>
+        /// Constructor initialize the instance of the <see cref="PasswordCheckerService"/> class.
+        /// </summary>
+        /// <param name="repository">repository</param>
         public PasswordCheckerService(IRepository repository)
         {
-            this.repository = repository;
+            this._repository = repository;
         }
 
-        public Tuple<bool, string> VerifyPassword(CheckCondition checkCondition, string password)
+        /// <summary>
+        /// Verify password, if OK write to repository.
+        /// </summary>
+        /// <param name="conditions">conditions for check password</param>
+        /// <param name="password">password for check</param>
+        /// <returns>Tuple whick contains if password valid and information message.</returns>
+        public Tuple<bool, string> VerifyPassword(Func<string, Tuple<bool, string>> conditions, string password)
         {
-            return checkCondition.Check(password);
+            if (conditions == null)
+            {
+                throw new ArgumentNullException(nameof(conditions));
+            }
+
+            if (password == null)
+            {
+                throw new ArgumentNullException(nameof(password));
+            }
+
+            foreach (Delegate condition in conditions.GetInvocationList())
+            {
+                Tuple<bool, string> tuple = (Tuple<bool, string>)condition.DynamicInvoke(password);
+                if (!tuple.Item1)
+                {
+                    return tuple;
+                }
+            }
+
+            _repository.Create(password);
+
+            return Tuple.Create(true, "Password is Ok. User was created");
         }
     }
 }

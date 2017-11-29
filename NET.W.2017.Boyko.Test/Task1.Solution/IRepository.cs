@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Task1
+﻿namespace Task1.Solution
 {
+    /// <summary>
+    /// Interface for repository.
+    /// </summary>
     public interface IRepository
     {
+        /// <summary>
+        /// Create password
+        /// </summary>
+        /// <param name="password">password</param>
         void Create(string password);
     }
 }
