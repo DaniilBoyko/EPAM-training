@@ -1,30 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Task3
+namespace Task3.Solution
 {
+    /// <summary>
+    /// Model of bank.
+    /// </summary>
     public class Bank : IObserver<StockInfo>
     {
-        private IObservable<StockInfo> stock;
-
+        /// <summary>
+        /// Name of the bank.
+        /// </summary>
         public string Name { get; set; }
 
+        /// <summary>
+        /// Constructor initialize the instance of the <see cref="Bank"/> class.
+        /// </summary>
+        /// <param name="name">name of the bank</param>
+        /// <param name="observable">observable to register bank</param>
         public Bank(string name, IObservable<StockInfo> observable)
         {
             this.Name = name;
-            stock = observable;
-            stock.Register(this);
+            observable.Register(this);
         }
 
+        /// <inheritdoc></inheritdoc>
         public void Update(object sender, StockInfo info)
         {
-            if (info.Euro > 40)
-                Console.WriteLine("Банк {0} продает евро;  Курс евро: {1}", this.Name, info.Euro);
-            else
-                Console.WriteLine("Банк {0} покупает евро;  Курс евро: {1}", this.Name, info.Euro);
+            Console.WriteLine(
+                info.Euro > 40 ? "Банк {0} продает евро;  Курс евро: {1}" : "Банк {0} покупает евро;  Курс евро: {1}",
+                this.Name, info.Euro);
         }
     }
 }

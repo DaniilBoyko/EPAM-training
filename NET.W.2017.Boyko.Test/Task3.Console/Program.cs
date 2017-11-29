@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task3.Solution;
 
 namespace Task3.Console
 {
@@ -15,7 +16,7 @@ namespace Task3.Console
             Broker broker = new Broker("Forex", stock);
             Bank bank = new Bank("BNT", stock);
 
-            stock.Market(new StockInfo {Euro = 123, USD = 12});
+            stock.Market(new StockInfo {Euro = 123, Usd = 12});
         }
     }
 }

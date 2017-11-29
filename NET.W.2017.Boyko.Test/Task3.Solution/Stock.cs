@@ -1,37 +1,50 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Task3
+namespace Task3.Solution
 {
+    /// <summary>
+    /// Model of stock.
+    /// </summary>
+    /// <typeparam name="T">type of sending data</typeparam>
     public class Stock<T> : IObservable<T> where T : new()
     {
-        private T info;
+        /// <summary>
+        /// Store some info.
+        /// </summary>
+        private T _info;
 
-        public event EventHandler<T> changeInfo;
+        /// <summary>
+        /// Store event for observers.
+        /// </summary>
+        public event EventHandler<T> ChangeInfo;
 
+        /// <summary>
+        /// Constructore initialize the instance of the <see cref="Stock{T}"/> class.
+        /// </summary>
         public Stock()
         {
-            info = new T();
+            _info = new T();
         }
 
-        public void Register(IObserver<T> observer) => changeInfo += observer.Update;
+        ///<inheritdoc></inheritdoc>
+        public void Register(Solution.IObserver<T> observer) => ChangeInfo += observer.Update;
 
-        public void Unregister(IObserver<T> observer) => changeInfo -= observer.Update;
+        /// <inheritdoc></inheritdoc>
+        public void Unregister(Solution.IObserver<T> observer) => ChangeInfo -= observer.Update;
 
+        /// <inheritdoc></inheritdoc>
         public void Notify()
         {
-            changeInfo(this, info);
+            ChangeInfo(this, _info);
         }
 
+        /// <summary>
+        /// Methods for chante info.
+        /// </summary>
+        /// <param name="newInfo">new info</param>
         public void Market(T newInfo)
         {
-            /*Random rnd = new Random();
-            stocksInfo.USD = rnd.Next(20, 40);
-            stocksInfo.Euro = rnd.Next(30, 50);*/
-            info = newInfo;
+            _info = newInfo;
             Notify();
         }
     }

@@ -1,36 +1,50 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Task3
+namespace Task3.Solution
 {
+    /// <summary>
+    /// Model for the broker.
+    /// </summary>
     public class Broker : IObserver<StockInfo>
     {
-        private IObservable<StockInfo> stock;
+        /// <summary>
+        /// Store stock.
+        /// </summary>
+        private IObservable<StockInfo> _stock;
 
+        /// <summary>
+        /// Name of the broker.
+        /// </summary>
         public string Name { get; set; }
 
-        public Broker(string name, IObservable<StockInfo> observable)
+        /// <summary>
+        /// Constructor initialize the instance of the <see cref="Broker"/> class.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="observable"></param>
+        public Broker(string name, Solution.IObservable<StockInfo> observable)
         {
             this.Name = name;
-            stock = observable;
-            stock.Register(this);
+            _stock = observable;
+            _stock.Register(this);
         }
 
+        /// <inheritdoc></inheritdoc>
         public void Update(object sender, StockInfo info)
         {
-            if (info.USD > 30)
-                Console.WriteLine("Брокер {0} продает доллары;  Курс доллара: {1}", this.Name, info.USD);
+            if (info.Usd > 30)
+                Console.WriteLine("Брокер {0} продает доллары;  Курс доллара: {1}", this.Name, info.Usd);
             else
-                Console.WriteLine("Брокер {0} покупает доллары;  Курс доллара: {1}", this.Name, info.USD);
+                Console.WriteLine("Брокер {0} покупает доллары;  Курс доллара: {1}", this.Name, info.Usd);
         }
 
+        /// <summary>
+        /// Stop trade.
+        /// </summary>
         public void StopTrade()
         {
-            stock.Unregister(this);
-            stock = null;
+            _stock.Unregister(this);
+            _stock = null;
         }
     }
 }
