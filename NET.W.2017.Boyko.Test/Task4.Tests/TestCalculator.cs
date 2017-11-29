@@ -43,7 +43,7 @@ namespace Task4.Tests
             Calculator calculator = new Calculator();
 
             // Act
-            calculator.CalculateAverage(new double[] {1, 2, 4}, averagingmethod.Object);
+            calculator.CalculateAverage(new double[] { 1, 2, 4 }, averagingmethod.Object);
 
             // Assert
             averagingmethod.Verify(avm => avm.Calculate(new double[] { 1, 2, 4 }), Times.Once);
