@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collectors\Collector.cs" />
+    <Compile Include="Collectors\SimpleCollector.cs" />
     <Compile Include="DocumentParts\BoldText.cs" />
     <Compile Include="Converters\Converter.cs" />
     <Compile Include="Converters\ToHtmlConverter.cs" />

@@ -1,28 +1,54 @@
-﻿namespace Task5.Solution.Converters
+﻿using Task5.Solution.DocumentParts;
+
+namespace Task5.Solution.Converters
 {
+    /// <summary>
+    /// Convert document part to news
+    /// </summary>
     public abstract class Converter
     {
-        public abstract string ConvertHyperlink(Hyperlink documentPart);
-        public abstract string ConvertPlainText(PlainText documentPart);
-        public abstract string ConvertBoldText(BoldText document);
+        /// <summary>
+        /// Convert hyper link to text.
+        /// </summary>
+        /// <param name="hyperlink">hyper link</param>
+        /// <returns>string</returns>
+        public abstract string ConvertHyperlink(Hyperlink hyperlink);
 
-        public string CollectionInformation { get; set; } = "";
+        /// <summary>
+        /// Convrt plain text to some text.
+        /// </summary>
+        /// <param name="plainText">plain text</param>
+        /// <returns>string</returns>
+        public abstract string ConvertPlainText(PlainText plainText);
 
-        public void Convert(DocumentPart documentPart)
+        /// <summary>
+        /// Convrt bold text to some text.
+        /// </summary>
+        /// <param name="boldText">bold text</param>
+        /// <returns>string</returns>
+        public abstract string ConvertBoldText(BoldText boldText);
+
+        /// <summary>
+        /// Covert document part.
+        /// </summary>
+        /// <param name="documentPart">document part</param>
+        public string Convert(DocumentPart documentPart)
         {
             if (documentPart.GetType() == typeof(Hyperlink))
             {
-                CollectionInformation += $"{ConvertHyperlink((Hyperlink) documentPart)}\n";
+                return $"{ConvertHyperlink((Hyperlink) documentPart)}\n";
             }
             if (documentPart.GetType() == typeof(PlainText))
             {
-                CollectionInformation += $"{ConvertPlainText((PlainText) documentPart)}\n";
+                return $"{ConvertPlainText((PlainText) documentPart)}\n";
             }
 
             if (documentPart.GetType() == typeof(BoldText))
             {
-                CollectionInformation += $"{ConvertBoldText((BoldText) documentPart)}\n";
+                return $"{ConvertBoldText((BoldText) documentPart)}\n";
             }
+
+            return "";
         }
     }
 }

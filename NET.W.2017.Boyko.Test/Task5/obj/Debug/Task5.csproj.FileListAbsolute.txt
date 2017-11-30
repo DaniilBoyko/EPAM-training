@@ -12,3 +12,10 @@ C:\Users\MIB\Desktop\23.11.2017\Task5\obj\Debug\Task5.csprojResolveAssemblyRefer
 C:\Users\MIB\Desktop\23.11.2017\Task5\obj\Debug\Task5.csproj.CoreCompileInputs.cache
 C:\Users\MIB\Desktop\23.11.2017\Task5\obj\Debug\Task5.dll
 C:\Users\MIB\Desktop\23.11.2017\Task5\obj\Debug\Task5.pdb
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5\bin\Debug\Task5.dll.config
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5\bin\Debug\Task5.dll
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5\bin\Debug\Task5.pdb
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5\obj\Debug\Task5.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5\obj\Debug\Task5.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5\obj\Debug\Task5.dll
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5\obj\Debug\Task5.pdb

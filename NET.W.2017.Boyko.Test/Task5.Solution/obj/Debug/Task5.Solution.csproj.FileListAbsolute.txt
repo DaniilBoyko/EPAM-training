@@ -8,3 +8,8 @@ C:\Users\MIB\Desktop\23.11.2017\Task5.Solution\bin\Debug\Task5.Solution.pdb
 C:\Users\MIB\Desktop\23.11.2017\Task5.Solution\obj\Debug\Task5.Solution.csproj.CoreCompileInputs.cache
 C:\Users\MIB\Desktop\23.11.2017\Task5.Solution\obj\Debug\Task5.Solution.dll
 C:\Users\MIB\Desktop\23.11.2017\Task5.Solution\obj\Debug\Task5.Solution.pdb
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5.Solution\bin\Debug\Task5.Solution.dll
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5.Solution\bin\Debug\Task5.Solution.pdb
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5.Solution\obj\Debug\Task5.Solution.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5.Solution\obj\Debug\Task5.Solution.dll
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5.Solution\obj\Debug\Task5.Solution.pdb

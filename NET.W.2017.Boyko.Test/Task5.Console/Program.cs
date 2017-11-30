@@ -1,4 +1,9 @@
-﻿namespace Task5.Console
+﻿using Task5.Solution;
+using Task5.Solution.Collectors;
+using Task5.Solution.Converters;
+using Task5.Solution.DocumentParts;
+
+namespace Task5.Console
 {
     using System.Collections.Generic;
     using System;
@@ -17,11 +22,11 @@
 
             Document document = new Document(parts);
 
-            Console.WriteLine(document.ToHtml());
+            Console.WriteLine(document.Convert(new ToHtmlConverter(), new SimpleCollector()));
 
-            Console.WriteLine(document.ToPlainText());
+            Console.WriteLine(document.Convert(new ToLaTeXConverter(), new SimpleCollector()));
 
-            Console.WriteLine(document.ToLaTeX());
+            Console.WriteLine(document.Convert(new ToPlainTestConverter(), new SimpleCollector()));
         }
     }
 }

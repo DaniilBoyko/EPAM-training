@@ -17,3 +17,12 @@ C:\Users\MIB\Desktop\23.11.2017\Task5.Console\bin\Debug\Task5.Console.pdb
 C:\Users\MIB\Desktop\23.11.2017\Task5.Console\bin\Debug\Task5.dll
 C:\Users\MIB\Desktop\23.11.2017\Task5.Console\bin\Debug\Task5.pdb
 C:\Users\MIB\Desktop\23.11.2017\Task5.Console\bin\Debug\Task5.dll.config
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5.Console\bin\Debug\Task5.Console.exe.config
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5.Console\bin\Debug\Task5.Console.exe
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5.Console\bin\Debug\Task5.Console.pdb
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5.Console\obj\Debug\Task5.Console.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5.Console\obj\Debug\Task5.Console.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5.Console\obj\Debug\Task5.Console.exe
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5.Console\obj\Debug\Task5.Console.pdb
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5.Console\bin\Debug\Task5.Solution.dll
+E:\EPAM-training\NET.W.2017.Boyko.Test\Task5.Console\bin\Debug\Task5.Solution.pdb
