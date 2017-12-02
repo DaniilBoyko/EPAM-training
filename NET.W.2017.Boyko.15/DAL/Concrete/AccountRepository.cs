@@ -31,7 +31,7 @@ namespace DAL.Concrete
         /// <inheritdoc></inheritdoc>
         public IEnumerable<DalAccount> GetAll()
         {
-            return _context.Set<OrmAccount>().Select(account => account.ToDalAccount());
+            return _context.Set<OrmAccount>().ToList().Select(account => account.ToDalAccount());
         }
 
         /// <inheritdoc></inheritdoc>
