@@ -1,0 +1,12 @@
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser.Tests.Console\bin\Debug\URL-Parser.Tests.Console.exe.config
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser.Tests.Console\bin\Debug\URL-Parser.Tests.Console.exe
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser.Tests.Console\bin\Debug\URL-Parser.Tests.Console.pdb
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser.Tests.Console\bin\Debug\URL-Parser.dll
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser.Tests.Console\bin\Debug\URL-Parser.pdb
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser.Tests.Console\obj\Debug\URL-Parser.Tests.Console.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser.Tests.Console\obj\Debug\URL-Parser.Tests.Console.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser.Tests.Console\obj\Debug\URL-Parser.Tests.Console.exe
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser.Tests.Console\obj\Debug\URL-Parser.Tests.Console.pdb
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser.Tests.Console\bin\Debug\NLog.config
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser.Tests.Console\bin\Debug\NLog.dll
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser.Tests.Console\bin\Debug\NLog.xml

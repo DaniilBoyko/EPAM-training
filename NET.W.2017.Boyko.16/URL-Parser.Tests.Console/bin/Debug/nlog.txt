@@ -1,0 +1,36 @@
+ ----------------- Error (2017-12-03 17:01:03.5498) -----------------
+ 
+ Call Site: Library.Models.NLogLogger.Error
+ Exception Type: URL_Parser.Exceptions.InvalidUrlException
+ Exception Message: ps/github.com/AnzhelikaKravchuk?tab=repositories - not a url Stack Trace: 
+ Additional Info: 
+
+ ----------------- Error (2017-12-03 17:05:35.3500) -----------------
+ 
+ Call Site: Library.Models.NLogLogger.Error
+ Exception Type: URL_Parser.Exceptions.InvalidUrlException
+ Exception Message: ps/github.com/AnzhelikaKravchuk?tab=repositories - not a url Stack Trace: 
+ Additional Info: 
+
+ ----------------- Error (2017-12-03 17:06:09.8335) -----------------
+ 
+ Call Site: Library.Models.NLogLogger.Error
+ Exception Type: URL_Parser.Exceptions.InvalidUrlException
+ Exception Message: ps/github.com/AnzhelikaKravchuk?tab=repositories - not a url Stack Trace: 
+ Additional Info: 
+
+ ----------------- Error (2017-12-03 17:06:36.4130) -----------------
+ 
+ Call Site: Library.Models.NLogLogger.Error
+ Exception Type: URL_Parser.Exceptions.InvalidUrlException
+ Exception Message: ps/github.com/AnzhelikaKravchuk?tab=repositories - not a url Stack Trace: 
+ Additional Info: 
+
+ ----------------- Error (2017-12-03 20:12:24.6446) -----------------
+ 
+ Call Site: URL_Parser.NLogLogger.Error
+ Exception Type: URL_Parser.Exceptions.InvalidUrlException
+ Exception Message: https/github.com/AnzhelikaKravchuk/2017-2018.MMF.BSU - not a url
+ Stack Trace: 
+ Additional Info: 
+

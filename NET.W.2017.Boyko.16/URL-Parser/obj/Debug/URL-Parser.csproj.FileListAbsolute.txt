@@ -1,0 +1,9 @@
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser\bin\Debug\URL-Parser.dll
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser\bin\Debug\URL-Parser.pdb
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser\obj\Debug\URL-Parser.csproj.CoreCompileInputs.cache
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser\obj\Debug\URL-Parser.dll
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser\obj\Debug\URL-Parser.pdb
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser\obj\Debug\URL-Parser.csprojResolveAssemblyReference.cache
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser\bin\Debug\NLog.config
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser\bin\Debug\NLog.dll
+E:\EPAM-training\NET.W.2017.Boyko.16\URL-Parser\bin\Debug\NLog.xml
