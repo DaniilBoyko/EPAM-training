@@ -17,6 +17,12 @@ namespace DAL.Interfaces.Repository
         IEnumerable<TEntity> GetAll();
 
         /// <summary>
+        /// Get all elements.
+        /// </summary>
+        /// <returns>Enumerable of all elements.</returns>
+        IEnumerable<TEntity> GetAll(string name, string surname);
+
+        /// <summary>
         /// Get element by id.
         /// </summary>
         /// <param name="id">id of element</param>

@@ -4,7 +4,6 @@ E:\EPAM-training\NET.W.2017.Boyko.15\ORM\bin\Debug\EntityFramework.dll
 E:\EPAM-training\NET.W.2017.Boyko.15\ORM\bin\Debug\EntityFramework.SqlServer.dll
 E:\EPAM-training\NET.W.2017.Boyko.15\ORM\bin\Debug\EntityFramework.xml
 E:\EPAM-training\NET.W.2017.Boyko.15\ORM\bin\Debug\EntityFramework.SqlServer.xml
-E:\EPAM-training\NET.W.2017.Boyko.15\ORM\obj\Debug\ORM.csprojResolveAssemblyReference.cache
 E:\EPAM-training\NET.W.2017.Boyko.15\ORM\obj\Debug\ORM.csproj.CoreCompileInputs.cache
 E:\EPAM-training\NET.W.2017.Boyko.15\ORM\obj\Debug\ORM.dll
 E:\EPAM-training\NET.W.2017.Boyko.15\ORM\obj\Debug\ORM.pdb

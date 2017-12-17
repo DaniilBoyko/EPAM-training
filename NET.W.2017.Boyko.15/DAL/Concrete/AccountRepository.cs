@@ -34,6 +34,11 @@ namespace DAL.Concrete
             return _context.Set<OrmAccount>().ToList().Select(account => account.ToDalAccount());
         }
 
+        public IEnumerable<DalAccount> GetAll(string name, string surname)
+        {
+            return _context.Set<OrmAccount>().Where(ac => ac.Name == name && ac.Surname == surname).ToList().Select(account => account.ToDalAccount());
+        }
+
         /// <inheritdoc></inheritdoc>
         public DalAccount GetById(string id)
         {

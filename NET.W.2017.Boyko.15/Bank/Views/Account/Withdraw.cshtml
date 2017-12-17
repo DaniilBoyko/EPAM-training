@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Withdraw";
+}
+
+<h2>Withdraw</h2>
+
+@if (ViewBag.Message != null)
+{
+    <h3>@ViewBag.Message</h3>
+
+    <div>
+        @Html.ActionLink("Go back to Accounts", "LoggedIn")
+    </div>
+}
+else
+{
+    using (Html.BeginForm())
+    {
+         <div>Account id:<input type="text" name="Id" id="Id"/>
+         </div>
+         <br/>
+         <div>Amount:<input type="number" name="Amount" id="Amount"/>
+         </div>
+         <br/>
+         <div><input type="submit" value="Withdraw"/>
+         </div>
+     }
+}
+

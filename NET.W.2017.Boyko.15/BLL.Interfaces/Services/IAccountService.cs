@@ -1,4 +1,7 @@
-﻿namespace BLL.Interfaces.Services
+﻿using System.Collections.Generic;
+using BLL.Interfaces.Entities.Account;
+
+namespace BLL.Interfaces.Services
 {
     /// <summary>
     /// Interface of account service.
@@ -43,5 +46,7 @@
         /// Show account info.
         /// </summary>
         void ShowAccountInfo();
+
+        List<Account> SelectAll(string name, string surname);
     }
 }

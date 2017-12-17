@@ -1,0 +1,41 @@
+﻿@model IEnumerable<BLL.Interfaces.Entities.Account.Account>
+@{
+    ViewBag.Title = "LoggedIn";
+}
+
+@if (Session["Username"] != null)
+{
+    <h4>Hello @Session["Usersurname"] @Session["Username"]!</h4>
+
+    <table>
+        <tr>
+            <th>Account Id</th>
+            <th>User name</th>
+            <th>User surname</th>
+            <th>Account points</th>
+            <th>Account amount</th>
+            <th>Account type</th>
+        </tr>
+        @foreach (var acc in Model)
+        {
+            <tr>
+                <td>@acc.Id</td>
+                <td>@acc.Name</td>
+                <td>@acc.Surname</td>
+                <td>@acc.Points</td>
+                <td>@acc.Amount</td>
+                <td>@acc.GetAccountType()</td>
+            </tr>
+        }
+    </table>
+    <br />
+    <input type="button" value="Deposit"
+           onclick="@("location.href='" + Url.Action("Deposit", "Account") + "'")" />
+
+    <input type="button" value="Withdraw"
+           onclick="@("location.href='" + Url.Action("Withdraw", "Account") + "'")" />
+
+    <input type="button" value="Close Account"
+           onclick="@("location.href='" + Url.Action("CloseAccount", "Account") + "'")" />
+}
+

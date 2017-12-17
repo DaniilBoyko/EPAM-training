@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using BLL.Interfaces;
 using BLL.Interfaces.Entities.Account;
 using BLL.Interfaces.Entities.Exceptions;
@@ -6,6 +7,7 @@ using BLL.Interfaces.Services;
 using BLL.Mappers;
 using BLL.Models;
 using DAL.Interfaces.Repository;
+using System.Linq;
 
 namespace BLL.Services
 {
@@ -121,9 +123,11 @@ namespace BLL.Services
             CurrentAccount = account;
         }
 
+
         /// <summary>
-        /// Delete current account.
+        /// Delete Account
         /// </summary>
+        /// <exception cref="AccountHasMoneyException">When account has money</exception>
         public void DeleteAccount()
         {
             if (CurrentAccount.Amount > 0)
@@ -157,6 +161,12 @@ namespace BLL.Services
         {
             Account account = AccountRepository.GetById(id)?.ToBllAccount();
             CurrentAccount = account ?? throw new AccountNotFoundException("Account not found.");
+        }
+
+        public List<Account> SelectAll(string name, string surname)
+        {
+            List<Account> accounts = AccountRepository.GetAll(name, surname)?.Select(ac => ac.ToBllAccount()).ToList();
+            return accounts;
         }
         #endregion // !public Methods
     }

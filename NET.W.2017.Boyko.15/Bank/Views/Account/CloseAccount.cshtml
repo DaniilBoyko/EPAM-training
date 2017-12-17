@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "CloseAccout";
+}
+
+<h2>CloseAccout</h2>
+
+@if (ViewBag.Message != null)
+{
+    <h3>@ViewBag.Message</h3>
+
+    <div>
+        @Html.ActionLink("Go back to Accounts", "LoggedIn")
+    </div>
+}
+else
+{
+    using (Html.BeginForm())
+    {
+        <div>
+            Account id:<input type="text" name="Id" id="Id" />
+        </div>
+
+        <br />
+        <div>
+            <input type="submit" value="Close" />
+        </div>
+    }
+}
