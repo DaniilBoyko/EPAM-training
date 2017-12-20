@@ -16,7 +16,6 @@ namespace Bank.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Bank application description.";
-
             return View();
         }
 

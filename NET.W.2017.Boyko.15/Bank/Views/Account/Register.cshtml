@@ -1,4 +1,5 @@
-﻿@model Bank.Models.UserAccount
+﻿@using Bank.Models
+@model Bank.Models.UserAccount
 
 @{
     ViewBag.Title = "Registration";
@@ -39,7 +40,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Type, htmlAttributes: new {@class = "control-label col-md-2"})
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Type, new {htmlAttributes = new {@class = "form-control"}})
+                    @Html.DropDownListFor(model => model.Type, new SelectList(UserAccount.AccountType, "Id", "Name"))
                     @Html.ValidationMessageFor(model => model.Type, "", new {@class = "text-danger"})
                 </div>
             </div>
@@ -64,7 +65,8 @@
 <div>
     @Html.ActionLink("Go to Login", "Login")
 </div>
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+
+

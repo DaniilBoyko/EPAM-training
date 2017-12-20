@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net.Mime;
-using System.Web;
 using System.Web.Mvc;
 using Bank.Models;
 using BLL.Interfaces.Entities.Account;
@@ -17,14 +14,15 @@ namespace Bank.Controllers
     public class AccountController : Controller
     {
         private static readonly IKernel Resolver;
+        private static readonly IAccountService service;
 
         static AccountController()
         {
             Resolver = new StandardKernel();
             Resolver.ConfigurateResolverConsole();
+            service = Resolver.Get<IAccountService>();
         }
 
-        // GET: Account
         public ActionResult Index()
         {
             return RedirectToAction("Register");
@@ -38,13 +36,10 @@ namespace Bank.Controllers
         [HttpPost]
         public ActionResult Register(UserAccount account)
         {
-            if (ModelState.IsValid)
-            {
-                var service = Resolver.Get<IAccountService>();
-                service.CreateNewAccount(account.Type, account.Name, account.Surname, account.Amount);
-                ModelState.Clear();
-                ViewBag.Message = "Account successfully registered.";
-            }
+            if (!ModelState.IsValid) return View();
+            service.CreateNewAccount(UserAccount.AccountType.ElementAt(account.Type).Name, account.Name, account.Surname, account.Amount);
+            ModelState.Clear();
+            ViewBag.Message = "Account successfully registered.";
             return View();
         }
 
@@ -56,7 +51,6 @@ namespace Bank.Controllers
         [HttpPost]
         public ActionResult Login(UserAccount userAccount)
         {
-            var service = Resolver.Get<IAccountService>();
             List<Account> accounts = service.SelectAll(userAccount.Name, userAccount.Surname);
             if (accounts.Count != 0)
             {
@@ -64,25 +58,16 @@ namespace Bank.Controllers
                 Session["Usersurname"] = userAccount.Surname;
                 return RedirectToAction("LoggedIn");
             }
-            else
-            {
-                ModelState.AddModelError("", "User is not found.");
-            }
+
+            ModelState.AddModelError("", "User is not found.");
             return View();
         }
 
         public ActionResult LoggedIn()
         {
-            if (Session["Username"] != null)
-            {
-                var service = Resolver.Get<IAccountService>();
-                List<Account> accounts = service.SelectAll(Session["Username"].ToString(), Session["Usersurname"].ToString());
-                return View(accounts);
-            }
-            else
-            {
-                return RedirectToAction("Login");
-            }
+            if (Session["Username"] == null) return RedirectToAction("Login");
+            List<Account> accounts = service.SelectAll(Session["Username"].ToString(), Session["Usersurname"].ToString());
+            return View(accounts);
         }
 
         public ActionResult Withdraw()
@@ -93,7 +78,6 @@ namespace Bank.Controllers
         [HttpPost]
         public ActionResult Withdraw(Transfer transfer)
         {
-            var service = Resolver.Get<IAccountService>();
             string message;
             try
             {
@@ -128,7 +112,6 @@ namespace Bank.Controllers
         [HttpPost]
         public ActionResult Deposit(Transfer transfer)
         {
-            var service = Resolver.Get<IAccountService>();
             string message = string.Empty;
             try
             {
@@ -159,7 +142,6 @@ namespace Bank.Controllers
         [HttpPost]
         public ActionResult CloseAccount(Transfer transfer)
         {
-            var service = Resolver.Get<IAccountService>();
             string message = string.Empty;
             try
             {
